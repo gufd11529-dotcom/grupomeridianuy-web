@@ -8,7 +8,27 @@
     burger.textContent = open ? 'Cerrar' : 'Menú';
   });
 
-  function ga(name, params) { try { if (window.gtag) window.gtag('event', name, params || {}); } catch (e) {} }
+  // ---- Utilidades compartidas con asesor.js y calculadora.js (window.GM lo crea build.py con la URL del Apps Script y el token)
+  var GM = window.GM = window.GM || {};
+  GM.ga = function (name, params) { try { if (window.gtag) window.gtag('event', name, params || {}); } catch (e) {} };
+  GM.esc = function (s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  // Envía el lead al Apps Script. ok() si el navegador lo manda; ko() si falla (sin red, bloqueado...).
+  // Corta «productos» y «origen» a 1.900 caracteres (el servidor rechaza más de 2.000).
+  GM.enviar = function (d, ok, ko) {
+    var p = { token: GM.token }, k;
+    for (k in d) if (Object.prototype.hasOwnProperty.call(d, k)) p[k] = d[k];
+    ['productos', 'origen'].forEach(function (c) { if (p[c] && p[c].length > 1900) p[c] = p[c].slice(0, 1899) + '\u2026'; });
+    try {
+      fetch(GM.script, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(p) })
+        .then(function () { if (ok) ok(); }, function () { if (ko) ko(); });
+    } catch (e) { if (ko) ko(); }
+  };
+  // Mensaje de fallo en lugar del de éxito, con enlace a WhatsApp (href ya armado)
+  GM.fallo = function (box, href, extra) {
+    box.innerHTML = '<b>No pudimos enviar tu consulta.</b> <a href="' + href + '" target="_blank" rel="noopener">Escribinos por WhatsApp</a>.' + (extra || '');
+    box.classList.add('show');
+  };
+  var ga = GM.ga, WA_URL = 'https://wa.me/59893682685';
 
   // WhatsApp con el nombre de la página o la guía desde la que se escribe
   var WA_SEL = 'a[href*="wa.me"],a[href*="api.whatsapp.com"]';
@@ -37,8 +57,6 @@
   // Formulario de contacto → misma hoja "Leads Grupo Meridian" que la tienda
   var F = document.getElementById('gm-lead');
   if (F) {
-    var URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbxsYt4D-WY0WaAjTui14gDQ9PoNtmvx2adc7aQtQeXGQzF3SCGa7Y_6IUK1Z5FllT0/exec';
-    var TOKEN = 'TqiTnuCu2-MwyEyb-UN3qX1goYu1bcO-';
     var v = function (n) { var el = F.querySelector('[name="' + n + '"]'); return el ? String(el.value || '').trim() : ''; };
     F.addEventListener('submit', function (ev) {
       ev.preventDefault();
@@ -47,15 +65,20 @@
       var nom = v('nom'), emp = v('emp'), wa = v('wa');
       if (!nom || !emp || !wa) { err.classList.add('show'); return; }
       err.classList.remove('show');
-      var d = { token: TOKEN, tipo: 'comercio', nombre: nom, comercio: emp, telefono: wa, departamento: v('depto'),
+      var d = { tipo: 'comercio', nombre: nom, comercio: emp, telefono: wa, departamento: v('depto'),
         tipo_comercio: 'Web .com · ' + v('need'), volumen: v('vol'),
         productos: 'Producto: ' + (v('prod') || '(sin describir)') + ' | Proveedor: ' + v('prov') + (v('mail') ? ' | Email: ' + v('mail') : ''),
         origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '') };
-      try { fetch(URL_SCRIPT, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(d) })['catch'](function () {}); } catch (e) {}
-      ga('generate_lead', { lead_source: 'web_com', need: v('need'), volumen: v('vol') });
       var msg = 'Hola, soy ' + nom + ' de ' + emp + '. Necesito: ' + v('need') + '. Producto: ' + (v('prod') || '(lo cuento por acá)') + '. Volumen: ' + v('vol') + '.';
-      ok.innerHTML = '<b>Recibido, ' + nom.replace(/</g, '') + '.</b> Te respondemos en horario comercial. Si preferís, también podés <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandarnos esto mismo por WhatsApp</a>.';
-      ok.classList.add('show'); btn.disabled = true; btn.style.opacity = '.5';
+      btn.disabled = true; btn.style.opacity = '.5';
+      GM.enviar(d, function () {
+        ga('generate_lead', { lead_source: 'web_com', need: v('need'), volumen: v('vol') });
+        ok.innerHTML = '<b>Recibido, ' + nom.replace(/</g, '') + '.</b> Te respondemos en horario comercial. Si preferís, también podés <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandarnos esto mismo por WhatsApp</a>.';
+        ok.classList.add('show');
+      }, function () {
+        GM.fallo(ok, WA_URL + '?text=' + encodeURIComponent(msg));
+        btn.disabled = false; btn.style.opacity = '';
+      });
     });
   }
 
@@ -108,15 +131,20 @@
     if (!nom || !/^[^\s@|]+@[^\s@|]+\.[^\s@|]+$/.test(mail)) { err.classList.add('show'); return; }
     err.classList.remove('show');
     var rubro = g('rubro') || '(sin indicar)';
-    var d = { token: 'TqiTnuCu2-MwyEyb-UN3qX1goYu1bcO-', tipo: 'comercio', nombre: nom, comercio: '(sin empresa) ' + nom.slice(0, 60), telefono: '', departamento: '',
+    var d = { tipo: 'comercio', nombre: nom, comercio: '(sin empresa) ' + nom.slice(0, 60), telefono: '', departamento: '',
       tipo_comercio: 'Checklist proveedor', volumen: '',
       productos: 'Producto: ' + rubro + ' | Proveedor: ' + g('prov') + ' | Descargó la checklist «Antes de pagarle al proveedor» || Email: ' + mail,
       origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '') };
-    try { fetch('https://script.google.com/macros/s/AKfycbxsYt4D-WY0WaAjTui14gDQ9PoNtmvx2adc7aQtQeXGQzF3SCGa7Y_6IUK1Z5FllT0/exec', { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(d) })['catch'](function () {}); } catch (e) {}
-    ga('generate_lead', { lead_source: 'checklist_proveedor', rubro: rubro });
     var msg = 'Hola, soy ' + nom.replace(/</g, '') + '. Bajé la checklist "Antes de pagarle al proveedor" y quiero que revisen mi caso. Producto: ' + rubro + '.';
-    ok.innerHTML = '<b>Gracias, ' + nom.replace(/</g, '') + '.</b> Acá está tu checklist: <a href="/descargas/antes-de-pagarle-al-proveedor.pdf" download target="_blank" rel="noopener">Descargar el PDF</a>. Si querés que revisemos tu caso, <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">escribinos por WhatsApp</a>.';
-    ok.classList.add('show'); btn.disabled = true; btn.style.opacity = '.5';
-    ga('checklist_descarga_visible', { lead_source: 'checklist_proveedor' });
+    btn.disabled = true; btn.style.opacity = '.5';
+    GM.enviar(d, function () {
+      ga('generate_lead', { lead_source: 'checklist_proveedor', rubro: rubro });
+      ok.innerHTML = '<b>Gracias, ' + nom.replace(/</g, '') + '.</b> Acá está tu checklist: <a href="/descargas/antes-de-pagarle-al-proveedor.pdf" download target="_blank" rel="noopener">Descargar el PDF</a>. Si querés que revisemos tu caso, <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">escribinos por WhatsApp</a>.';
+      ok.classList.add('show');
+      ga('checklist_descarga_visible', { lead_source: 'checklist_proveedor' });
+    }, function () {
+      GM.fallo(ok, WA_URL + '?text=' + encodeURIComponent(msg), ' El PDF sí lo podés bajar: <a href="/descargas/antes-de-pagarle-al-proveedor.pdf" download target="_blank" rel="noopener">Descargar el PDF</a>.');
+      btn.disabled = false; btn.style.opacity = '';
+    });
   });
 })();

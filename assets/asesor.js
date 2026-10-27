@@ -5,13 +5,10 @@
   var root = document.getElementById("asesor");
   if (!root) return;
 
-  var URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbxsYt4D-WY0WaAjTui14gDQ9PoNtmvx2adc7aQtQeXGQzF3SCGa7Y_6IUK1Z5FllT0/exec';
-  var TOKEN = 'TqiTnuCu2-MwyEyb-UN3qX1goYu1bcO-';
   var WA = 'https://wa.me/59893682685';
   var SHOP_ASESOR = 'https://grupomeridian.shop/asesor/';
 
-  function ga(n, p) { try { if (window.gtag) window.gtag('event', n, p || {}); } catch (e) {} }
-  function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var GM = window.GM, ga = GM.ga, esc = GM.esc; // definidos en site.js (se carga antes)
 
   var CAT = {
     alim: { l: 'Alimentos o bebidas', p: 'Alimentos y bebidas necesitan empresa habilitada en el MSP, registro bromatológico del producto antes de importar y certificado del LATU. Las aguas saborizadas o con azúcar llevan además licencia del MSP.' },
@@ -177,12 +174,12 @@
     h += '<h3 class="dx-h3">Para leer antes de hablar</h3><div class="dx-guides">' + guias().map(function (g) { return '<a href="' + g[0] + '">' + g[1] + ' →</a>'; }).join('') + '</div>';
     h += '<div class="dx-cap"><h3 class="dx-h3">Recibí el análisis de tu caso</h3><p class="dx-p">Dejanos tus datos y un especialista te escribe en horario comercial, con lo que podemos hacer y qué hace falta. Sin compromiso.</p>' +
       '<form id="dx-form" class="lead" novalidate>' +
-      '<label>Qué producto es<textarea name="prod" placeholder="Qué es, de dónde viene y cualquier dato que sume"></textarea></label>' +
-      '<div class="row"><label>Tu nombre *<input name="nom" type="text" autocomplete="name" required></label>' +
-      '<label>Empresa' + (s.perfil === 'empr' ? ' (si tenés)' : ' *') + '<input name="emp" type="text" autocomplete="organization"></label></div>' +
-      '<div class="row"><label>WhatsApp *<input name="wa" type="tel" placeholder="099 123 456" autocomplete="tel" required></label>' +
+      '<label>Qué producto es<textarea name="prod" maxlength="1200" placeholder="Qué es, de dónde viene y cualquier dato que sume"></textarea></label>' +
+      '<div class="row"><label>Tu nombre *<input name="nom" type="text" maxlength="100" autocomplete="name" required></label>' +
+      '<label>Empresa' + (s.perfil === 'empr' ? ' (si tenés)' : ' *') + '<input name="emp" type="text" maxlength="100" autocomplete="organization"></label></div>' +
+      '<div class="row"><label>WhatsApp *<input name="wa" type="tel" maxlength="30" placeholder="099 123 456" autocomplete="tel" required></label>' +
       '<label>Departamento<select name="depto">' + ['Montevideo', 'Canelones', 'Maldonado', 'Colonia', 'San José', 'Salto', 'Paysandú', 'Rivera', 'Tacuarembó', 'Rocha', 'Soriano', 'Florida', 'Lavalleja', 'Durazno', 'Cerro Largo', 'Río Negro', 'Artigas', 'Treinta y Tres', 'Flores', 'Fuera de Uruguay'].map(function (d) { return '<option>' + d + '</option>'; }).join('') + '</select></label></div>' +
-      '<label>Correo (opcional)<input name="mail" type="email" autocomplete="email"></label>' +
+      '<label>Correo (opcional)<input name="mail" type="email" maxlength="100" autocomplete="email"></label>' +
       '<div class="hp" aria-hidden="true"><label>No completar<input name="web" type="text" tabindex="-1" autocomplete="off"></label></div>' +
       '<span class="err" id="dx-err" role="alert">Necesitamos tu nombre' + (s.perfil === 'empr' ? '' : ', la empresa') + ' y un WhatsApp para responderte.</span>' +
       '<button class="btn dark" type="submit">Quiero el análisis</button>' +
@@ -203,18 +200,23 @@
       err.classList.remove('show');
       var volTxt = s.obj === 'lanzar' ? ('Stock: ' + label('stock')) : ('Primera compra: ' + label('vol'));
       var d = {
-        token: TOKEN, tipo: 'comercio', nombre: nom, comercio: emp || '(emprendedor sin empresa)', telefono: wa, departamento: v('depto'),
+        tipo: 'comercio', nombre: nom, comercio: emp || '(emprendedor sin empresa)', telefono: wa, departamento: v('depto'),
         tipo_comercio: 'Asesor .com · Prioridad ' + pr + ' · ' + sv[0],
         volumen: volTxt + ' · Plazo: ' + label('plazo'),
         productos: 'Producto: ' + (v('prod') || '(sin describir)') + ' || ' + resumen() + (v('mail') ? ' || Email: ' + v('mail') : ''),
         origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '')
       };
-      try { fetch(URL_SCRIPT, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(d) })['catch'](function () {}); } catch (e) {}
-      ga('generate_lead', { lead_source: 'asesor_com', prioridad: pr, servicio: sv[2], categoria: s.cat });
       var msg = 'Hola, soy ' + nom + (emp ? ' de ' + emp : '') + '. Usé el asesor de la web: ' + sv[0] + '. Producto: ' + (v('prod') || '(te lo cuento por acá)') + '. ' + resumen();
       var ok = document.getElementById('dx-ok'), btn = F.querySelector('button[type=submit]');
-      ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
-      ok.classList.add('show'); btn.disabled = true; btn.style.opacity = '.5';
+      btn.disabled = true; btn.style.opacity = '.5';
+      GM.enviar(d, function () {
+        ga('generate_lead', { lead_source: 'asesor_com', prioridad: pr, servicio: sv[2], categoria: s.cat });
+        ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
+        ok.classList.add('show');
+      }, function () {
+        GM.fallo(ok, WA + '?text=' + encodeURIComponent(msg));
+        btn.disabled = false; btn.style.opacity = '';
+      });
     });
   }
 

@@ -1,3 +1,4 @@
+@font-face{font-family:Montserrat;src:url(/assets/fonts/montserrat.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
 /* Grupo Meridian — web corporativa (grupomeridianuy.com) · 2026-09 · mismo lenguaje visual que grupomeridian.shop */
 :root{--ink:#0E0F11;--ink2:#3C4048;--mute:#6B7078;--line:#E1E3E6;--ground:#F2F3F4;--white:#fff;--ok:#1F8A4C;--no:#B23A3A;--r:22px;--r-l:30px;--wrap:1180px;--font:'Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
 *{box-sizing:border-box}
@@ -355,3 +356,6 @@ form.lead .btn{justify-self:start}
 .rc-b{display:inline-block;font-style:normal;margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border-bottom:1.5px solid var(--ink)}
 .art .reel-card,.art .seg-links a{text-decoration:none}
 .art .rc-b{text-decoration:none;border-bottom:1.5px solid var(--ink)}
+
+/* cabecera: en pantallas hasta 800 px se usa la imagen de 800 px (variable --hero-800 puesta en línea por build.py) */
+@media (max-width:800px){.hero[style*="--hero-800"]{background-image:var(--hero-800)!important}}

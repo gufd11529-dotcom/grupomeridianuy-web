@@ -5,13 +5,10 @@
   var root = document.getElementById('calc');
   if (!root) return;
 
-  var URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbxsYt4D-WY0WaAjTui14gDQ9PoNtmvx2adc7aQtQeXGQzF3SCGa7Y_6IUK1Z5FllT0/exec';
-  var TOKEN = 'TqiTnuCu2-MwyEyb-UN3qX1goYu1bcO-';
   var WA = 'https://wa.me/59893682685';
   var ARANCEL_MAX = 20; // el 99,1 % de las líneas paga 20 % o menos (OMC, 2026)
 
-  function ga(n, p) { try { if (window.gtag) window.gtag('event', n, p || {}); } catch (e) {} }
-  function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var GM = window.GM, ga = GM.ga, esc = GM.esc; // definidos en site.js (se carga antes)
   function el(id) { return document.getElementById(id); }
   function parse(txt) {
     var t = String(txt || '').replace(/usd|u\$s|us\$|\$|%|\s/gi, '');
@@ -109,17 +106,22 @@
     var c = last, res = c ? ('Mercadería ' + fmt(c.fob) + ' | Flete y seguro ' + (c.flete ? fmt(c.flete) : 'sin indicar') + ' | CIF ' + fmt(c.cif) +
       ' | Tipo: ' + c.tipo + ' | Origen: ' + c.origen + ' | Arancel: ' + c.arancel + ' | IVA: ' + c.iva + (c.uds ? ' | Unidades: ' + c.uds : '') +
       ' | Costo tributario que queda: ' + c.queda + ' | A pagar en el despacho: ' + c.total + ' | Mercadería + tributos que quedan: ' + c.puesto) : '(no llegó a calcular)';
-    var d = { token: TOKEN, tipo: 'comercio', nombre: nom, comercio: v('emp') || '(sin empresa indicada)', telefono: wa, departamento: v('depto'),
+    var d = { tipo: 'comercio', nombre: nom, comercio: v('emp') || '(sin empresa indicada)', telefono: wa, departamento: v('depto'),
       tipo_comercio: 'Calculadora .com · Costo puesto en Uruguay',
       volumen: c ? 'CIF ' + fmt(c.cif) : '(sin calcular)',
       productos: 'Producto: ' + (v('prod') || '(sin describir)') + ' || ' + res + (v('mail') ? ' || Email: ' + v('mail') : ''),
       origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '') };
-    try { fetch(URL_SCRIPT, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(d) })['catch'](function () {}); } catch (e) {}
-    ga('generate_lead', { lead_source: 'calculadora_com', cif: c ? Math.round(c.cif) : 0 });
     var msg = 'Hola, soy ' + nom + (v('emp') ? ' de ' + v('emp') : '') + '. Usé la calculadora de la web. Producto: ' + (v('prod') || '(te lo cuento por acá)') + '. ' + res;
     var ok = el('calc-ok'), btn = F.querySelector('button[type=submit]');
-    ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial para pedirte lo que falte y armar el costo completo de tu caso. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
-    ok.classList.add('show'); btn.disabled = true; btn.style.opacity = '.5';
+    btn.disabled = true; btn.style.opacity = '.5';
+    GM.enviar(d, function () {
+      ga('generate_lead', { lead_source: 'calculadora_com', cif: c ? Math.round(c.cif) : 0 });
+      ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial para pedirte lo que falte y armar el costo completo de tu caso. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
+      ok.classList.add('show');
+    }, function () {
+      GM.fallo(ok, WA + '?text=' + encodeURIComponent(msg));
+      btn.disabled = false; btn.style.opacity = '';
+    });
   });
   // Detalle del resultado: nombre + WhatsApp o correo, justo debajo del cálculo (mismo canal que el formulario de abajo)
   var S = el('calc-send');
@@ -135,16 +137,21 @@
     var resumen = 'Producto: ' + c.tipo + ' | CIF ' + fmt(c.cif) + ' (mercadería ' + fmt(c.fob) + ', flete y seguro ' + (c.flete ? fmt(c.flete) : 'sin indicar') + ') | Origen: ' + c.origen +
       ' | Arancel: ' + c.arancel + ' | IVA: ' + c.iva + (c.uds ? ' | Unidades: ' + c.uds : '') +
       ' | Impuestos estimados: costo tributario que queda ' + c.queda + ', a pagar en el despacho ' + c.total + ' | Mercadería + tributos que quedan: ' + c.puesto;
-    var d = { token: TOKEN, tipo: 'comercio', nombre: nom, comercio: '(sin empresa) ' + nom.slice(0, 60), telefono: esTel ? ct : '', departamento: '',
+    var d = { tipo: 'comercio', nombre: nom, comercio: '(sin empresa) ' + nom.slice(0, 60), telefono: esTel ? ct : '', departamento: '',
       tipo_comercio: 'Calculadora .com · Resultado',
       volumen: 'CIF ' + fmt(c.cif),
       productos: resumen + (esMail ? ' || Email: ' + ct : ''),
       origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '') };
-    try { fetch(URL_SCRIPT, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(d) })['catch'](function () {}); } catch (e) {}
-    ga('generate_lead', { lead_source: 'calculadora_resultado', cif: Math.round(c.cif) });
     var msg = 'Hola, soy ' + nom + '. Usé la calculadora de la web y quiero que revisen mi cálculo. ' + resumen;
     var ok = el('calc-send-ok'), btn = S.querySelector('button[type=submit]');
-    ok.innerHTML = '<b>Listo, ' + esc(nom) + '.</b> ' + (esMail ? 'Te escribimos a ' + esc(ct) + ' con este cálculo.' : 'Te escribimos por WhatsApp con este cálculo.') + ' Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos el cálculo por WhatsApp</a>.';
-    ok.classList.add('show'); btn.disabled = true; btn.style.opacity = '.5';
+    btn.disabled = true; btn.style.opacity = '.5';
+    GM.enviar(d, function () {
+      ga('generate_lead', { lead_source: 'calculadora_resultado', cif: Math.round(c.cif) });
+      ok.innerHTML = '<b>Listo, ' + esc(nom) + '.</b> ' + (esMail ? 'Te escribimos a ' + esc(ct) + ' con este cálculo.' : 'Te escribimos por WhatsApp con este cálculo.') + ' Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos el cálculo por WhatsApp</a>.';
+      ok.classList.add('show');
+    }, function () {
+      GM.fallo(ok, WA + '?text=' + encodeURIComponent(msg));
+      btn.disabled = false; btn.style.opacity = '';
+    });
   });
 })();
