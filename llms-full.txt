@@ -4884,3 +4884,474 @@ La última revisión fue el 27 de octubre de 2026. Las normas cambian: la fecha 
 - Presidencia, Uruguay aprobó el acuerdo interino de comercio entre el Mercosur y la Unión Europea (27-2-2026): https://www.gub.uy/presidencia/comunicacion/noticias/uruguay-aprobo-acuerdo-interino-comercio-entre-mercosur-union-europea
 - Cancillería, inicio de la aplicación provisional del Acuerdo Comercial Interino Mercosur-UE: https://www.gub.uy/ministerio-relaciones-exteriores/comunicacion/noticias/inicio-aplicacion-provisional-del-acuerdo-comercial-interino-entre-mercosur
 - Congreso de Intendentes, preguntas frecuentes sobre el RUNAEV (rótulos): https://www.gub.uy/congreso-intendentes/politicas-y-gestion/preguntas-frecuentes-sobre-registro-unico-nacional-alimentos-empresas-vehiculos
+
+---
+
+# Importar maquinaria y bienes de capital a Uruguay: qué se paga, qué se puede exonerar y qué mirar antes de comprar
+
+URL: https://www.grupomeridianuy.com/guias/importar-maquinaria-y-bienes-de-capital-a-uruguay/
+Actualizada: 2026-10-28
+
+Respuesta corta: Una máquina paga como cualquier importación: arancel según su código NCM, tasa consular (5 %, o 3 % con origen Mercosur o Chile y certificado de origen) e IVA del 22 %. La exoneración no es automática: por ejemplo, un proyecto de inversión declarado promovido (Decreto 329/025) puede exonerar tributos de importación de bienes de activo fijo, siempre que la Dirección Nacional de Industrias los declare no competitivos con la industria nacional. Antes de comprar, confirmá el código NCM, si hay exoneración para tu caso y, si es usada, si se puede ingresar.
+
+## Qué se considera un bien de capital
+
+En esta guía llamamos bien de capital a lo que una empresa compra para producir o prestar su servicio durante años, y no para revenderlo: una línea de envasado, una máquina de corte, un horno, un tractor o un equipo de refrigeración. Es una definición de uso corriente, no una categoría de la ley uruguaya: lo que manda en la aduana es el código NCM de cada equipo.
+
+La diferencia con una importación de mercadería para vender está en tres puntos: el monto suele ser mayor, el equipo puede llegar en partes, y existen regímenes de exoneración y de admisión temporaria que no aplican a la mercadería común. El camino general de trámites (RUT, VUCE, despachante, DUA) es el de la guía de cómo importar.
+
+## Qué impuestos paga una máquina importada
+
+Concepto | Cómo funciona | Qué conviene confirmar | 
+
+Arancel de importación | Depende del código NCM de cada equipo. El MEF publica la nomenclatura y los aranceles en archivos de Excel de 10 dígitos | El código exacto de tu máquina y su arancel. Esta guía no da cifras porque cambian de un equipo a otro | 
+
+Tasa consular | 5 % del valor en aduana (Ley 19.535, art. 265). Baja al 3 % solo con origen Mercosur o Chile y certificado de origen: el detalle está en la guía de tasa consular | Que el certificado de origen esté en regla antes del embarque | 
+
+IVA | 22 % en la tasa básica (Texto Ordenado, Título 10) | Si sos contribuyente de IVA, hablalo con tu contador: ahí el impuesto no queda como costo | 
+
+Anticipo de IVA | Para contribuyentes: 10 % (tasa básica) o 3 % (mínima) sobre el valor en aduana más el arancel (Decreto 220/998, art. 115) | Cómo se computa en tu liquidación, con tu contador | 
+
+Descripción general. No incluye regímenes especiales, IMESI ni el anticipo de IRAE (está en la guía de costos). Fuentes oficiales al pie.
+
+«El IVA no es costo» vale solo para contribuyentes de IVA. Si tu actividad no está gravada con IVA o no sos contribuyente, el IVA de importación sí forma parte de lo que te cuesta la máquina. El anticipo de IRAE, la base de cálculo (valor CIF) y el orden de los tributos están en la guía de costos y en la de precio CIF. El código y su arancel, en la guía de arancel y NCM.
+
+## Cuándo se puede exonerar: el proyecto de inversión
+
+La exoneración de una máquina no se da por el solo hecho de ser maquinaria: depende de un régimen que la ampare y de un trámite previo. El régimen general es el de promoción de inversiones de la Ley 16.906, actualizado por el Decreto 329/025, que rige desde el 1 de febrero de 2026 (art. 23).
+
+- Quién: empresas cuyo proyecto de inversión fue declarado promovido por el Poder Ejecutivo, previo asesoramiento de la Comisión de Aplicación (COMAP).
+
+- Qué bienes: bienes muebles del activo fijo destinados directamente a la actividad del proyecto, con un valor unitario mínimo de 1.500 UI. Quedan excluidos, entre otros, los vehículos no utilitarios (art. 3).
+
+- Qué se exonera: las tasas y tributos de importación, incluido el IVA, de los bienes de activo fijo que no tengan exoneración por otro beneficio, siempre que la Dirección Nacional de Industrias del MIEM los declare no competitivos con la industria nacional (art. 18).
+
+El decreto no trae un calendario para la máquina, pero el orden prudente es: presentar el proyecto, obtener la declaración de bien no competitivo y recién entonces despachar con la exoneración. Si la máquina ya se despachó, confirmá con quien gestiona el proyecto si todavía podés usar el beneficio antes de dar nada por perdido o por ganado. El decreto también tiene reglas de transición para los proyectos presentados con el régimen anterior (art. 23); si es tu caso, confirmalo con quien lo gestiona.
+
+Otros regímenes. Hay beneficios por sector. Por ejemplo, el MIEM informa que el Decreto 124/019 exonera los tributos de importación de partes y materiales para fabricar maquinaria agrícola, con condiciones y un registro de empresas productoras. Es un régimen para fabricantes, no para quien compra una máquina para uso propio. La misma página del MIEM menciona que la maquinaria agrícola terminada ya tenía exoneración: si comprás maquinaria agrícola, pedile al despachante que te confirme qué régimen aplica a tu equipo. Fuera de esos casos, no encontramos una norma que exonere en general toda la maquinaria importada: no des por hecho el beneficio hasta tenerlo por escrito.
+
+## Maquinaria nueva y maquinaria usada
+
+El Decreto 266/013 prorrogó por 180 días, desde agosto de 2013, la prohibición de la Ley 17.887 de importar ciertos bienes muebles usados y da la lista: automóviles y vehículos comerciales livianos, ómnibus, camiones, camiones tractores, chasis, remolques y semirremolques, carrocerías y cabinas, y motocicletas (estas, con sus partes y accesorios usados). Prevé excepciones con un certificado de necesidad de los ministerios de Industria y de Transporte.
+
+La lista que leímos no menciona maquinaria industrial o agrícola en general, pero eso no alcanza para decir que cualquier máquina usada entra sin trámite: no encontramos una guía oficial que lo confirme, y como la prohibición se fijó por plazos, cuál es la norma vigente hoy hay que comprobarlo en cada caso. Antes de pagar un equipo usado:
+
+- Pedile al despachante que confirme por escrito el código NCM y si el bien usado tiene alguna restricción o requisito de habilitación.
+
+- Si el equipo es un vehículo o un chasis (una grúa sobre camión, por ejemplo), tratalo como vehículo: la prohibición puede alcanzarlo.
+
+- Pedí al vendedor factura con modelo, año y número de serie, y fotos; el despachante las va a necesitar para declarar y para una eventual verificación.
+
+## Cuando no hace falta nacionalizar: admisión temporaria y reparación
+
+Si la máquina entra solo por un tiempo (para repararla, mantenerla o actualizarla) o si importás insumos para producir y reexportar, el régimen que corresponde es la admisión temporaria, que no es una importación definitiva. El Decreto 505/009 incluye expresamente las máquinas y equipos que ingresan para reparación, mantenimiento o actualización.
+
+El caso contrario también existe: una máquina uruguaya enviada al exterior a reparar. En una consulta tributaria de 2020, la DGI concluyó que, para ese caso planteado, el reingreso de una máquina reparada estaba exonerado de IVA de importación y de anticipo de IVA, porque la reparación no cambiaba su naturaleza y la máquina conservaba la exoneración que tenía cuando se compró. Es una respuesta a un caso concreto, no una regla general: si te toca, pedí al despachante que revise si aplica a tu equipo.
+
+## Qué pedirle al proveedor y al despachante antes de pagar
+
+- Datos de la máquina en la factura: modelo, número de serie, año de fabricación, potencia y descripción técnica. Sirven para fijar el código NCM.
+
+- Condición de venta (Incoterm): define quién paga el flete, el seguro y el riesgo hasta dónde. Mirá la guía de Incoterms.
+
+- Si viene desarmada o en varios envíos: consultá cómo se declara cada parte; no la partas por tu cuenta para pagar menos.
+
+- Certificado de origen, si querés la preferencia del Mercosur o Chile.
+
+- Habilitaciones: algunos equipos (eléctricos, por ejemplo) necesitan registros por la VUCE. Mirá habilitaciones por producto.
+
+- Cómo pagarle al proveedor: en operaciones grandes conviene una forma de pago que proteja a las dos partes. Está en la guía de pagos al exterior.
+
+- Un despachante que conozca bienes de capital y que revise el caso antes de la compra, no después del embarque.
+
+## Preguntas frecuentes
+
+**¿Qué impuestos paga la maquinaria que se importa a Uruguay?**
+Arancel según el código NCM, tasa consular (5 %, o 3 % con origen Mercosur o Chile y certificado de origen) e IVA del 22 %. Los contribuyentes de IVA además pagan un anticipo de IVA. Salvo que tengas una exoneración, la máquina paga como cualquier otra importación.
+
+**¿La maquinaria está exonerada de arancel o de IVA?**
+No de forma general. Hay exoneraciones por régimen: por ejemplo, un proyecto de inversión declarado promovido (Decreto 329/025) puede exonerar los tributos de importación de bienes de activo fijo que la Dirección Nacional de Industrias declare no competitivos con la industria nacional. Hay que tramitarlo antes de importar.
+
+**¿Se puede importar maquinaria usada a Uruguay?**
+Hay una prohibición de importar ciertos bienes usados, básicamente vehículos (Decreto 266/013, que hay que comprobar si sigue vigente en su forma actual). No encontramos una prohibición general para la maquinaria usada, pero tampoco una confirmación oficial: pedile al despachante que lo verifique por escrito antes de pagar.
+
+**¿Qué es la admisión temporaria y cuándo conviene?**
+Es un régimen por el cual la mercadería entra exenta de tributos para ser reexportada, transformada o reparada, no para consumirse en el país. Conviene para insumos que se reexportan y para equipos que entran a repararse. Mirá la guía de admisión temporaria.
+
+**¿El IVA de importar una máquina es un costo?**
+Solo si no sos contribuyente de IVA o tu actividad no está gravada. Si sos contribuyente, el IVA no queda como costo; cómo se computa en tu caso lo define tu contador.
+
+**¿Necesito un despachante para importar una máquina?**
+Sí para una importación comercial, como en cualquier otra. En maquinaria conviene consultarlo antes de comprar para confirmar el código NCM y los requisitos.
+
+## Fuentes
+
+- Decreto 329/025, régimen general de promoción de inversiones, Ley 16.906 (IMPO): https://www.impo.com.uy/bases/decretos/329-2025
+- Decreto 266/013, prohibición de importar bienes muebles usados (IMPO): https://www.impo.com.uy/bases/decretos/266-2013
+- MIEM, régimen de beneficios para fabricantes de maquinaria agrícola (Decreto 124/019): https://www.gub.uy/ministerio-industria-energia-mineria/beneficios-fabricantes-maquinaria-agricola
+- DGI, Consulta 6313/2020: reingreso de maquinaria enviada a reparar (IMPO): https://www.impo.com.uy/bases/consultas-tributarias/6313-2020
+- MEF, Nomenclatura y aranceles de Uruguay: https://www.gub.uy/ministerio-economia-finanzas/nomenclatura-aranceles-uruguay-0
+- Ley 19.535, art. 265, tasa consular (IMPO): https://www.impo.com.uy/bases/leyes/19535-2017/265
+- Texto Ordenado DGI 2023, Título 10, IVA (IMPO): https://www.impo.com.uy/bases/todgi-2023/10-2024
+- Decreto 220/998, art. 115, anticipo de IVA (IMPO): https://www.impo.com.uy/bases/decretos/220-1998/115
+- Decreto 505/009, admisión temporaria (IMPO): https://www.impo.com.uy/bases/decretos/505-2009
+
+---
+
+# Admisión temporaria en Uruguay: cómo traer insumos y equipos sin pagar tributos para reexportarlos
+
+URL: https://www.grupomeridianuy.com/guias/admision-temporaria-en-uruguay/
+Actualizada: 2026-10-28
+
+Respuesta corta: La admisión temporaria permite ingresar mercadería extranjera sin pagar tributos, para reexpedirla después de transformarla, elaborarla, repararla o agregarle valor con mano de obra, sin consumirla en el país. El Decreto 505/009 fija un plazo de 18 meses por operación desde la autorización del LATU, con una prórroga posible de hasta 18 meses más. Si no se cancela a tiempo, la Aduana puede cobrar los tributos con actualizaciones, multas y recargos; vender lo ingresado en el mercado interno sin importarlo antes tiene una multa del 100 % del valor CIF.
+
+## Qué es y para quién sirve
+
+Según el artículo 1 del Decreto 505/009, la admisión temporaria es el ingreso de mercadería extranjera exento de tributos, con el fin de reexpedirla después de una transformación, elaboración, reparación o agregado de valor con ocupación efectiva de mano de obra. También cubre las máquinas y equipos que ingresan para reparación, mantenimiento o actualización.
+
+El MEF la describe como un régimen para empresas industriales. Sirve, por ejemplo, para una fábrica que importa materia prima, envases o partes para producir algo que después exporta. No sirve para traer mercadería y venderla en Uruguay: eso es importación definitiva y paga los tributos (ver costos de importar).
+
+## Qué mercadería admite
+
+El artículo 2 del decreto enumera siete categorías:
+
+- Materias primas e insumos intermedios.
+
+- Partes, piezas y equipos.
+
+- Envases y material de empaque.
+
+- Matrices, moldes y modelos.
+
+- Productos de consumo en proceso o en control de calidad (no incluye repuestos).
+
+- Elementos para software y tecnologías de la información.
+
+- Máquinas y equipos que ingresan para reparación o actualización.
+
+El artículo 40 deja afuera los metales y piedras preciosas, las materias primas para explosivos y todo lo que tenga una reglamentación especial de importación y control. La mercadería debe estar identificada y separada de otra (art. 6).
+
+## Quién autoriza y cómo se tramita
+
+Las fuentes oficiales que leímos describen el trámite desde distintos lados, y conviene tenerlos presentes:
+
+- El decreto (arts. 3 y 42) dice que cada operación se presenta ante el LATU, que verifica los requisitos, emite la autorización y la comunica a la Aduana; sin esa autorización la Aduana no tramita la solicitud. El LATU también inspecciona stocks y coeficientes de consumo.
+
+- El trámite del MEF (régimen general) se hace solo en línea por la VUCE, sin costo, con la empresa o su despachante registrados. Pide el vínculo contractual con el proveedor, una certificación notarial de la sociedad y de la representación (de no más de 60 días), la solicitud firmada y la factura proforma. Al aprobarse, el sistema numera la habilitación y la envía a la Aduana.
+
+- Para bienes de un proyecto de inversión hay un trámite aparte en la VUCE: pide el RUT, la factura o proforma, la declaración jurada de admisión temporaria, la constancia de ingreso del proyecto en COMAP y la constancia de que el bien es «no competitivo» de la Dirección Nacional de Industrias. La Asesoría de Política Comercial del MEF entrega un número de habilitación que se incorpora al DUA.
+
+Cuál te corresponde depende de tu actividad y de lo que traigas: no lo des por supuesto y consultalo con el despachante antes de comprar. Una empresa que no tiene planta propia debe además tener un contrato con una planta habilitada y garantizar ante la Aduana los tributos suspendidos (art. 22). Las empresas inhabilitadas o suspendidas por DGI, BPS o Aduana no pueden tramitar (art. 39).
+
+## Plazos de la norma y cómo se cierra cada operación
+
+Estos son los plazos que fija el decreto para cumplir la operación; no son plazos de tramitación y no los prometemos.
+
+Tema | Qué dice el Decreto 505/009 | 
+
+Plazo de cada operación | 18 meses desde la autorización del LATU (art. 4) | 
+
+Prórroga | Hasta 18 meses más, sin nueva prórroga después. Se pide al menos 90 días antes del vencimiento; si el Poder Ejecutivo no resuelve en 60 días, se considera denegada (art. 4) | 
+
+Importación definitiva | Dentro de los primeros 12 meses del plazo de 18 (art. 8). En los últimos 6 meses, solo con autorización del MIEM, por vía excepcional y con verificación física (art. 9) | 
+
+Reexportación en el mismo estado | Dentro del primer plazo de 18 meses, con autorización del MIEM y verificación física. Los envases y las matrices, moldes y modelos pueden reexportarse sin esa autorización (art. 10) | 
+
+Resumen del Decreto 505/009 (texto de IMPO consultado el 28-10-2026). Confirmá con el despachante el texto vigente y las modificaciones.
+
+El artículo 7 enumera cómo se cancela una operación: exportando (descarga en la exportación del producto elaborado), importando definitivamente, reexportando en el mismo estado, por faltante por fuerza mayor o por destrucción o donación por deterioro. Para cada cancelación, la empresa presenta el detalle ante el LATU, que informa a la Aduana. Los subproductos y residuos tienen un tratamiento propio (art. 44).
+
+## Qué pasa si no se cumple
+
+- Si no se cancela en plazo: el LATU hace una inspección obligatoria y avisa a la Aduana (art. 12). Con esa base, la Aduana puede exigir los tributos con anticipos, actualizaciones, multas y recargos desde la fecha del despacho original (art. 13).
+
+- Excedentes o faltantes: los que se justifican técnicamente se regularizan sin multas dentro de los 30 días; los que no, se pagan con actualización, multas y recargos. Si no se regularizan, la empresa queda suspendida (art. 14).
+
+- Vender en el mercado interno lo ingresado sin importarlo antes: multa del 100 % del valor CIF del faltante de stock, más los tributos, actualizaciones, multas y recargos; el MIEM puede además suspender hasta un año el uso de los regímenes de promoción industrial (art. 16). El artículo 17 la vincula con una infracción aduanera con posible denuncia penal.
+
+- Responsables: los administradores y directores son personal y solidariamente responsables (art. 37).
+
+Por eso la regla práctica es llevar el control de ingresos y salidas desde el primer día. La caída de un solo lote puede transformarse en una deuda con multa sobre toda la operación.
+
+## Admisión temporaria, importación definitiva o zona franca
+
+Régimen | Para qué sirve | Tributos | 
+
+Importación definitiva | Mercadería que se vende o se consume en Uruguay | Paga arancel, tasa consular, IVA y anticipos | 
+
+Admisión temporaria | Insumos y equipos que se reexportan, transforman o reparan, con autorización y control de stock | Exenta de tributos durante la operación; si se nacionaliza, paga (arts. 8 y 9) | 
+
+Zona franca o depósito aduanero | Almacenar o producir fuera del territorio aduanero con otras reglas | Según el régimen. Mirá la guía de zona franca | 
+
+Comparación de uso general. Para decidir en tu caso, pedí un análisis al despachante o al contador.
+
+Si el equipo que entra es una máquina que vas a quedarte, no es admisión temporaria: es una importación definitiva, con o sin exoneración. Está en la guía de maquinaria y bienes de capital.
+
+## Lo que no pudimos confirmar
+
+No leímos la Ley 18.184 ni las circulares de la Aduana sobre este régimen, y no confirmamos si hay modificaciones posteriores al Decreto 505/009 que cambien plazos o requisitos. Tampoco encontramos en las páginas del MEF un plazo de resolución del trámite: no damos ninguno. Si ves una norma más nueva, avisanos por el asesor.
+
+## Preguntas frecuentes
+
+**¿Qué es la admisión temporaria en Uruguay?**
+Es un régimen aduanero por el cual se ingresa mercadería extranjera sin pagar tributos, con el fin de reexpedirla después de transformarla, elaborarla, repararla o agregarle valor con mano de obra (Decreto 505/009, art. 1). No sirve para vender en el mercado interno sin importar antes.
+
+**¿Quién puede usar la admisión temporaria?**
+El MEF la describe como un régimen para empresas industriales, directamente o a través de empresas comerciales. Hace falta autorización previa y no pueden usarla las empresas inhabilitadas o suspendidas por DGI, BPS o Aduana.
+
+**¿Cuánto dura una operación de admisión temporaria?**
+El decreto fija 18 meses desde la autorización del LATU, con una prórroga de hasta 18 meses más que se pide con anticipación. Son los plazos de la norma, no de la tramitación.
+
+**¿Qué pasa si no reexporto la mercadería?**
+Si la operación no se cancela en plazo, el LATU inspecciona y la Aduana puede cobrar los tributos con actualizaciones, multas y recargos. Si se vende en el mercado interno sin importación definitiva previa, la multa es del 100 % del valor CIF del faltante (arts. 12, 13 y 16).
+
+**¿Se paga algo por tramitar la admisión temporaria?**
+Los trámites del MEF en la VUCE (régimen general y proyecto de inversión) figuran sin costo en las páginas oficiales. Los honorarios del despachante y los gastos de terceros son aparte y se acuerdan con cada uno.
+
+**¿La admisión temporaria sirve para importar una máquina?**
+Solo si la máquina entra por un tiempo, para repararla, mantenerla o actualizarla. Para quedarte con ella es importación definitiva, y ahí puede haber exoneración por proyecto de inversión.
+
+## Fuentes
+
+- Decreto 505/009, admisión temporaria (IMPO): https://www.impo.com.uy/bases/decretos/505-2009
+- MEF, trámite de admisión temporaria en régimen general: https://www.gub.uy/tramites/admision-temporaria-regimen-general
+- MEF, trámite de admisión temporaria bajo proyecto de inversión: https://www.gub.uy/tramites/admision-temporaria-bajo-proyecto-inversion
+- MEF, admisión temporaria: https://www.gub.uy/ministerio-economia-finanzas/politicas-y-gestion/admision-temporaria
+
+---
+
+# El despacho paso a paso en Uruguay: el DUA, los canales verde, naranja y rojo, y qué hacer si la aduana observa
+
+URL: https://www.grupomeridianuy.com/guias/despacho-aduanero-dua-canales-y-observaciones-en-uruguay/
+Actualizada: 2026-10-28
+
+Respuesta corta: El despachante numera el DUA en el sistema LUCIA, se pagan los tributos y se pide el canal de revisión. En verde, la mercadería se libera automáticamente; en naranja un funcionario de Aduanas revisa los documentos y en rojo revisa los documentos y la mercadería, antes de liberarla. Si la Aduana observa, lo hace por el sistema: pide documentos, propone una reliquidación de tributos o exige una garantía por la diferencia. El importador puede aceptar o rechazar, y cada caso lo resuelve el despachante o un abogado.
+
+## Qué es el DUA y quién lo presenta
+
+El DUA (Documento Único Aduanero) es la declaración con la que se despacha la mercadería: qué es, qué valor tiene, de dónde viene y qué tributos le corresponden. En una importación comercial lo presenta el despachante de aduana (en el procedimiento de la Aduana, el «declarante») a través del sistema informático LUCIA. Quién es y qué hace está en la guía del despachante.
+
+El importador no llena el DUA, pero responde por lo que se declara. Por eso conviene entender el recorrido y revisar con el despachante la clasificación, el valor y el origen antes de que se numere.
+
+## El recorrido del DUA, en orden
+
+El procedimiento oficial de la Dirección Nacional de Aduanas (Orden del Día 29/2012 y su anexo) describe estas etapas:
+
+- Numeración del DUA. El despachante lo envía con los datos de la operación y los documentos de respaldo.
+
+- Liquidación y pago. Si hay tributos y tasas, el sistema genera la liquidación y el declarante cumple con el pago.
+
+- Cambios. Antes de pedir el canal se pueden corregir datos con mensajes complementarios.
+
+- Solicitud de canal. Cuando la mercadería está a disposición y con la documentación requerida en ese momento, se pide el canal de revisión.
+
+- Control a priori, en forma selectiva. En algunos casos un funcionario revisa los documentos antes de asignar el canal.
+
+- Asignación de canal y revisión según el resultado.
+
+- Liberación y disponibilidad de la mercadería, y archivo de la documentación del DUA.
+
+- Control posterior. La Aduana puede revisar la operación después de liberada.
+
+El procedimiento no da tiempos para ninguna de estas etapas, y nosotros tampoco: dependen de la carga, del control y de los documentos.
+
+## Los canales: verde, naranja y rojo
+
+El canal lo asigna el sistema según criterios de riesgo de la Aduana. No lo elige el importador ni el despachante.
+
+Canal | Qué pasa según el procedimiento oficial | Qué significa para vos | 
+
+Verde | El sistema da el cumplido automáticamente, imprime el DUA y la mercadería queda liberada | No hay revisión de la mercadería en ese momento (la Aduana puede controlar después) | 
+
+Naranja | Un funcionario de Aduanas (el «vista») hace un análisis documental; terminado, se libera la mercadería | Revisión de los documentos, no de la mercadería: que estén completos y coherentes | 
+
+Rojo | Análisis documental y revisión física: el declarante entrega el sobre con la documentación al vista, que verifica también la mercadería; al ingresar el cumplido se libera | Verificación completa de documentos y mercadería | 
+
+Resumen del procedimiento DUA Digital - Importación (Orden del Día 29/2012). El detalle de qué revisa cada canal puede haber cambiado: confirmalo con el despachante.
+
+Que te toque naranja o rojo no significa que hayas hecho algo mal: el sistema asigna el canal por riesgo, y una verificación sin diferencias termina sin consecuencias.
+
+## Si la aduana observa: los casos más comunes
+
+Las observaciones llegan por el sistema LUCIA y las responde el despachante, con los datos y documentos que vos le aportes. Según el procedimiento oficial, estas son las situaciones típicas:
+
+- Falta documentación. El funcionario ingresa una observación por documentación pendiente. El despachante la sube al DUA y la revisión continúa.
+
+- Diferencia de tributos (reliquidación). Si el análisis documental o físico lleva a modificar el DUA y cambia el monto de los tributos, el funcionario propone una reliquidación y lo notifica al declarante. El declarante puede aceptar o rechazar la propuesta, y puede agregar sus comentarios en la respuesta. Si la rechaza y el funcionario no está de acuerdo, puede iniciar un expediente, e incluso una intervención judicial.
+
+- La Aduana discrepa con la clasificación, el origen o el valor. Si querés retirar la mercadería mientras se resuelve, la Aduana puede pedir una garantía por los tributos que se generarían si el caso queda firme. Al constituirla, la observación se levanta y el control posterior sigue en la oficina de Fiscalización. El procedimiento remite al Decreto 67/001 para la garantía.
+
+Las diferencias pueden venir de tres fuentes: el código NCM (cambia el arancel), el valor (cambia la base de todos los tributos; ver precio CIF) y el origen (cambia la tasa consular y el arancel preferencial; ver tasa consular).
+
+## Qué hacer si te observan
+
+- Pedile al despachante el texto exacto de la observación y la propuesta de reliquidación, si la hay. Sin eso no se puede decidir.
+
+- Reuní los documentos que respaldan lo declarado: factura, pago, contrato o pedido, ficha técnica, certificado de origen.
+
+- Preguntá cuánto cuesta cada camino por escrito: aceptar y pagar la diferencia, o rechazar y garantizar. No son lo mismo y cada caso es distinto.
+
+- Si se abre un expediente o hay una intervención judicial, sumá un abogado especializado en materia aduanera. Es una recomendación nuestra, no un requisito de la norma.
+
+- No dejes la mercadería sin decidir: mientras está en puerto o en depósito se acumulan gastos de almacenaje, que cobra el depósito y no la Aduana.
+
+No damos plazos de respuesta ni de recurso porque no los confirmamos en la norma: el despachante o el abogado deben indicártelos para tu caso.
+
+## Cómo bajar el riesgo de una observación
+
+- Confirmá el código NCM antes de comprar y pedí al proveedor una descripción técnica coherente con ese código. Mirá la guía de arancel y NCM.
+
+- Que la factura diga lo mismo que el resto: producto, cantidad, valor, condición de venta y datos del vendedor.
+
+- Declará todo lo que integra el valor: flete, seguro y gastos hasta el ingreso, según la condición de venta (Incoterms).
+
+- Origen: si pedís preferencia, el certificado de origen tiene que coincidir con la factura y la mercadería.
+
+- Habilitaciones al día antes del embarque, no después del arribo (habilitaciones).
+
+## Una aclaración sobre multas: la RG 15/2026 no es una regla general
+
+La Resolución General 15/2026 de la Aduana regula cómo se aplica la multa del artículo 632 de la Ley 20.446: el doble de los tributos cuando se declara en forma inexacta el valor o la procedencia, pero solo en el régimen de envíos postales internacionales. No se aplica así a una importación comercial por despacho común. Para las consecuencias de una declaración inexacta en una importación comercial no encontramos un monto que podamos citar: depende de la infracción y la determina la Aduana en el procedimiento. Consultalo con el despachante o el abogado.
+
+## Preguntas frecuentes
+
+**¿Qué es el DUA?**
+Es el Documento Único Aduanero: la declaración con la que se despacha una mercadería. En una importación comercial lo presenta el despachante de aduana en el sistema LUCIA, con los datos de la operación y los documentos de respaldo.
+
+**¿Qué significan los canales verde, naranja y rojo?**
+Son los niveles de revisión. En verde la mercadería se libera automáticamente; en naranja un funcionario de Aduanas revisa los documentos antes de liberarla; en rojo revisa los documentos y además la mercadería. El canal lo asigna el sistema según criterios de riesgo.
+
+**¿Puedo elegir el canal?**
+No. Lo asigna el sistema de la Aduana al pedir la revisión, según criterios de riesgo. Lo que sí podés hacer es reducir el riesgo de diferencias con una buena clasificación, una factura coherente y los documentos en orden.
+
+**¿Qué hago si la aduana observa mi importación?**
+Pedile al despachante el texto de la observación y la propuesta de reliquidación, si hay. El declarante puede aceptar o rechazar. Si la Aduana discrepa en clasificación, origen o valor, puede pedir una garantía para liberar la mercadería mientras se resuelve. Cada caso lo resuelven el despachante o un abogado.
+
+**¿Puedo retirar la mercadería si hay una discusión sobre el valor?**
+Según el procedimiento de la Aduana, en los casos de estudio de valor o de discrepancia de clasificación u origen se solicita al importador que garantice los tributos que podrían generarse. Con la garantía, la observación se levanta y el control sigue después.
+
+**¿La multa del doble de los tributos se aplica a todas las importaciones?**
+No. Esa multa (art. 632 de la Ley 20.446, reglamentada por la RG 15/2026) es del régimen de envíos postales internacionales, no para una importación comercial por despacho común. Para el resto de los casos no encontramos un monto que podamos citar.
+
+## Fuentes
+
+- Dirección Nacional de Aduanas, Procedimiento DUA Digital - Importación (Orden del Día 29/2012, anexo): https://www.aduanas.gub.uy/innovaportal/file/9601/1/anexo_od_29_2012procedimiento_dua_digital_-_importacion.pdf
+- Dirección Nacional de Aduanas, Resolución General 15/2026 (sanciones en envíos postales internacionales): https://www.aduanas.gub.uy/innovaportal/file/28483/1/rg-15-2026.pdf
+- Código Aduanero, Ley 19.276 (IMPO): https://www.impo.com.uy/bases/codigo-aduanero/19276-2014
+
+---
+
+# Cómo pagarle al proveedor del exterior desde Uruguay: transferencia, carta de crédito y qué verificar antes
+
+URL: https://www.grupomeridianuy.com/guias/como-pagarle-al-proveedor-del-exterior-desde-uruguay/
+Actualizada: 2026-10-28
+
+Respuesta corta: Hay tres caminos: transferencia (anticipada o con saldo), cobranza documentaria y carta de crédito o crédito documentario. La transferencia es la más simple, pero el dinero sale antes de ver la mercadería. La carta de crédito condiciona el pago a que el vendedor presente los documentos pedidos, y en el BROU se solicita con una solicitud y un instructivo propios. Antes de la primera transferencia, verificá al proveedor, la muestra, el Incoterm y el código NCM: el checklist gratuito de Grupo Meridian reúne los 12 puntos.
+
+## Las formas de pago, de menor a mayor protección
+
+Estas son modalidades de uso corriente en comercio internacional, no una clasificación de una ley uruguaya. Lo que cambia entre una y otra es quién asume el riesgo y cuándo sale el dinero.
+
+Forma | Cómo funciona | Riesgo principal | 
+
+Transferencia anticipada | Pagás todo o una parte antes del embarque, por transferencia bancaria | Para el comprador: pagar y que la mercadería no llegue o no sea la pactada | 
+
+Anticipo y saldo contra documentos | Un porcentaje al pedido y el resto cuando el proveedor envía los documentos de embarque | Se reparte el riesgo, pero el anticipo ya salió | 
+
+Cobranza documentaria | El proveedor envía los documentos a través de su banco y vos los retirás en el tuyo al pagar o aceptar. El BROU la ofrece como «cobranza de importación» | No hay promesa del banco de pagar: vos decidís si retirás o no | 
+
+Carta de crédito (crédito documentario) | El banco se compromete a pagar si el vendedor presenta los documentos pedidos, en orden y a tiempo. El BROU la ofrece «a la vista» o «a plazo» | El banco revisa documentos, no la mercadería: si pedís mal los documentos, te protegés mal | 
+
+Descripción general. Los detalles de cada producto los define el banco; consultá con el tuyo.
+
+Cuál conviene depende del monto, de cuánto conocés al proveedor y de lo que acepte el vendedor. Los proveedores nuevos o los pedidos grandes justifican más protección; un proveedor de años y un pedido chico, menos.
+
+## Pagar por transferencia: qué datos pide el banco
+
+Tomamos como ejemplo lo que informa el BROU para enviar una transferencia al exterior desde eBROU Empresas. Otros bancos tienen sus propios formularios y requisitos.
+
+- Destino: país y ciudad.
+
+- Beneficiario: nombre completo, cuenta en el banco pagador, domicilio en el país de destino y el detalle del pago o propósito del giro (obligatorio).
+
+- Banco pagador: el código BIC o SWIFT; si no lo tenés, nombre del banco, país y ciudad.
+
+- Documentación: para giros mayores a USD 10.000, el BROU pide además la factura o un comprobante del motivo del giro.
+
+- Comisiones: además de la del banco que envía, pueden cobrar los bancos intermediarios o corresponsales, y eso puede hacer que al proveedor le llegue menos de lo que mandaste. Preguntá antes a tu banco cómo se reparten esos gastos y acordá con el proveedor quién los paga. No ponemos cifras: son de cada banco y cambian.
+
+Pedí la factura proforma y el dato de la cuenta por un canal que puedas verificar (el contrato, la web oficial o una llamada), y comprobá que el nombre del titular de la cuenta coincida con el del vendedor de la factura. Si un correo te avisa de un cambio de cuenta de última hora, verificalo por otra vía antes de pagar. Es una recomendación nuestra, no una norma.
+
+## La carta de crédito: cómo se pide y qué decide cada campo
+
+El BROU publica un instructivo para la apertura de crédito documentario de importación (formulario «Solicitud de Apertura LCI»). De él sacamos los puntos que más pesan:
+
+- Quién la presenta: la solicitud va firmada por las personas autorizadas ante el BROU y la autoriza la dependencia que atiende habitualmente a la empresa. Solo se aceptan débitos en cuentas a nombre del ordenante (el comprador).
+
+- Cómo se respalda: con fondos propios (se firma además un contrato de prenda sobre un depósito a la vista) o dentro de una línea de crédito (con un documento de adeudo firmado con el ejecutivo de cuenta).
+
+- Seguro: en las operaciones dentro de una línea de crédito, si la condición de venta obliga al comprador a contratar el seguro (por ejemplo EXW, FOB o CFR), hay que presentar una póliza o certificado que cubra el 110 % del valor de la factura, en la misma moneda del crédito, con cobertura de al menos «todo riesgo» desde el embarque hasta el destino, y con los derechos cedidos al BROU.
+
+- Forma de pago: a la vista (contra documentos en orden) o a plazo (por ejemplo, «a los 60 días de la fecha de embarque»).
+
+- Adelanto: se puede indicar un porcentaje a adelantar al beneficiario antes de presentar documentos.
+
+- Documentos: el campo 46A define cuáles se exigen (factura, documento de embarque, seguro, lista de empaque, etc.). El BROU sugiere pedir la lista de empaque porque la solicita el seguro ante cualquier incidente. Si la operación es financiada, el documento de embarque y la póliza deben estar a la orden del BROU.
+
+- Gastos: se indica a cargo de quién va cada gasto bancario. Los gastos de cada banco los fija cada uno: pedile el detalle al tuyo, no lo damos acá.
+
+La carta de crédito protege si los documentos que pedís prueban lo que te importa: fecha de embarque, cantidad, descripción, seguro. Un documento de más que el vendedor no pueda conseguir puede trabar el pago; uno de menos te deja sin protección. Armá la lista con el despachante.
+
+## El Incoterm cambia quién asume el riesgo
+
+La condición de venta (Incoterm) define quién paga el flete y el seguro y hasta dónde llega la responsabilidad del vendedor. Con la carta de crédito además decide quién debe contratar el seguro, como vimos arriba. El detalle está en la guía de Incoterms y en el flete marítimo, en la de LCL y FCL. El pago anticipado no cambia esas reglas: si el riesgo ya es tuyo desde el embarque, necesitás seguro propio.
+
+## Antes de pagar: lo que conviene tener resuelto
+
+- Quién es el proveedor: datos de la empresa, web, referencias, otros compradores. Desconfiá de lo que solo existe por mensajes.
+
+- Muestra: aprobada por escrito antes del pedido grande.
+
+- Etiqueta en español y requisitos del producto, si el producto lo exige (habilitaciones).
+
+- Código NCM confirmado con el despachante, para calcular los tributos (arancel y NCM).
+
+- Incoterm y quién contrata el flete y el seguro.
+
+- Forma de pago acordada por escrito: porcentajes, momento y documentos.
+
+- Certificado de origen, si querés pagar menos tasa consular o arancel (tasa consular).
+
+- Costo total calculado con la calculadora, para no pagar un pedido que después no cierra.
+
+Checklist gratis. Reunimos estos puntos en el PDF «Antes de pagarle al proveedor»: 12 puntos para repasarlos antes de la primera transferencia.
+
+## Lo que no incluimos
+
+No damos comisiones de bancos ni tarifas de terceros: son de cada institución y cambian. Tampoco leímos la normativa del Banco Central del Uruguay sobre operaciones con el exterior ni los requisitos de otros bancos distintos del BROU, y no confirmamos horarios de corte ni tiempos de acreditación. Para esos puntos, consultá con tu banco.
+
+## Preguntas frecuentes
+
+**¿Cómo le pago a un proveedor del exterior desde Uruguay?**
+Los caminos habituales son la transferencia bancaria (anticipada o con saldo), la cobranza documentaria y la carta de crédito. En el BROU, la transferencia se envía desde eBROU Empresas con datos del beneficiario, del banco pagador y el propósito del giro.
+
+**¿Qué datos necesita el banco para una transferencia al exterior?**
+En el BROU: país y ciudad de destino, nombre del beneficiario, cuenta en el banco pagador, domicilio, detalle del pago y el código BIC o SWIFT del banco. Para giros mayores a USD 10.000 pide además la factura o un comprobante del motivo del giro.
+
+**¿Qué es una carta de crédito de importación?**
+Es un compromiso del banco de pagar al vendedor si presenta los documentos que el comprador pidió, en orden y a tiempo. En el BROU se llama crédito documentario de importación y se solicita con un formulario y un instructivo propios.
+
+**¿Una carta de crédito garantiza que la mercadería llega bien?**
+No. El banco revisa los documentos, no la mercadería. Protege si pedís los documentos que prueban lo que te importa (embarque, cantidad, descripción, seguro).
+
+**¿Quién paga las comisiones bancarias?**
+Se acuerda. En la carta de crédito el formulario indica a cargo de quién va cada gasto. En una transferencia también puede haber gastos de bancos intermediarios: preguntá a tu banco cómo se reparten y acordalo con el proveedor. No damos cifras porque son de cada banco.
+
+**¿Dónde está la checklist «Antes de pagarle al proveedor»?**
+En la página de la guía gratuita: reúne 12 puntos para repasar antes de la primera transferencia. Está enlazada en esta guía.
+
+## Fuentes
+
+- BROU, transferencias al exterior (eBROU Empresas): https://www.brou.com.uy/clientes-empresa/empresas/comercio-exterior/transferencias-al-exterior
+- BROU, instructivo para la apertura de crédito documentario de importación: https://www.brou.com.uy/documents/20182/56177/Solicitud_de_Apertura_LCI-Instructivo_2022.pdf/cbab2c9d-192f-428b-ba6c-63ce3f3925a7
+- BROU, servicios de comercio exterior para importaciones (crédito documentario y cobranzas): https://www.brou.com.uy/clientes-empresa/empresas/comisiones/importaciones
