@@ -63,13 +63,13 @@
       var err = document.getElementById('gm-lead-err'), ok = document.getElementById('gm-lead-ok'), btn = F.querySelector('button[type=submit]');
       if (v('web')) return; // honeypot
       var nom = v('nom'), emp = v('emp'), wa = v('wa');
-      if (!nom || !emp || !wa) { err.classList.add('show'); return; }
+      if (!nom || !wa) { err.classList.add('show'); return; }
       err.classList.remove('show');
-      var d = { tipo: 'comercio', nombre: nom, comercio: emp, telefono: wa, departamento: v('depto'),
+      var d = { tipo: 'comercio', nombre: nom, comercio: emp || '(sin empresa)', telefono: wa, departamento: v('depto'),
         tipo_comercio: 'Web .com · ' + v('need'), volumen: v('vol'),
         productos: 'Producto: ' + (v('prod') || '(sin describir)') + ' | Proveedor: ' + v('prov') + (v('mail') ? ' | Email: ' + v('mail') : ''),
         origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '') };
-      var msg = 'Hola, soy ' + nom + ' de ' + emp + '. Necesito: ' + v('need') + '. Producto: ' + (v('prod') || '(lo cuento por acá)') + '. Volumen: ' + v('vol') + '.';
+      var msg = 'Hola, soy ' + nom + (emp ? ' de ' + emp : '') + '. Necesito: ' + v('need') + '. Producto: ' + (v('prod') || '(lo cuento por acá)') + '. Volumen: ' + v('vol') + '.';
       btn.disabled = true; btn.style.opacity = '.5';
       GM.enviar(d, function () {
         ga('generate_lead', { lead_source: 'web_com', need: v('need'), volumen: v('vol') });

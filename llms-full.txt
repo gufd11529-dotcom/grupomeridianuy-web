@@ -5355,3 +5355,470 @@ En la página de la guía gratuita: reúne 12 puntos para repasar antes de la pr
 - BROU, transferencias al exterior (eBROU Empresas): https://www.brou.com.uy/clientes-empresa/empresas/comercio-exterior/transferencias-al-exterior
 - BROU, instructivo para la apertura de crédito documentario de importación: https://www.brou.com.uy/documents/20182/56177/Solicitud_de_Apertura_LCI-Instructivo_2022.pdf/cbab2c9d-192f-428b-ba6c-63ce3f3925a7
 - BROU, servicios de comercio exterior para importaciones (crédito documentario y cobranzas): https://www.brou.com.uy/clientes-empresa/empresas/comisiones/importaciones
+
+---
+
+# Certificado de origen y preferencias arancelarias en Uruguay: cuándo se paga menos y por qué se puede perder
+
+URL: https://www.grupomeridianuy.com/guias/certificado-de-origen-y-preferencias-arancelarias-uruguay/
+Actualizada: 2026-10-29
+
+Respuesta corta: El origen es dónde se produjo o se transformó la mercadería, no dónde la comprás ni desde dónde se embarca. Para que valga una preferencia de un acuerdo (por ejemplo, el Mercosur o Chile) hay que presentar la prueba de origen que ese acuerdo exige. Con ella, la tasa consular baja del 5 % al 3 % para origen Mercosur o Chile, y el arancel puede bajar según el acuerdo y el código NCM. Sin la prueba, o con una que la Aduana no acepta, se paga como origen general.
+
+## Qué es el origen y por qué importa
+
+El origen es el país donde se produjo la mercadería, o donde tuvo la transformación que las reglas del acuerdo consideran suficiente. No es el país del vendedor, ni el del puerto de embarque, ni el de la factura. Un producto fabricado en China que llega desde Brasil no es de origen brasileño por haber pasado por ahí.
+
+La Aduana define la prueba de origen como el documento, en papel o electrónico, que sirve como principio de prueba de que la mercadería cumple las reglas de origen aplicables (así lo dice la RG 06/2025 de la Dirección Nacional de Aduanas, citando las directrices de la Organización Mundial de Aduanas). Sin esa prueba, no hay preferencia.
+
+## Qué cambia cuando se acredita el origen
+
+Concepto | Con prueba de origen válida | Sin ella | 
+
+Tasa consular | 3 % del valor en aduana si el origen es Mercosur o Chile y se presenta el certificado de origen (Mercosur: Ley 19.535, art. 265; Chile: mismo trato por las notas del ACE 73, Ley 19.812) | 5 % con carácter general | 
+
+Arancel de importación | Puede haber una preferencia según el acuerdo y el código NCM. Esta guía no da cifras: cambian por producto y por acuerdo | Arancel general del código NCM | 
+
+IVA | No cambia por el origen en sí; sí cambia su base si baja el arancel (el IVA se calcula sobre el valor en aduana más el arancel) | Base más alta si el arancel es más alto | 
+
+Descripción general. México tiene trato propio por su tratado: confirmalo con el despachante. El detalle de la tasa está en la guía de tasa consular.
+
+Importante: el origen no es automático. Que el proveedor esté en el Mercosur no alcanza: la mercadería tiene que ser originaria y tenés que presentar la prueba. La tasa consular está explicada en la guía de tasa consular; cómo encontrar el arancel de tu producto, en la guía de arancel y NCM.
+
+## Certificado de origen y declaración de origen
+
+En el Mercosur (ACE 18) ya no existe solo el certificado. El Régimen de Origen del Mercosur (Decisión CMC 05/2023, incorporada por el 218.º Protocolo Adicional al ACE 18) habla de prueba de origen y admite dos modalidades, a elección del país exportador:
+
+- Certificado de origen: lo emite la autoridad competente del país exportador. Debe contener la declaración del productor o exportador y la certificación de una entidad habilitada, ambas firmadas.
+
+- Declaración de origen: la completa y firma el exportador o el productor. Brasil informó que sus exportadores pueden emitirla desde el 1 de marzo de 2025, y la Aduana uruguaya la acepta desde esa fecha.
+
+La Aduana advirtió en diciembre de 2025 que no sirve cualquier papel con el nombre «declaración de origen». En el Comunicado 69/2025 señaló que un documento con la firma del exportador y la de una entidad no habilitada no es ni certificado ni declaración, y no es prueba de origen idónea. Por eso conviene pedirle al proveedor, antes del embarque, el formato exacto que exige el acuerdo y mostrárselo al despachante.
+
+Otros acuerdos tienen su propia prueba. Según la tabla de la RG 06/2025, para Chile, México y Colombia la Aduana espera el certificado de origen. Para el Mercosur y algunos acuerdos con Brasil y Argentina (sector automotor y, con Brasil, productos de zonas francas), certificado o declaración.
+
+## El certificado de origen digital por VUCE
+
+Uruguay recibe certificados de origen digitales (COD) a través de la VUCE. Según el MEF, se usan con los socios del Mercosur desde 2018 y con Chile desde 2021; con México, la Aduana puso en marcha su procedimiento el 6 de junio de 2022. Con Colombia (ACE 72), la versión definitiva rige desde el 3 de marzo de 2025.
+
+- Quién lo gestiona: el importador o el despachante, antes de numerar el DUA. En el procedimiento con Colombia, la VUCE pide el número del certificado y el número de factura declarado en él.
+
+- Qué controla la VUCE: la estructura del documento, que no esté alterado y que la firma sea válida. Eso no significa que la Aduana lo acepte: sigue sujeto a los controles cuando se declara en el DUA.
+
+- Validez jurídica: la ALADI (Resolución 386) establece que la certificación digital tiene la misma validez que la de papel con firma autógrafa, siempre que el acuerdo lo reconozca.
+
+## Cuándo se presenta y cómo se declara
+
+- Antes del DUA: el importador o el despachante obtiene el certificado, en papel o digital, antes de que se numere el DUA (así lo prevé, por ejemplo, el procedimiento de la Aduana para Colombia).
+
+- En el DUA: el despachante declara el código del acuerdo y el código y número del documento de origen. Según la tabla de la Aduana, el momento de presentación es la solicitud de canal (ver la guía del despacho).
+
+- Si es una declaración de origen (no un certificado de autoridad): se adjunta la imagen del documento y se identifica con el texto «DORI», el número de factura y la fecha de la factura (AAMMDD).
+
+La validez en el tiempo del certificado y el plazo para presentarlo los fija la RG 18/2019 de la Aduana y cada acuerdo. No pudimos leer ese texto, así que no damos plazos: pedile al despachante que los verifique para tu caso antes del embarque.
+
+## Por qué se puede perder la preferencia
+
+- La prueba no es idónea: formato que el acuerdo no prevé, entidad no habilitada, firmas de más (caso del Comunicado 69/2025).
+
+- Certificado de prueba: en el ACE 72, los certificados digitales emitidos antes del 3 de marzo de 2025 no se admiten para la preferencia, porque eran de la etapa de pruebas.
+
+- Datos que no coinciden: si el certificado no concuerda con la factura o con la mercadería, la Aduana puede discrepar. Es una recomendación práctica nuestra: la norma que leímos no enumera todos los motivos.
+
+- Control posterior: aunque el trámite salga bien, la Aduana puede revisar después de la liberación.
+
+Si la Aduana discrepa, el caso sigue el recorrido de una observación: lo explica la guía de DUA, canales y observaciones.
+
+## Qué pedirle al proveedor antes de pagar
+
+- Que confirme por escrito el país de origen de fabricación de cada producto, no solo el de su depósito.
+
+- El formato de prueba de origen que corresponde (certificado o declaración) y quién lo firma o lo certifica.
+
+- Que factura, descripción y código del producto coincidan con lo que dirá la prueba.
+
+- Si el acuerdo permite certificado digital, que se emita por la vía que usa la VUCE.
+
+Para países concretos, mirá importar de Brasil e importar de Argentina. Los acuerdos nuevos, como el de Mercosur con la Unión Europea, traen sus propias reglas de origen: están resumidos en la guía de novedades 2026.
+
+## Lo que no pudimos confirmar
+
+No pudimos leer la RG 18/2019 de la Aduana, que fija la fecha de emisión, la vigencia y el momento de presentación del certificado, ni el reglamento de origen de cada acuerdo. Por eso no damos plazos ni requisitos de fondo (por ejemplo, cuánto contenido regional exige cada producto): son distintos por acuerdo y por producto. Tampoco encontramos en las páginas oficiales una lista completa de motivos por los que la Aduana rechaza una prueba de origen.
+
+## Preguntas frecuentes
+
+**¿Qué es el certificado de origen?**
+Es el documento que prueba en qué país se produjo la mercadería, para acceder a la preferencia de un acuerdo comercial. En el Mercosur, la prueba de origen puede ser un certificado de origen o una declaración de origen del exportador o productor.
+
+**¿Cuánto baja la tasa consular con certificado de origen?**
+De 5 % a 3 % del valor en aduana, solo si el origen es Mercosur o Chile y se presenta el certificado de origen (Ley 19.535, art. 265, y notas del ACE 73 para Chile). Para otros orígenes es el 5 %. México tiene trato propio por su tratado.
+
+**¿Si compro en Brasil o Argentina ya pago menos?**
+No necesariamente. Lo que cuenta es el origen de fabricación, no el lugar de compra ni de embarque. Un producto fabricado en otro país que pasa por Brasil paga como origen general.
+
+**¿Qué es una declaración de origen?**
+Es una prueba de origen que firma el exportador o el productor, sin certificación de una entidad. Brasil habilitó a sus exportadores a emitirla desde el 1 de marzo de 2025, y la Aduana de Uruguay la acepta con una identificación específica en el DUA.
+
+**¿Sirve el certificado de origen digital?**
+Sí. Uruguay recibe certificados digitales por la VUCE con los socios del Mercosur, Chile, México y Colombia, si el acuerdo lo prevé. La VUCE controla la estructura y la firma, pero la aceptación final es de la Aduana al declarar el DUA.
+
+**¿Cuánto dura un certificado de origen?**
+Depende del acuerdo y de la norma de la Aduana (RG 18/2019). No confirmamos el plazo en las fuentes oficiales que leímos, así que no damos cifra: pedile al despachante que lo verifique antes del embarque.
+
+## Fuentes
+
+- Dirección Nacional de Aduanas, Resolución General 06/2025 (prueba de origen en el ACE 18 y tabla de acuerdos): https://aduanas.gub.uy/innovaportal/file/27365/1/rg-06-2025.pdf
+- Dirección Nacional de Aduanas, Comunicado 69/2025 (aclaración sobre las pruebas de origen del ACE 18): https://www.aduanas.gub.uy/innovaportal/file/28151/1/comunicado-69-2025-aclaracion-respecto-a-las-pruebas-de-origen-del-ace-n18.pdf
+- Dirección Nacional de Aduanas, Resolución General 04/2025 (certificado de origen digital, ACE 72 con Colombia): https://vuce.gub.uy/wp-content/uploads/2025/02/rg-04-2025.pdf
+- MEF, certificado de origen digital con México (2-6-2022): https://www.gub.uy/ministerio-economia-finanzas/comunicacion/noticias/se-implementa-certificacion-origen-digital-importaciones-uruguay-productos
+- Decreto 342/019, decisiones sobre certificados de origen del TLC Uruguay-México (IMPO): https://www.impo.com.uy/bases/decretos-internacional/342-2019/1
+- Ley 19.535, art. 265, tasa consular (IMPO): https://www.impo.com.uy/bases/leyes/19535-2017/265
+- MEF, ACE 73 Uruguay-Chile: mismo trato que el Mercosur en tasa consular (notas aprobadas por la Ley 19.812): https://www.gub.uy/ministerio-economia-finanzas/convenios/ace-73-uruguay-chile
+- Texto Ordenado DGI 2023, Título 10, IVA: arts. 12, 13 y 34 (IMPO): https://www.impo.com.uy/bases/todgi-2023/10-2024
+- MEF, Nomenclatura y aranceles de Uruguay: https://www.gub.uy/ministerio-economia-finanzas/nomenclatura-aranceles-uruguay-0
+- VUCE, Ventanilla Única de Comercio Exterior: https://www.vuce.gub.uy
+
+---
+
+# IMESI en la importación a Uruguay: qué productos alcanza, quién lo paga y cómo se suma al costo
+
+URL: https://www.grupomeridianuy.com/guias/imesi-en-la-importacion-a-uruguay/
+Actualizada: 2026-10-29
+
+Respuesta corta: El IMESI es un impuesto que se suma a los demás cuando importás ciertos bienes: bebidas, alcoholes, cosméticos y perfumería, tabaco, vehículos, combustibles y lubricantes, entre otros. La ley fija un tope por rubro y el Poder Ejecutivo fija la tasa por decreto, así que cambia. Los importadores de esos bienes son contribuyentes y lo liquidan en sus declaraciones; quien importa sin ser contribuyente lo paga antes del despacho y es un pago definitivo. A la fecha de esta guía, lo más reciente es el Decreto 147/026, que desde el 1 de enero de 2027 cambia el IMESI de los vehículos de pasajeros eléctricos e híbridos según su valor en aduana.
+
+## Qué es el IMESI
+
+IMESI quiere decir Impuesto Específico Interno. Lo administra la DGI y está en el Título 11 del Texto Ordenado. Grava la primera enajenación de los bienes que la ley enumera, y también el uso propio que hacen de ellos los fabricantes e importadores.
+
+No es un arancel ni la tasa consular: es un impuesto interno, distinto de los tributos aduaneros. Por eso aparece en la importación como un costo más, aparte de los que explica la guía de costos.
+
+## Qué bienes alcanza
+
+El artículo 1 del Título 11 enumera los rubros. Para quien importa, los que más aparecen son:
+
+- Bebidas: vinos finos, espumantes, alcoholes potables, bebidas alcohólicas, cerveza, bebidas sin alcohol, aguas minerales y sodas.
+
+- Cosméticos y perfumería en general.
+
+- Tabacos, cigarros y cigarrillos.
+
+- Vehículos automotores.
+
+- Combustibles y derivados del petróleo, lubricantes y grasas lubricantes.
+
+- Otros: motores diésel no incorporados a vehículos, equipos y artefactos de baja eficiencia energética y ciertas sustancias activas de fitosanitarios. Además, el artículo 2 (Ley 19.829, de residuos) grava envases, bolsas plásticas y algunos descartables.
+
+Esta es una lista general: el alcance exacto de cada rubro, incluidas las excepciones, está en el decreto reglamentario (Decreto 96/990). Por ejemplo, el decreto trata aparte los productos de perfumería y tocador, y fija tasa cero para algunos productos capilares. Cómo se aplica a tu producto lo define el código NCM y la reglamentación: pedile al despachante que confirme por escrito si tu producto lleva IMESI antes de comprar. Para los rubros que más vemos, mirá las guías de cosméticos, perfumes y snacks y bebidas.
+
+## Cuánto es: la ley pone el tope y el decreto la tasa
+
+La ley fija un máximo para cada rubro y deja al Poder Ejecutivo fijar la tasa dentro de ese máximo. Por eso el tope de la ley no es lo que pagás, y la tasa aplicada puede cambiar por decreto sin que cambie la ley.
+
+No publicamos una tabla de tasas por producto: no encontramos una fuente oficial única y actualizada que reúna las tasas vigentes, y las versiones que circulan en la prensa y en blogs no sirven como fuente. Para saber la tasa de tu producto, pedí al despachante el rubro, la tasa vigente y el decreto en que se apoya, con fecha.
+
+## Quién lo paga al importar
+
+- Contribuyentes (fabricantes e importadores de los bienes gravados): son los sujetos del impuesto (art. 5). El decreto prevé que lo liquiden y paguen por mes, con declaración jurada (Decreto 96/990, art. 8); cómo se aplica en tu empresa y en tu rubro lo define tu contador.
+
+- Quien importa sin ser contribuyente: queda gravada la importación directa, salvo los bienes que ya eran de su uso personal antes de importarlos (art. 4). El pago es definitivo y se liquida sin deducción alguna. Se paga antes del despacho (Decreto 96/990, art. 8).
+
+- Control en la aduana: la DGI interviene el despacho de los bienes gravados, y no se autoriza sin la constancia de inscripción del propietario o de que no corresponde el pago (Decreto 96/990, art. 3).
+
+- Base de cálculo para no contribuyentes en cosméticos y perfumería (rubro 8), vehículos (11) y lubricantes (12 y 13): la tasa se aplica sobre la suma del valor normal de aduana más el arancel, con un incremento del 50 % (Decreto 96/990, art. 11). Para los demás bienes, la base es la que fija el decreto para cada caso.
+
+Los bienes que se exportan están exentos de IMESI, y hay exoneraciones para ciertas importaciones amparadas en la ley de promoción de inversiones, Ley 16.906 (Título 11, arts. 12 y 10). Son regímenes puntuales: no des por hecho el beneficio hasta tenerlo confirmado.
+
+## Cómo se relaciona con el IVA
+
+Para las importaciones, el Título 10 (art. 13) dice que el IVA se calcula sobre el valor normal de aduana más el arancel. El artículo 12, que es la regla general de la base del IVA, agrega que se incluye el monto de otros gravámenes que afecten la operación. Si el IMESI entra o no en la base del IVA en tu importación, y en qué momento, no está dicho de forma expresa en lo que leímos: pedile a tu despachante y a tu contador que lo confirmen antes de armar el costo.
+
+Para no olvidarte de nada, armá la cuenta con estas líneas por separado:
+
+- Valor en aduana (CIF) y arancel, como en la guía de precio CIF.
+
+- Tasa consular, sobre el valor en aduana.
+
+- IMESI, con la base y la tasa que te confirmen para tu rubro.
+
+- IVA, sobre la base que te confirmen.
+
+«El IVA no es costo» vale solo para contribuyentes de IVA. Si no sos contribuyente, el IVA de importación sí es parte de lo que te cuesta. El IMESI, en cambio, no es IVA: no lo trates como crédito sin confirmarlo con tu contador. Hay un ejemplo con números en la guía de costo total.
+
+## Autos eléctricos e híbridos: qué cambia desde 2027
+
+El Decreto 147/026 (promulgado el 30 de junio de 2026 y publicado el 3 de julio de 2026) modifica el IMESI de los vehículos automotores de pasajeros de la Categoría F, y sus derivados, con motorización eléctrica o híbrida. Rige desde el 1 de enero de 2027.
+
+- Fija la tasa según el valor en aduana del vehículo al momento de importarlo, en tres tramos: hasta USD 19.000, más de USD 19.000 y hasta USD 27.000, y más de USD 27.000.
+
+- Los considerandos (no el articulado) mencionan una franja inicial con tasa 0 % para los eléctricos puros de menor valor en aduana.
+
+- Las tasas de cada tramo, y las de los híbridos, figuran en una imagen del Diario Oficial que la página de IMPO no permite leer en texto. Por eso no damos cifras, tampoco las que publicó la prensa.
+
+Según la fecha de vigencia que informa IMPO, hasta entonces sigue el régimen anterior. Si vas a importar un vehículo eléctrico o híbrido, pedile al despachante el texto del decreto con las tasas y que te diga con qué fecha de despacho queda tu operación. Los vehículos usados tienen además sus restricciones propias: están en la guía de maquinaria y bienes de capital.
+
+## Envíos y courier
+
+Ojo si pensabas traer estos productos por courier: el Decreto 50/026, que regula los envíos postales y de courier, dice en su artículo 7 que no se aplica a la mercadería gravada por IMESI. Es decir, los cosméticos, perfumes o bebidas con IMESI no entran en la franquicia ni en la prestación única de ese régimen. Mirá la guía de courier para empresas y confirmá con el operador cómo se despacha tu envío.
+
+## Lo que no pudimos confirmar
+
+No encontramos una tabla oficial actualizada de las tasas vigentes por rubro, ni las tasas del Decreto 147/026 en texto. El IMESI cambia por decreto: toda cifra de esta guía vale solo a la fecha de esta guía (29 de octubre de 2026). Si ves una norma más nueva, avisanos por el asesor.
+
+## Preguntas frecuentes
+
+**¿Qué es el IMESI?**
+Es el Impuesto Específico Interno: un impuesto que grava la primera venta, o la importación, de ciertos bienes como bebidas, cosméticos y perfumería, tabaco, vehículos y combustibles. Lo administra la DGI.
+
+**¿Todos los productos importados pagan IMESI?**
+No. Solo los bienes que la ley enumera. El código NCM y la reglamentación definen si tu producto lo lleva; pedile al despachante que lo confirme por escrito antes de comprar.
+
+**¿Cuánto es el IMESI?**
+Depende del rubro. La ley fija un tope y el Poder Ejecutivo fija la tasa por decreto, por lo que cambia. Esta guía no da una tabla: pedí al despachante la tasa vigente y el decreto, con fecha.
+
+**¿El IMESI integra la base del IVA?**
+Para la importación, la ley dice que el IVA se calcula sobre el valor normal de aduana más el arancel (Título 10, art. 13); la regla general (art. 12) agrega otros gravámenes de la operación. Si el IMESI entra en la base en tu caso, confirmalo con tu despachante y tu contador antes de armar el costo.
+
+**¿Qué cambia en 2027 para los autos eléctricos e híbridos?**
+El Decreto 147/026 cambia, desde el 1 de enero de 2027, el IMESI de los vehículos de pasajeros eléctricos e híbridos de la Categoría F, según tramos de valor en aduana (hasta USD 19.000, hasta USD 27.000 y más). Las tasas están en una imagen del Diario Oficial y no las damos.
+
+**¿Una persona que no es empresa también paga IMESI al importar?**
+Sí: la importación directa por quien no es contribuyente está gravada, el pago es definitivo y se hace antes del despacho. Además, la mercadería con IMESI queda fuera del régimen de courier del Decreto 50/026.
+
+## Fuentes
+
+- Texto Ordenado DGI, Título 11, IMESI (IMPO): https://www.impo.com.uy/bases/todgi-2023/11-2024
+- Decreto 96/990, reglamentación del IMESI (IMPO): https://www.impo.com.uy/bases/decretos/96-1990
+- Decreto 147/026, IMESI de vehículos de pasajeros eléctricos e híbridos (IMPO): https://www.impo.com.uy/bases/decretos/147-2026
+- Decreto 50/026, envíos postales y courier: art. 7, no se aplica a mercadería con IMESI (IMPO): https://www.impo.com.uy/bases/decretos/50-2026
+- Texto Ordenado DGI 2023, Título 10, IVA: arts. 12, 13 y 34 (IMPO): https://www.impo.com.uy/bases/todgi-2023/10-2024
+- MEF, Nomenclatura y aranceles de Uruguay: https://www.gub.uy/ministerio-economia-finanzas/nomenclatura-aranceles-uruguay-0
+- Ley 19.535, art. 265, tasa consular (IMPO): https://www.impo.com.uy/bases/leyes/19535-2017/265
+
+---
+
+# Contenedor en el puerto de Montevideo: qué es el almacenaje, la demora o sobreestadía y cómo no pagarlas de más
+
+URL: https://www.grupomeridianuy.com/guias/contenedor-en-el-puerto-de-montevideo-almacenaje-y-demoras/
+Actualizada: 2026-10-29
+
+Respuesta corta: Mientras el contenedor no sale del puerto corren costos que no son impuestos. El almacenaje es la estadía del contenedor en custodia de la terminal. La demora o sobreestadía (demurrage y detention) es lo que se cobra cuando excedés el tiempo libre que da la naviera para retirar su contenedor lleno y devolverlo vacío. Si la carga es LCL, hay además gastos de depósito. Cada actor cobra lo suyo y con su propia tarifa. La Aduana no los cobra, pero si la mercadería queda sin destino aduanero a tiempo puede pasar a situación de abandono. El plan es retirar rápido, con el despacho listo antes de que llegue el barco.
+
+## Por qué este costo sorprende al que importa por primera vez
+
+El precio del flete y los impuestos se calculan antes de comprar. Los costos del puerto, en cambio, dependen de los días: si el contenedor se retira rápido casi no pesan, y si se demora pueden comerse el margen.
+
+La causa más común no es el puerto: es que falta algo para despachar (un documento, una habilitación, una respuesta del proveedor) y el contenedor espera con el reloj corriendo. Por eso esta guía va de la mano con la del despacho aduanero.
+
+## Qué es cada cosa
+
+La Administración Nacional de Puertos (ANP) publica un glosario de servicios portuarios. Resumimos los conceptos que más importan, con sus palabras:
+
+Concepto | Qué es según el glosario de la ANP | En simple | 
+
+Almacenaje de contenedores | Estadía de contenedores en custodia de la terminal | El espacio que ocupa tu contenedor en el puerto mientras no lo retirás | 
+
+Demora (demurrage / detention) | Tarifa aplicada cuando el recibidor excede el tiempo libre otorgado por el transportista (armador) para retirar el contenedor lleno y devolverlo vacío | Lo que se paga por usar el contenedor de la naviera más días de los incluidos. En el uso corriente se le dice también sobreestadía | 
+
+Gastos de depósito, carga LCL | Estadía de mercadería según plazo | Lo que cobra el depósito cuando tu carga viaja consolidada con la de otros y se desconsolida | 
+
+Desconsolidación | Desagrupar mercaderías transportadas en una sola operación, según cada consignatario | Separar tu mercadería del contenedor compartido (LCL) | 
+
+THC (manejo de la carga) | Gastos portuarios por manejo de las cargas | El costo de mover tu carga en la terminal | 
+
+Glosario de la ANP, actualizado el 3-9-2020 (avance de un grupo de trabajo de la ANP). Es una lista de conceptos, no un tarifario: no trae montos ni días libres.
+
+Hay más conceptos en el glosario: entrega o recepción del contenedor, traslados dentro del recinto portuario, horas de espera del camión, entre otros. Si el despachante o el agente te pasan una liquidación, pedí que cada línea esté nombrada así.
+
+## Almacenaje o sobreestadía: la diferencia
+
+- El almacenaje corresponde al lugar: la terminal o el depósito donde está el contenedor.
+
+- La demora o sobreestadía corresponde al equipo: el contenedor es de la naviera, y la naviera da un tiempo libre para sacarlo y devolverlo. Quién te la factura (la naviera, su agente u otro) pedilo por escrito.
+
+- Pueden sumarse: un contenedor puede estar pagando almacenaje en la terminal y demora a la naviera al mismo tiempo.
+
+- Cada uno tiene su propio tiempo libre y su propia tarifa, que fija quien cobra. Ni la Aduana ni esta guía los fijan: salen del tarifario o del contrato de cada uno.
+
+El tiempo libre y cómo se cuentan los días (corridos o hábiles, desde la llegada del buque o desde otro momento) son datos que tenés que pedir por escrito antes de embarcar. No los presumas: cambian según la naviera, la terminal y el contrato.
+
+## Qué dice la Aduana: depósito temporal y abandono
+
+El Código Aduanero llama depósito temporal de importación a la condición de la mercadería desde que se descarga hasta que recibe un destino aduanero (art. 57). Debe permanecer en lugares habilitados y dentro de los plazos de la legislación aduanera.
+
+Si el trámite de despacho no se inicia a tiempo, la mercadería puede pasar a situación de abandono. El Código lo prevé, por ejemplo, cuando vence el plazo de permanencia en depósito temporal o cuando el dueño o consignatario lo declara por escrito. Las causales están en el artículo 98. El abandono no infraccional se declara por un proceso ante un juzgado: si no hay oposición, el tribunal ordena el remate sin base y al mejor postor, y si la mercadería está en contenedores, a pedido del transportista se le entregan de inmediato (art. 99).
+
+Es un extremo que se evita con una buena planificación. Las fechas concretas de cada etapa dependen del lugar y del régimen: no las damos. Lo que sí importa es que los costos del puerto corren desde mucho antes de cualquier abandono.
+
+## Cómo planificar para pagar lo mínimo
+
+- Antes de embarcar, pedí por escrito a la naviera o al agente de carga los días libres y cómo se cuentan, y qué tarifas rigen después.
+
+- Tené el despacho listo antes del arribo: factura, lista de empaque, conocimiento de embarque, habilitaciones y, si corresponde, certificado de origen. El despachante necesita todo para numerar el DUA.
+
+- Elegí el despachante antes de que llegue el barco, no después. Mirá la guía del despachante.
+
+- Coordiná el transporte para el retiro, con día y hora, para no sumar horas de espera del camión.
+
+- Contá con el canal naranja o rojo: el sistema asigna el canal por riesgo y una revisión lleva su tiempo. Si planificás con margen, no te toma de sorpresa.
+
+- Devolvé el contenedor vacío apenas se pueda: la demora cuenta hasta la devolución, según la definición de la ANP.
+
+- Si es LCL, sabé que el depósito cobra por plazo. Mirá la comparación en la guía de LCL y FCL.
+
+## Si el costo ya está corriendo
+
+- Pedí la liquidación detallada: qué concepto, desde qué fecha y con qué tarifa.
+
+- Preguntá si el atraso es por falta de un documento o por una observación de la Aduana, y qué lo destraba. Si la Aduana pide una garantía para liberar la mercadería mientras se resuelve una discrepancia, esa opción está explicada en la guía de despacho y observaciones.
+
+- Si la diferencia es con una factura de la propia ANP (no de la terminal ni de la naviera), la ANP tiene una página de reclamos tarifarios, y en su sitio hay una consulta de liquidación de DUA.
+
+- Pedí por escrito las condiciones a cada actor antes de aceptar el cobro: es más fácil discutir con papeles.
+
+## Lo que no incluimos
+
+No damos tarifas, días libres ni plazos de depósito de ninguna terminal, naviera o depósito: son de cada operador, cambian y no encontramos un tarifario oficial único. El glosario de la ANP que usamos es de 2020 y describe conceptos. Tampoco usamos notas de prensa sobre conflictos o aumentos de tarifas como fuente de cifras. Para los valores de tu operación, pedilos por escrito a quien los cobra.
+
+## Preguntas frecuentes
+
+**¿Qué es la sobreestadía de un contenedor?**
+Es lo que se cobra cuando el que recibe la carga excede el tiempo libre que otorga la naviera (armador) para retirar el contenedor lleno y devolverlo vacío. La ANP la define como demora (demurrage y detention).
+
+**¿Cuál es la diferencia entre almacenaje y sobreestadía?**
+El almacenaje es la estadía del contenedor en custodia de la terminal. La sobreestadía o demora es el uso del contenedor de la naviera más allá del tiempo libre. Pueden cobrarse las dos al mismo tiempo, cada una por quien la cobra.
+
+**¿Cuántos días libres tiene un contenedor en Montevideo?**
+No lo fijamos: depende de la naviera, de la terminal y del contrato, y cambia. Pedilo por escrito, junto con la forma de contar los días, antes de embarcar.
+
+**¿Quién cobra estos costos, la Aduana?**
+No. La Aduana controla el despacho. Los cobran quienes prestan el servicio (terminal, naviera o su agente, depósito), cada uno con su tarifa.
+
+**¿Qué pasa si no retiro la mercadería?**
+Si no se le da destino aduanero a tiempo, el Código Aduanero prevé que pase a situación de abandono, que se declara por un proceso judicial y puede terminar en un remate. Antes de eso ya corren los costos del puerto.
+
+**¿Cómo evito pagar demoras de más?**
+Con el despacho listo antes de que llegue el barco: documentos completos, despachante contratado, transporte coordinado y devolución rápida del contenedor vacío.
+
+## Fuentes
+
+- ANP, glosario de servicios portuarios (actualizado el 3-9-2020): https://www.anp.com.uy/es/inicio/institucional/informacion-comercial/glosario-de-servicios-portuarios
+- ANP, glosario de servicios portuarios: listado general (PDF): https://www.anp.com.uy/sites/default/files/archivos/parrafo-archivo/2020-08/GLOSARIO%20DE%20SERVICIOS%20PORTUARIOS.pdf
+- ANP, reclamos tarifarios (servicios facturados por la ANP): https://www.anp.com.uy/es/inicio/clientes/informacion/reclamos-tarifarios
+- Código Aduanero, Ley 19.276 (IMPO): https://www.impo.com.uy/bases/codigo-aduanero/19276-2014
+- Código Aduanero, art. 57, depósito temporal de importación (IMPO): https://www.impo.com.uy/bases/codigo-aduanero/19276-2014/57
+- Código Aduanero, art. 98, abandono de mercadería (IMPO): https://www.impo.com.uy/bases/codigo-aduanero/19276-2014/98
+- Código Aduanero, art. 99, procedimiento de abandono no infraccional (IMPO): https://www.impo.com.uy/bases/codigo-aduanero/19276-2014/99
+- Dirección Nacional de Aduanas, Procedimiento DUA Digital - Importación (Orden del Día 29/2012, anexo): https://www.aduanas.gub.uy/innovaportal/file/9601/1/anexo_od_29_2012procedimiento_dua_digital_-_importacion.pdf
+
+---
+
+# Importar equipos médicos y productos de salud a Uruguay: habilitar la empresa, registrar el producto y qué ve la aduana
+
+URL: https://www.grupomeridianuy.com/guias/importar-equipos-medicos-y-productos-de-salud-a-uruguay/
+Actualizada: 2026-10-29
+
+Respuesta corta: Para importar equipos médicos hay dos pasos ante el Ministerio de Salud Pública. Primero, habilitar la empresa: es obligatorio para quien importa, almacena o distribuye reactivos de diagnóstico, equipos médicos o dispositivos terapéuticos. Después, registrar cada producto ante el Departamento de Evaluación de Tecnología, y solo puede hacerlo una empresa ya habilitada. Los dos trámites son arancelados y no damos montos ni plazos. Un particular no puede ingresar productos de salud desde el exterior, salvo excepciones médicas puntuales que autoriza el MSP.
+
+## Qué alcanza esta guía
+
+Los productos médicos que regula el MSP son tres: equipos médicos, reactivos de diagnóstico y dispositivos terapéuticos (así los agrupa el Manual de registro del Departamento de Evaluación de Tecnología, DET). Esta guía es para empresas que quieren importarlos y venderlos.
+
+Otros productos de salud tienen su propio camino. El MSP también otorga registro sanitario a medicamentos, cosméticos, suplementos, productos de higiene y artículos ópticos. Los cosméticos están en la guía de cosméticos, y el panorama de registros por producto, en habilitaciones.
+
+Esto es una guía informativa. La habilitación y el registro los hace la empresa titular, con su director técnico, ante el MSP: ni esta guía ni Meridian los reemplazan, y nadie puede prometerte una aprobación ni un plazo.
+
+## Paso 1: habilitar la empresa
+
+Según la página oficial del trámite (actualizada el 26 de septiembre de 2025), es obligatorio para toda empresa que importe, almacene o distribuya reactivos de diagnóstico, equipos médicos o dispositivos terapéuticos. Lo gestiona la Dirección General de la Salud del MSP. El certificado de habilitación dura hasta 5 años desde la fecha de la resolución ministerial.
+
+Qué piden | Detalle | 
+
+Papeles de la empresa | Nota al ministro firmada por el representante legal y la dirección técnica, formulario de solicitud, certificado notarial (distinto para unipersonal y sociedad), constancia de inscripción y constancia de pago de Tesorería del MSP | 
+
+Personal | Título del director técnico, carné de salud vigente de todo el personal, planilla de control de trabajo del MTSS y organigrama | 
+
+Local | Plano de la planta, certificado de control de plagas (contrato o procedimiento propio) y constancia de la Dirección Nacional de Bomberos | 
+
+Procesos | Memoria descriptiva, listado de productos con su clase de riesgo y procedimientos escritos (recepción, almacenamiento, devoluciones, retiro del mercado, distribución, limpieza y servicio técnico para equipos médicos) | 
+
+Si lo tercerizás | Contrato de servicio técnico de equipos médicos y contrato de depósito habilitado, con firmas certificadas ante escribano | 
+
+Resumen de la página oficial del MSP. Hay más formularios y requisitos: consultá la lista completa en el trámite.
+
+El trámite es arancelado: la página no indica el monto (hay que consultarlo en Tesorería del MSP). Se presenta en papel y escaneado en un pendrive, en el MSP de Montevideo o en las direcciones departamentales de salud; el sitio web solo recibe consultas.
+
+## Paso 2: registrar cada producto
+
+Solo puede registrar un producto una empresa previamente habilitada. El registro se hace ante el DET. Según su Manual (versión 2020), la empresa presenta una carpeta con hasta 20 productos de la misma familia, y el DET evalúa la documentación y comunica las observaciones. Si no hay observaciones, emite el Certificado de Registro y Autorización de venta, que es requisito para empezar a comercializar el producto.
+
+- Certificado de libre venta del país de origen, apostillado.
+
+- Certificados de calidad de la fábrica de origen (para equipos y dispositivos, el manual menciona la norma ISO 13485).
+
+- Manuales, instrucciones de uso o informe técnico en español.
+
+- Rótulo de origen y rótulo local.
+
+- Formularios del DET y nota al ministro.
+
+- Clase de riesgo: el producto se clasifica en clases I a IV según reglas de clasificación (invasividad, duración del contacto, si administra energía o sustancias, etc.). Para registrar por primera vez un producto Clase I, el Manual pide además un formulario de «Declaración Clase I».
+
+- Arancel: el registro también es arancelado. El Manual de 2020 lo expresa en unidades reajustables; no sabemos si sigue igual, y no damos montos.
+
+- Renovación: debe presentarse antes de que venza el registro.
+
+Ojo con la fecha de las fuentes. El Manual del DET es de 2020 y cita decretos anteriores. En 2022 el Decreto 428/022 incorporó el Reglamento Técnico MERCOSUR de registro de productos médicos (Resolución GMC 25/21) y derogó el Decreto 7/2001; rige desde su publicación, el 20 de enero de 2023. Los formularios y requisitos pueden haber cambiado: pedí al MSP la versión vigente antes de armar la carpeta.
+
+## Equipos que emiten radiaciones
+
+Si el equipo genera radiaciones ionizantes o contiene material radiactivo (por ejemplo, equipos de rayos X), además se evalúa su seguridad radiológica. Esa evaluación la hace la Autoridad Reguladora Nacional en Radioprotección (ARNR, del MIEM) y avala el registro en el DET. La página oficial la describe sin costo y pide copia de la solicitud presentada en el MSP, especificaciones técnicas, manuales y la certificación de la norma IEC emitida por un organismo reconocido. Se tramita en línea o en persona.
+
+## Qué ve la aduana
+
+El despacho de estos productos se apoya en el registro del MSP. En la VUCE hay un trámite del MSP (TECM) para pedir el certificado negativo o el desaduanamiento de registro de equipos y dispositivos médicos. Para el desaduanamiento, la empresa tiene que estar registrada en el MSP y el producto, tener un registro en proceso; el Manual del DET lo menciona para el producto cuya renovación está en trámite y cuyo certificado no está vigente. Si tu producto lo necesita, lo confirman el MSP y el despachante.
+
+El resto del recorrido es el de cualquier importación: código NCM, arancel, tasa consular, IVA y despacho. Está en la guía de cómo importar y en la del despacho. Hacé la habilitación y el registro antes de embarcar: sin ellos, la mercadería puede quedarse esperando en el puerto con el reloj corriendo (ver almacenaje y demoras).
+
+## Particulares, excepciones y casos especiales
+
+- Un particular no puede traer productos de salud del exterior. El MSP no autoriza el ingreso por compras en el exterior ni por envíos de familiares o amigos, porque la autoridad sanitaria no evaluó su calidad, seguridad y eficacia.
+
+- Excepción médica: el MSP puede autorizar de forma excepcional el ingreso de un producto no registrado para un paciente con prescripción específica, con responsabilidad del médico y del prestador, consentimiento informado y siempre que no exista un equivalente registrado en el país. No es una vía comercial.
+
+- Desfibriladores (DEA/DESA): las empresas importadoras o distribuidoras deben registrar en línea, sin costo, cada venta (equipo y comprador), con la factura.
+
+## Lo que no pudimos confirmar
+
+No confirmamos los aranceles vigentes de los trámites del MSP, los plazos de resolución, las clases de riesgo de productos concretos ni si el Manual del DET de 2020 sigue igual después del Decreto 428/022. Tampoco leímos el texto completo de ese reglamento: figura como anexo. Si el MSP te pide algo distinto, vale lo que diga el MSP.
+
+## Preguntas frecuentes
+
+**¿Qué necesito para importar equipos médicos a Uruguay?**
+Dos cosas ante el MSP: la habilitación de la empresa (obligatoria para quien importa, almacena o distribuye) y el registro de cada producto en el Departamento de Evaluación de Tecnología. Después se despacha como cualquier importación.
+
+**¿Puedo registrar un producto sin tener la empresa habilitada?**
+No. Según el Manual del DET, solo puede registrar un producto una empresa previamente habilitada.
+
+**¿Cuánto dura la habilitación de la empresa?**
+La página oficial del trámite dice que el certificado de habilitación tiene una validez de hasta 5 años desde la fecha de la resolución ministerial.
+
+**¿Cuánto cuesta y cuánto tarda el registro?**
+Los dos trámites son arancelados. La página de la habilitación no trae el monto y el Manual de registro de 2020 lo expresa en unidades reajustables, sin garantía de que siga igual. No damos montos ni plazos de resolución: consultalo en el MSP.
+
+**¿Un particular puede importar un equipo médico?**
+No. El MSP no autoriza el ingreso de productos de salud del exterior por particulares. Solo hay una excepción médica puntual, con prescripción, consentimiento informado y sin equivalente registrado en el país.
+
+**¿Los equipos de rayos X necesitan algo más?**
+Sí: los que generan radiaciones ionizantes o contienen material radiactivo necesitan una evaluación de seguridad radiológica de la ARNR (MIEM) que avala el registro ante el MSP.
+
+## Fuentes
+
+- MSP, habilitación y registro de empresas que importan, almacenan o distribuyen productos médicos: https://www.gub.uy/tramites/habilitacion-registro-empresas-importan-almacenan-distribuyen-productos-medicos
+- MSP, Departamento de Evaluación de Tecnología: Manual de procedimientos de registro de productos médicos (versión 2020): https://www.gub.uy/ministerio-salud-publica/sites/ministerio-salud-publica/files/documentos/publicaciones/Manual%20Registro%20Producto%20DET_v2020_0.pdf
+- Decreto 428/022, Reglamento Técnico MERCOSUR de registro de productos médicos (IMPO): https://www.impo.com.uy/bases/decretos/428-2022
+- ARNR (MIEM), solicitud de evaluación para registro en el MSP de equipos con riesgo radiológico: https://www.gub.uy/tramites/solicitud-evaluacion-registro-ministerio-salud-publica
+- VUCE, TECM - MSP: Certificado de Desaduanamiento de Registro para importación de equipos y dispositivos médicos: https://vuce.gub.uy/tecm2/
+- MSP, ¿puedo ingresar al país productos de salud desde el exterior?: https://www.gub.uy/ministerio-salud-publica/Puedo-ingresar-al-pa%C3%ADs-productos-de-salud-desde-el-exterior
+- MSP, registro de comercialización de DEA/DESA por empresas de equipos médicos: https://www.gub.uy/tramites/registro-comercializacion-deadesa-empresas-equipos-medicos
+- MEF, Nomenclatura y aranceles de Uruguay: https://www.gub.uy/ministerio-economia-finanzas/nomenclatura-aranceles-uruguay-0
