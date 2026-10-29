@@ -73,7 +73,7 @@
       btn.disabled = true; btn.style.opacity = '.5';
       GM.enviar(d, function () {
         ga('generate_lead', { lead_source: 'web_com', need: v('need'), volumen: v('vol') });
-        ok.innerHTML = '<b>Recibido, ' + nom.replace(/</g, '') + '.</b> Te respondemos en horario comercial. Si preferís, también podés <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandarnos esto mismo por WhatsApp</a>.';
+        ok.innerHTML = '<b>Recibido, ' + nom.replace(/</g, '') + '.</b> Te vamos a escribir por WhatsApp. Lo primero que te vamos a preguntar: qué producto es, cuánto pensás mover y si ya tenés proveedor. Si preferís, también podés <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandarnos esto mismo por WhatsApp</a>.';
         ok.classList.add('show');
       }, function () {
         GM.fallo(ok, WA_URL + '?text=' + encodeURIComponent(msg));
