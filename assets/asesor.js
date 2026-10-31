@@ -46,25 +46,23 @@
       ['si', 'Sí, ya tengo stock acá'],
       ['viene', 'Está por llegar'],
       ['no', 'No, hay que importarlo']] },
-    { id: 'vol', q: '¿Cuánto pensás invertir en la primera compra?', when: function (s) { return s.obj !== 'lanzar'; }, o: [
-      ['v1', 'Menos de USD 5.000'],
-      ['v2', 'USD 5.000 a 20.000'],
-      ['v3', 'USD 20.000 a 50.000'],
-      ['v4', 'Más de USD 50.000'],
-      ['v0', 'No lo sé todavía']] },
     { id: 'canal', q: '¿Dónde lo querés vender?', o: [
       ['super', 'Supermercados'],
       ['mayor', 'Distribuidoras y mayoristas'],
       ['alm', 'Almacenes y comercios'],
       ['online', 'Venta online'],
       ['propio', 'Es para uso de mi empresa'],
-      ['nose', 'Todavía no lo sé']] },
-    { id: 'plazo', q: '¿Para cuándo lo necesitás?', o: [
-      ['p1', 'En menos de un mes'],
-      ['p2', 'En 1 a 3 meses'],
-      ['p3', 'En 3 a 6 meses'],
-      ['p0', 'Solo estoy averiguando']] }
+      ['nose', 'Todavía no lo sé']] }
   ];
+
+  // 31-10-2026: dinero y plazo ya no se preguntan antes del resultado; van al final, opcionales
+  var EXTRA = {
+    vol: { q: '¿Cuánto pensás invertir en la primera compra?', o: [['v1', 'Menos de USD 5.000'], ['v2', 'USD 5.000 a 20.000'], ['v3', 'USD 20.000 a 50.000'], ['v4', 'Más de USD 50.000'], ['v0', 'No lo sé todavía']],
+      n: { v1: 'Con una primera compra chica conviene consolidar: tu carga viaja dentro de un contenedor compartido. Por unidad el flete sale más que en un contenedor lleno, y menos que pagando uno entero que no llenás.', v0: 'Sin problema: antes de definir cuánto comprar calculamos el costo puesto en Uruguay (producto, flete, arancel, tasa consular, IVA y despacho).' } },
+    plazo: { q: '¿Para cuándo lo necesitás?', o: [['p1', 'En menos de un mes'], ['p2', 'En 1 a 3 meses'], ['p3', 'En 3 a 6 meses'], ['p0', 'Solo estoy averiguando']],
+      n: { p1: 'Menos de un mes es muy justo para importar: solo el tránsito marítimo desde China ronda 30 a 40 días, sin contar producción. Te damos plazos reales al analizar tu caso.' } }
+  };
+  function extraLabel(id) { var o = EXTRA[id].o.filter(function (x) { return x[0] === s[id]; })[0]; return o ? o[1] : '(no respondió)'; }
 
   var s = {}, hist = [], started = false;
   var body = root.querySelector('.dx-body'), bar = root.querySelector('.dx-bar i'), count = root.querySelector('.dx-count');
@@ -82,7 +80,7 @@
     if (!st) return result();
     bar.style.width = Math.round((i / vs.length) * 100) + '%';
     count.textContent = 'Pregunta ' + (i + 1) + ' de ' + vs.length;
-    var h = '<h2 class="dx-q" tabindex="-1">' + st.q + '</h2><div class="dx-opts">';
+    var h = '<h2 class="dx-q" tabindex="-1">' + st.q + '</h2><div class="dx-opts' + (st.o.length > 6 ? ' dx-opts-2' : '') + '">';
     st.o.forEach(function (o) {
       h += '<button type="button" class="dx-opt' + (s[st.id] === o[0] ? ' on' : '') + '" data-v="' + o[0] + '"><b>' + o[1] + '</b>' + (o[2] ? '<span>' + o[2] + '</span>' : '') + '</button>';
     });
@@ -94,6 +92,7 @@
         if (!started) { started = true; ga('asesor_inicio', { objetivo: b.dataset.v }); }
         if (st.id === 'obj' && s.obj !== b.dataset.v) s = {};
         s[st.id] = b.dataset.v;
+        ga('asesor_paso', { paso: i + 1, pregunta: st.id, respuesta: b.dataset.v });
         if (st.id === 'obj' && b.dataset.v === 'arena') return arena();
         hist.push(i);
         render(i + 1);
@@ -124,19 +123,26 @@
     return ['Importación a medida', 'Nos encargamos de la operación completa: fabricante, carga, aduana con despachante habilitado y entrega en tu depósito o en el nuestro de Pando.', 'importacion'];
   }
 
-  function puntos() {
+  function puntos(skip) {
     var p = [];
-    if (s.perfil === 'empr') p.push('Para importar a tu nombre hace falta una empresa inscrita en el RUT. Si todavía no la tenés, vemos juntos la mejor forma de empezar, incluida la opción de que la importación la hagamos nosotros.');
-    if (s.prov === 'no') p.push('Buscamos y verificamos el fabricante: muestras, antecedentes y condiciones por escrito antes de la primera orden.');
+    if (s.perfil === 'empr' && skip !== 'rut') p.push('Para importar a tu nombre hace falta una empresa inscrita en el RUT. Si todavía no la tenés, vemos juntos la mejor forma de empezar, incluida la opción de que la importación la hagamos nosotros.');
+    if (s.prov === 'no' && skip !== 'prov') p.push('Buscamos y verificamos el fabricante: muestras, antecedentes y condiciones por escrito antes de la primera orden.');
     if (s.prov === 'opciones') p.push('Te ayudamos a comparar los proveedores que tenés: calidad, condiciones de pago y costo real puesto en Uruguay, no solo el precio de fábrica.');
-    if (s.vol === 'v1') p.push('Con una primera compra chica conviene consolidar: tu carga puede viajar dentro de un contenedor compartido: por unidad, el flete suele salir más que en un contenedor lleno, y menos que pagando uno entero que no llenás.');
-    if (s.vol === 'v0') p.push('Antes de definir cuánto comprar, calculamos el costo puesto en Uruguay: producto, flete, arancel, tasa consular, IVA y despacho.');
-    if (CAT[s.cat]) p.push(CAT[s.cat].p);
+    if (CAT[s.cat] && skip !== 'cat') p.push(CAT[s.cat].p);
     if (s.canal === 'super') p.push('Para supermercados vas a necesitar código de barras GS1, factura electrónica y alta como proveedor. Nosotros presentamos el producto; la decisión de listarlo es del comprador.');
     if (s.canal === 'mayor' || s.canal === 'alm') p.push('Las distribuidoras y los almacenes son buena puerta de entrada para un producto nuevo: llegan a muchos puntos de venta y dan datos de rotación.');
-    if (s.plazo === 'p1' && s.obj !== 'lanzar') p.push('Menos de un mes es muy justo para importar: solo el tránsito marítimo desde China ronda 30 a 40 días, sin contar producción. Te damos plazos reales al analizar tu caso.');
     if (s.hoy === 'nada') p.push('Un producto que todavía no se vende en ningún lado conviene probarlo primero en un canal chico, como almacenes o venta online, para tener datos antes de ir a una cadena.');
     return p;
+  }
+
+  // Lo que más teme el visitante, primero: qué tiene que resolver antes de comprar
+  function primero() {
+    var hab = ['alim', 'cosm', 'limp', 'masc', 'elec', 'text', 'jug'];
+    if (hab.indexOf(s.cat) > -1) return ['cat', 'La habilitación de tu producto', CAT[s.cat].p + ' Conviene tenerlo claro antes de pagarle al proveedor.'];
+    if (s.perfil === 'empr') return ['rut', 'Con qué empresa se importa', 'Para importar a tu nombre hace falta una empresa inscrita en el RUT. Si todavía no la tenés, vemos juntos la mejor forma de empezar, incluida la opción de que la importación la hagamos nosotros.'];
+    if (s.prov === 'no') return ['prov', 'Encontrar un fabricante confiable', 'Buscamos y verificamos el fabricante: muestras, antecedentes y condiciones por escrito antes de la primera orden.'];
+    if (s.obj === 'lanzar' && s.stock !== 'no') return ['', 'A quién se lo presentamos primero', 'Con el producto en Uruguay, lo que define el arranque es el canal: qué distribuidoras, supermercados o almacenes lo prueban primero y con qué condiciones.'];
+    return ['', 'El código arancelario de tu producto', 'De ese código sale cuánto arancel paga y si necesita algún permiso. Con eso se calcula el costo puesto en Uruguay antes de comprar.'];
   }
 
   function guias() {
@@ -153,9 +159,9 @@
     var n = 0;
     n += { empresa: 2, distri: 3, marca: 3, empr: 0 }[s.perfil] || 0;
     n += { si: 2, opciones: 1, no: 0 }[s.prov] || 0;
-    n += { v1: 1, v2: 2, v3: 3, v4: 4, v0: 0 }[s.vol] || 0;
+    n += s.vol ? ({ v1: 1, v2: 2, v3: 3, v4: 4, v0: 0 }[s.vol] || 0) : 1; // sin responder cuenta como término medio
     if (s.obj === 'lanzar') { n += { si: 3, viene: 2, no: 1 }[s.stock] || 0; n += { uy: 2, afuera: 1, nada: 0 }[s.hoy] || 0; }
-    n += { p1: 2, p2: 2, p3: 1, p0: -2 }[s.plazo] || 0;
+    n += s.plazo ? ({ p1: 2, p2: 2, p3: 1, p0: -2 }[s.plazo] || 0) : 1;
     return n >= 7 ? 'A' : n >= 4 ? 'B' : 'C';
   }
 
@@ -164,25 +170,33 @@
       .map(function (st) { return st.q.replace(/[¿?]/g, '') + ': ' + label(st.id); }).join(' | ');
   }
 
+  function selExtra(id) {
+    var E = EXTRA[id];
+    return '<label>' + E.q + '<select name="x-' + id + '"><option value="">Elegí una opción</option>' + E.o.map(function (o) { return '<option value="' + o[0] + '">' + o[1] + '</option>'; }).join('') + '</select></label><p class="dx-note" id="dx-n-' + id + '" hidden></p>';
+  }
+
   function result() {
-    var sv = servicio(), pr = prioridad();
+    var sv = servicio(), pr = prioridad(), pm = primero();
     bar.style.width = '100%'; count.textContent = 'Tu resultado';
     ga('asesor_resultado', { servicio: sv[2], prioridad: pr, categoria: s.cat });
-    var h = '<p class="eyebrow">Lo que te recomendamos</p><h2 class="dx-q" tabindex="-1">' + sv[0] + '</h2><p class="dx-p">' + sv[1] + '</p>';
-    var p = puntos();
+    var h = '<p class="eyebrow">Lo primero que tenés que resolver</p><h2 class="dx-q" tabindex="-1">' + pm[1] + '</h2><p class="dx-p">' + pm[2] + '</p>' +
+      '<h3 class="dx-h3">Cómo te ayudamos: ' + sv[0] + '</h3><p class="dx-p">' + sv[1] + '</p>';
+    var p = puntos(pm[0]);
     if (p.length) h += '<h3 class="dx-h3">Lo que vemos en tu caso</h3><ul class="dx-list">' + p.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
     h += '<h3 class="dx-h3">Para leer antes de hablar</h3><div class="dx-guides">' + guias().map(function (g) { return '<a href="' + g[0] + '">' + g[1] + ' →</a>'; }).join('') + '</div>';
     h += '<div class="dx-cap"><h3 class="dx-h3">Recibí el análisis de tu caso</h3><p class="dx-p">Dejanos tus datos y un especialista te escribe en horario comercial, con lo que podemos hacer y qué hace falta. Sin compromiso.</p>' +
       '<form id="dx-form" class="lead" novalidate>' +
       '<label>Qué producto es<textarea name="prod" maxlength="1200" placeholder="Qué es, de dónde viene y cualquier dato que sume"></textarea></label>' +
       '<div class="row"><label>Tu nombre *<input name="nom" type="text" maxlength="100" autocomplete="name" required></label>' +
-      '<label>Empresa' + (s.perfil === 'empr' ? ' (si tenés)' : ' *') + '<input name="emp" type="text" maxlength="100" autocomplete="organization"></label></div>' +
+      '<label>Empresa (opcional)<input name="emp" type="text" maxlength="100" autocomplete="organization"></label></div>' +
       '<div class="row"><label>WhatsApp *<input name="wa" type="tel" maxlength="30" placeholder="099 123 456" autocomplete="tel" required></label>' +
       '<label>Departamento<select name="depto">' + ['Montevideo', 'Canelones', 'Maldonado', 'Colonia', 'San José', 'Salto', 'Paysandú', 'Rivera', 'Tacuarembó', 'Rocha', 'Soriano', 'Florida', 'Lavalleja', 'Durazno', 'Cerro Largo', 'Río Negro', 'Artigas', 'Treinta y Tres', 'Flores', 'Fuera de Uruguay'].map(function (d) { return '<option>' + d + '</option>'; }).join('') + '</select></label></div>' +
       '<label>Correo (opcional)<input name="mail" type="email" maxlength="100" autocomplete="email"></label>' +
+      '<details class="dx-more"><summary>Para afinar el análisis (opcional)</summary>' +
+      (s.obj !== 'lanzar' ? selExtra('vol') : '') + selExtra('plazo') + '</details>' +
       '<div class="hp" aria-hidden="true"><label>No completar<input name="web" type="text" tabindex="-1" autocomplete="off"></label></div>' +
-      '<span class="err" id="dx-err" role="alert">Necesitamos tu nombre' + (s.perfil === 'empr' ? '' : ', la empresa') + ' y un WhatsApp para responderte.</span>' +
-      '<button class="btn dark" type="submit">Quiero el análisis</button>' +
+      '<span class="err" id="dx-err" role="alert">Necesitamos tu nombre y un WhatsApp para responderte.</span>' +
+      '<button class="btn dark" type="submit">Que me escriban por WhatsApp</button>' +
       '<span class="note">Usamos estos datos solo para responderte. <a href="/politica-de-privacidad/"><u>Política de privacidad</u></a>.</span>' +
       '<div class="sent" id="dx-ok" role="status"></div></form></div>' +
       '<button type="button" class="dx-back">← Cambiar respuestas</button>';
@@ -191,26 +205,38 @@
     scrollTop();
     body.querySelector('.dx-back').addEventListener('click', function () { hist = []; s = {}; render(0); scrollTop(); });
     var F = document.getElementById('dx-form');
+    ['vol', 'plazo'].forEach(function (id) {
+      var sel = F.querySelector('[name="x-' + id + '"]'), note = document.getElementById('dx-n-' + id);
+      if (!sel) return;
+      sel.addEventListener('change', function () {
+        s[id] = sel.value || undefined;
+        var t = s[id] && EXTRA[id].n[s[id]];
+        if (id === 'plazo' && s.obj === 'lanzar') t = '';
+        note.textContent = t || ''; note.hidden = !t;
+        ga('asesor_extra', { pregunta: id, respuesta: sel.value });
+      });
+    });
     F.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var v = function (n) { var el = F.querySelector('[name="' + n + '"]'); return el ? String(el.value || '').trim() : ''; };
       if (v('web')) return;
       var nom = v('nom'), emp = v('emp'), wa = v('wa'), err = document.getElementById('dx-err');
-      if (!nom || !wa || (!emp && s.perfil !== 'empr')) { err.classList.add('show'); return; }
+      if (!nom || !wa) { err.classList.add('show'); return; }
+      pr = prioridad();
       err.classList.remove('show');
-      var volTxt = s.obj === 'lanzar' ? ('Stock: ' + label('stock')) : ('Primera compra: ' + label('vol'));
+      var volTxt = s.obj === 'lanzar' ? ('Stock: ' + label('stock')) : ('Primera compra: ' + extraLabel('vol'));
       var d = {
         tipo: 'comercio', nombre: nom, comercio: emp || '(emprendedor sin empresa)', telefono: wa, departamento: v('depto'),
         tipo_comercio: 'Asesor .com · Prioridad ' + pr + ' · ' + sv[0],
-        volumen: volTxt + ' · Plazo: ' + label('plazo'),
+        volumen: volTxt + ' · Plazo: ' + extraLabel('plazo'),
         productos: 'Producto: ' + (v('prod') || '(sin describir)') + ' || ' + resumen() + (v('mail') ? ' || Email: ' + v('mail') : ''),
         origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '')
       };
-      var msg = 'Hola, soy ' + nom + (emp ? ' de ' + emp : '') + '. Usé el asesor de la web: ' + sv[0] + '. Producto: ' + (v('prod') || '(te lo cuento por acá)') + '. ' + resumen();
+      var msg = 'Hola, soy ' + nom + (emp ? ' de ' + emp : '') + '. Usé el asesor de la web: ' + sv[0] + '. Producto: ' + (v('prod') || '(te lo cuento por acá)') + '. ' + resumen() + (s.plazo ? ' | Plazo: ' + extraLabel('plazo') : '') + (s.vol && s.obj !== 'lanzar' ? ' | Primera compra: ' + extraLabel('vol') : '');
       var ok = document.getElementById('dx-ok'), btn = F.querySelector('button[type=submit]');
       btn.disabled = true; btn.style.opacity = '.5';
       GM.enviar(d, function () {
-        ga('generate_lead', { lead_source: 'asesor_com', prioridad: pr, servicio: sv[2], categoria: s.cat });
+        ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'asesor_com', prioridad: pr, servicio: sv[2], categoria: s.cat });
         ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
         ok.classList.add('show');
       }, function () {

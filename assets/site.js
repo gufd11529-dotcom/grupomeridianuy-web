@@ -14,14 +14,23 @@
   GM.esc = function (s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   // Envía el lead al Apps Script. ok() si el navegador lo manda; ko() si falla (sin red, bloqueado...).
   // Corta «productos» y «origen» a 1.900 caracteres (el servidor rechaza más de 2.000).
+  // 31-10-2026: lee la respuesta del servidor ({"ok":true/false}); solo da \u00abRecibido\u00bb si no la rechaz\u00f3.
+  // Cada env\u00edo lleva un c\u00f3digo (envio_id) que va a la hoja (en \u00aborigen\u00bb) y a Analytics, para cruzarlos.
   GM.enviar = function (d, ok, ko) {
-    var p = { token: GM.token }, k;
+    var p = { token: GM.token }, k, id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
     for (k in d) if (Object.prototype.hasOwnProperty.call(d, k)) p[k] = d[k];
+    p.origen = (p.origen || '') + ' \u00b7 id:' + id;
     ['productos', 'origen'].forEach(function (c) { if (p[c] && p[c].length > 1900) p[c] = p[c].slice(0, 1899) + '\u2026'; });
+    GM.ultimoEnvio = id;
+    var bien = function () { if (ok) ok(id); }, mal = function (motivo) { GM.ga('lead_error', { motivo: motivo, envio_id: id, lead_source: location.pathname }); if (ko) ko(); };
     try {
-      fetch(GM.script, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(p) })
-        .then(function () { if (ok) ok(); }, function () { if (ko) ko(); });
-    } catch (e) { if (ko) ko(); }
+      fetch(GM.script, { method: 'POST', redirect: 'follow', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(p) })
+        .then(function (r) { return r.text(); })
+        .then(function (t) {
+          var j = null; try { j = JSON.parse(t); } catch (e) {}
+          if (j && j.ok === false) mal('rechazado'); else bien();
+        }, function () { mal('red'); });
+    } catch (e) { mal('excepcion'); }
   };
   // Mensaje de fallo en lugar del de éxito, con enlace a WhatsApp (href ya armado)
   GM.fallo = function (box, href, extra) {
@@ -72,7 +81,7 @@
       var msg = 'Hola, soy ' + nom + (emp ? ' de ' + emp : '') + '. Necesito: ' + v('need') + '. Producto: ' + (v('prod') || '(lo cuento por acá)') + '. Volumen: ' + v('vol') + '.';
       btn.disabled = true; btn.style.opacity = '.5';
       GM.enviar(d, function () {
-        ga('generate_lead', { lead_source: 'web_com', need: v('need'), volumen: v('vol') });
+        ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'web_com', need: v('need'), volumen: v('vol') });
         ok.innerHTML = '<b>Recibido, ' + nom.replace(/</g, '') + '.</b> Te vamos a escribir por WhatsApp. Lo primero que te vamos a preguntar: qué producto es, cuánto pensás mover y si ya tenés proveedor. Si preferís, también podés <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandarnos esto mismo por WhatsApp</a>.';
         ok.classList.add('show');
       }, function () {
@@ -138,7 +147,7 @@
     var msg = 'Hola, soy ' + nom.replace(/</g, '') + '. Bajé la checklist "Antes de pagarle al proveedor" y quiero que revisen mi caso. Producto: ' + rubro + '.';
     btn.disabled = true; btn.style.opacity = '.5';
     GM.enviar(d, function () {
-      ga('generate_lead', { lead_source: 'checklist_proveedor', rubro: rubro });
+      ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'checklist_proveedor', rubro: rubro });
       ok.innerHTML = '<b>Gracias, ' + nom.replace(/</g, '') + '.</b> Acá está tu checklist: <a href="/descargas/antes-de-pagarle-al-proveedor.pdf" download target="_blank" rel="noopener">Descargar el PDF</a>. Si querés que revisemos tu caso, <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">escribinos por WhatsApp</a>.';
       ok.classList.add('show');
       ga('checklist_descarga_visible', { lead_source: 'checklist_proveedor' });
@@ -166,7 +175,7 @@
     var PDF = '/descargas/hoja-costos-importar-uruguay.pdf';
     btn.disabled = true; btn.style.opacity = '.5';
     GM.enviar(d, function () {
-      ga('generate_lead', { lead_source: 'hoja_costos' });
+      ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'hoja_costos' });
       ok.innerHTML = '<b>Gracias, ' + nom + '.</b> Acá está tu hoja: <a href="' + PDF + '" download target="_blank" rel="noopener">Descargar el PDF</a>. Para hacer las cuentas desde el móvil, usá la <a href="/calculadora/">calculadora</a>. Si querés que revisemos tu caso, <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">escribinos por WhatsApp</a>.';
       ok.classList.add('show');
       ga('hoja_costos_descarga_visible', { lead_source: 'hoja_costos' });
@@ -175,4 +184,19 @@
       btn.disabled = false; btn.style.opacity = '';
     });
   });
+
+  // 31-10-2026 · medición: ¿se ve la respuesta corta de la guía? ¿qué botón grande se toca?
+  var ans = document.querySelector('.answer');
+  if (ans && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      if (es.some(function (x) { return x.isIntersecting; })) { ga('guia_resp_visible', { lead_source: location.pathname }); io.disconnect(); }
+    }, { threshold: 0.6 });
+    io.observe(ans);
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target && e.target.closest ? e.target.closest('a.btn') : null;
+    if (!b) return;
+    var zona = b.closest('.hero') ? 'hero' : b.closest('.cta-box') ? 'cierre' : b.closest('header,.pill') ? 'cabecera' : b.closest('.answer,.dx') ? 'contenido' : 'otro';
+    ga('cta_clic', { lead_source: location.pathname, texto: (b.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60), destino: (b.getAttribute('href') || '').split('?')[0].slice(0, 80), zona: zona });
+  }, true);
 })();

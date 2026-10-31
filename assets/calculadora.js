@@ -115,7 +115,7 @@
     var ok = el('calc-ok'), btn = F.querySelector('button[type=submit]');
     btn.disabled = true; btn.style.opacity = '.5';
     GM.enviar(d, function () {
-      ga('generate_lead', { lead_source: 'calculadora_com', cif: c ? Math.round(c.cif) : 0 });
+      ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'calculadora_com', cif: c ? Math.round(c.cif) : 0 });
       ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial para pedirte lo que falte y armar el costo completo de tu caso. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
       ok.classList.add('show');
     }, function () {
@@ -146,7 +146,7 @@
     var ok = el('calc-send-ok'), btn = S.querySelector('button[type=submit]');
     btn.disabled = true; btn.style.opacity = '.5';
     GM.enviar(d, function () {
-      ga('generate_lead', { lead_source: 'calculadora_resultado', cif: Math.round(c.cif) });
+      ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'calculadora_resultado', cif: Math.round(c.cif) });
       ok.innerHTML = '<b>Listo, ' + esc(nom) + '.</b> ' + (esMail ? 'Te escribimos a ' + esc(ct) + ' con este cálculo.' : 'Te escribimos por WhatsApp con este cálculo.') + ' Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos el cálculo por WhatsApp</a>.';
       ok.classList.add('show');
     }, function () {

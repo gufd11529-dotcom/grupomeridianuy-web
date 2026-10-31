@@ -372,3 +372,12 @@ form.lead .btn{justify-self:start}
   .wa span{display:inline}
   .wa{padding:11px 15px}
 }
+/* 31-10-2026 · asesor: categorías en dos columnas, datos opcionales plegados */
+.dx-opts-2{grid-template-columns:1fr 1fr;gap:10px}
+.dx-opts-2 .dx-opt{padding:12px 14px}
+.dx-opts-2 .dx-opt b{font-size:15px}
+.dx-more{margin:6px 0 12px;border:1px solid rgba(0,0,0,.12);border-radius:12px;padding:10px 14px}
+.dx-more summary{cursor:pointer;font-weight:600;font-size:15px}
+.dx-more[open] summary{margin-bottom:10px}
+.dx-note{font-size:14px;color:var(--ink2);margin:-4px 0 10px}
+.dx .dx-opts.dx-opts-2{grid-template-columns:1fr 1fr}
