@@ -49,7 +49,7 @@
   // Cada clic a WhatsApp cuenta como contacto
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"],a[href*="api.whatsapp.com"]') : null;
-    if (a) ga('contacto_whatsapp', { lead_source: location.pathname });
+    if (a) ga('contacto_whatsapp', { lead_source: location.pathname, cta: a.hasAttribute('data-wa-hero') ? 'hero' : (a.classList.contains('wa') ? 'flotante' : 'texto') });
     var m = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"],a[href^="tel:"]') : null;
     if (m) ga(m.getAttribute('href').indexOf('tel:') === 0 ? 'contacto_telefono' : 'contacto_email', { lead_source: location.pathname });
   }, true);
