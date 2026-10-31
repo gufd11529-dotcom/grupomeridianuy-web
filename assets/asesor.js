@@ -184,7 +184,7 @@
     var p = puntos(pm[0]);
     if (p.length) h += '<h3 class="dx-h3">Lo que vemos en tu caso</h3><ul class="dx-list">' + p.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
     h += '<h3 class="dx-h3">Para leer antes de hablar</h3><div class="dx-guides">' + guias().map(function (g) { return '<a href="' + g[0] + '">' + g[1] + ' →</a>'; }).join('') + '</div>';
-    h += '<div class="dx-cap"><h3 class="dx-h3">Recibí el análisis de tu caso</h3><p class="dx-p">Dejanos tus datos y un especialista te escribe en horario comercial, con lo que podemos hacer y qué hace falta. Sin compromiso.</p>' +
+    h += '<div class="dx-cap"><h3 class="dx-h3">Recibí el análisis de tu caso</h3><p class="dx-p">Dejanos tus datos y te escribimos por WhatsApp o por correo con lo que podemos hacer y qué hace falta. Sin compromiso.</p>' +
       '<form id="dx-form" class="lead" novalidate>' +
       '<label>Qué producto es<textarea name="prod" maxlength="1200" placeholder="Qué es, de dónde viene y cualquier dato que sume"></textarea></label>' +
       '<div class="row"><label>Tu nombre *<input name="nom" type="text" maxlength="100" autocomplete="name" required></label>' +
@@ -237,7 +237,7 @@
       btn.disabled = true; btn.style.opacity = '.5';
       GM.enviar(d, function () {
         ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'asesor_com', prioridad: pr, servicio: sv[2], categoria: s.cat });
-        ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
+        ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te vamos a escribir por WhatsApp o por correo. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
         ok.classList.add('show');
       }, function () {
         GM.fallo(ok, WA + '?text=' + encodeURIComponent(msg));

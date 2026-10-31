@@ -117,11 +117,11 @@
       }
       if (g.no_verif) h += '<p class="hr-conf"><b>Lo que no pudimos confirmar.</b> ' + esc(g.no_verif) + '</p>';
       if (g.extra) h += '<p class="dx-p">' + esc(g.extra) + '</p>';
-      var imp = { propia: 'Con empresa propia, la habilitación de la empresa la tramitás vos.', sin: 'Primero hace falta tener la empresa inscrita en el RUT.', otra: 'La habilitación la tiene que tener quien figure como importador; lo vemos en tu caso.', nose: 'Conviene definir primero qué empresa va a figurar como importadora: de eso depende quién tramita qué.' }[s.imp];
+      var imp = { propia: 'Con empresa propia, los trámites van a nombre de tu empresa.', sin: 'Primero hace falta tener la empresa inscrita en el RUT.', otra: 'Los trámites van a nombre de quien figure como importador; lo vemos en tu caso.', nose: 'Conviene definir primero qué empresa va a figurar como importadora: de eso depende quién tramita qué.' }[s.imp];
       h += '<p class="dx-p">' + imp + '</p>';
       if ((s.ncm === 'no' || s.ncm === 'nose') && s.det !== 'masc_ar') h += '<p class="dx-p">El código arancelario define cuánto arancel paga el producto y si necesita algún permiso. Lo confirma tu despachante antes de comprar.</p>';
       h += '<p class="dx-p"><b>También tenés que tener:</b> RUT activo en DGI, registro en VUCE (se hace una vez) y un despachante de aduana, que es obligatorio para importar. Si querés la preferencia arancelaria de un origen, hace falta certificado de origen.</p>';
-      if (c.nivel === 'alta') h += '<p class="dx-p"><b>Esto no significa que no se pueda.</b> Significa que el orden importa: conviene resolver la habilitación antes de pagar. Si querés, vemos juntos cuál es la forma más sencilla de arrancar en tu caso. Analizamos tu caso sin costo.</p>';
+      if (c.nivel === 'alta') h += '<p class="dx-p"><b>Se puede, pero el orden importa:</b> conviene resolver estos trámites antes de pagar. Si querés, vemos juntos cuál es la forma más sencilla de arrancar en tu caso. Analizamos tu caso sin costo.</p>';
       var pts = ({ propia: 2, otra: 1, sin: 0, nose: 0 }[s.imp] || 0) + (s.reg === 'si' ? 1 : 0) + (s.ncm === 'si' ? 1 : 0) + ((c.nivel === 'media' || c.nivel === 'alta') ? 1 : 0);
       var resumenTxt = 'Producto: ' + g.l + ' | Carga de trámites: ' + (c.nivel === 'a_confirmar' ? 'a confirmar' : c.nivel + ' (' + c.n + ' pasos)') + (primero ? ' | Primer paso: ' + primero.k : '');
       return {
@@ -245,7 +245,7 @@
   // =====================================================================
   // 2. ¿Funcionaría tu producto en Uruguay?  (heurística nuestra, no estadística)
   // =====================================================================
-  var VIA_D = { comer: 0, cuid: 1, masc: 1, elec: 1, ropa: 1, hogar: 1 }; // trámites: 0 = carga alta, 1 = media o a confirmar (ver «Permisos»)
+  var VIA_D = { comer: 0, cuid: 0, masc: 1, elec: 1, ropa: 1, hogar: 1 }; // trámites: 0 = carga alta, 1 = media o a confirmar (ver «Permisos»)
   var VIA_S = [['A', 'Demanda comprobada'], ['B', 'Motivo para elegirlo'], ['C', 'Encaje con el canal'], ['D', 'Trámites'], ['E', 'Primera compra']];
   TOOLS.viabilidad = {
     titulo: 'Viabilidad',
@@ -272,7 +272,7 @@
       else if (s.canal === 'sup' && s.par !== 'nada' && claro) d.C = [1, 'Las cadenas piden rotación demostrada o una propuesta clara para la categoría: tu diferencial ayuda, pero conviene llegar con datos.'];
       else if (s.canal === 'sup') d.C = [0, 'Las cadenas piden rotación demostrada o una propuesta clara para la categoría. Sin eso conviene empezar en un canal más chico.'];
       else d.C = [1, 'Todavía no tenés un canal definido: es lo primero que conviene decidir.'];
-      d.D = VIA_D[s.grp] === 0 ? [0, 'Hay varios trámites antes de poder vender. No lo hace inviable, pero suma pasos y costos antes del primer ingreso.'] : [1, 'Hay trámites por confirmar antes de poder vender. Miralos en la herramienta de permisos.'];
+      d.D = VIA_D[s.grp] === 0 ? [0, 'Hay varios trámites antes de poder vender. No lo hace inviable, pero suma pasos y costos antes del primer ingreso.'] : [1, 'Según el producto, puede haber trámites antes de poder vender. Miralos en la herramienta de permisos.'];
       var alta = VIA_D[s.grp] === 0;
       if (!s.inv || s.inv === 'v0') d.E = null;
       else if (s.inv === 'v1') d.E = alta ? [0, 'Con una compra chica y varios trámites antes de vender, la cuenta cierra más justa: conviene empezar probando en chico.'] : [1, 'Con una compra chica conviene consolidar: tu carga viaja dentro de un contenedor compartido y por unidad sale más que en un contenedor lleno.'];
@@ -282,15 +282,16 @@
       var nivel = conf === 'baja' ? 'sin_nivel' : ratio >= 0.75 ? 'buen' : ratio >= 0.5 ? 'potencial' : ratio >= 0.25 ? 'validar' : 'probar';
       var NT = { buen: 'Buen punto de partida', potencial: 'Tiene potencial, con puntos para resolver', validar: 'Conviene validarlo antes de comprar', probar: 'Hoy conviene probar antes de importar', sin_nivel: 'Con lo que sabés hoy no alcanza para opinar' };
       var ord = con.slice().sort(function (a, b) { return d[b][0] - d[a][0] || keys.indexOf(a) - keys.indexOf(b); });
-      var fav = ord.filter(function (k) { return d[k][0] >= 1; }).slice(0, 2);
+      var fav = ord.filter(function (k) { return d[k][0] === 2; }).slice(0, 2);
       var cont = con.slice().sort(function (a, b) { return d[a][0] - d[b][0] || keys.indexOf(a) - keys.indexOf(b); }).filter(function (k) { return d[k][0] <= 1 && fav.indexOf(k) < 0 || d[k][0] === 0; }).slice(0, 2);
-      var nulos = (s.par === 'nose' ? 1 : 0) + (s.prec === 'nose' ? 1 : 0);
+      var nulos = (s.par === 'nose' ? 1 : 0) + (s.prec === 'nose' ? 1 : 0) + (s.canal === 'nose' ? 1 : 0);
       var h = '<p class="eyebrow">Tu resultado</p><h2 class="dx-q" tabindex="-1">' + NT[nivel] + '</h2>';
       h += '<p class="dx-p">Confianza del resultado: <b>' + (conf === 'baja' ? 'baja' : conf) + '</b>. ' + (nulos ? 'Dejaste ' + nulos + (nulos === 1 ? ' respuesta' : ' respuestas') + ' en «no sé»: abajo está qué averiguar. ' : '') + 'Es una guía de orden, no una predicción de ventas.</p>';
       if (nivel === 'sin_nivel') {
         var av = [];
         if (s.par === 'nose') av.push('Cuántas marcas parecidas hay en góndola: recorré dos o tres supermercados y almacenes.');
         if (s.prec === 'nose') av.push('A qué precio se vende lo parecido, para saber si quedás más arriba o más abajo.');
+        if (s.canal === 'nose') av.push('Por dónde arrancarías: almacenes, una distribuidora, venta online o una cadena. De eso dependen el precio y el tamaño de la primera compra.');
         if (!av.length) av.push('Conseguí una señal de un comprador real: una muestra, un pedido de prueba o una consulta a una distribuidora.');
         h += '<h3 class="dx-h3">Lo que conviene averiguar primero</h3><ul class="dx-list">' + av.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
       } else {
@@ -356,7 +357,7 @@
       if (pend.length) {
         h += '<h3 class="dx-h3">Tus pendientes, en orden</h3><ol class="hr-list">' + pend.map(function (k) { var p = PEN[k](); return '<li><b>' + p[0] + '.</b> ' + p[1] + (p[2] ? ' <a href="' + p[2] + '"' + (p[2].charAt(0) === '/' ? '' : ' target="_blank" rel="noopener"') + '>' + p[3] + '</a>' : '') + '</li>'; }).join('') + '</ol>';
       } else h += '<p class="dx-p">No te quedan pendientes con lo que respondiste.</p>';
-      h += '<p class="dx-p"><b>Una aclaración importante:</b> presentar el producto no garantiza que la cadena lo liste. La decisión es del comprador de cada categoría, y sus condiciones (listados, logística, plazos de pago) no son públicas. Esto es una guía de orden, no una promesa.</p>';
+      h += '<p class="dx-p"><b>Presentar el producto no garantiza que la cadena lo liste.</b> Lo decide el comprador de cada categoría, y sus condiciones (listados, logística, plazos de pago) no son públicas.</p>';
       var n = pend.length, pts = ((s.repo === 'si' || s.repo === 'stock') ? 2 : 0) + (s.fact === 'emp' ? 2 : 0) + (n <= 2 ? 2 : n <= 4 ? 1 : 0);
       var det = SUP_L.map(function (k) { return k + ': ' + (sc[k] === -1 ? 'a confirmar' : sc[k]); }).join(' | ') + ' || Pendientes: ' + pend.join(', ');
       return {
@@ -378,7 +379,7 @@
     titulo: 'Importar o comprar local',
     steps: [
       { id: 'mismo', q: '¿El mismo producto, o uno equivalente, lo conseguís hoy en el mercado local?', o: [['igual', 'Sí, el mismo'], ['parecido', 'Uno parecido'], ['nolo', 'No lo hay']] },
-      { id: 'contri', q: '¿Sos contribuyente de IVA?', when: function (s) { return s.mismo !== 'nolo'; }, o: [['si', 'Sí', 'El IVA y los anticipos no son costo para vos.'], ['no', 'No', 'Para vos el IVA y los anticipos de importación sí son un costo.']] },
+      { id: 'contri', q: '¿Sos contribuyente de IVA?', when: function (s) { return s.mismo !== 'nolo'; }, o: [['si', 'Sí', 'El IVA y los anticipos no son costo para vos.'], ['no', 'No', 'Para vos el IVA de importación sí es un costo.']] },
       { id: 'loc', q: '¿Cuánto pagás hoy por unidad al mayorista local?', when: function (s) { return s.mismo !== 'nolo'; }, type: 'fields',
         fields: [{ id: 'loc', label: 'Precio por unidad, sin IVA, en USD', ph: '3,20', hint: 'Si pagás en pesos, pasalo a dólares con la cotización del día.' }],
         check: function (s) { return fnum(s.loc, 'el precio local por unidad', true); } },
@@ -409,7 +410,7 @@
       var cif = fob * uds + flete;
       function costo(ar) { // por unidad
         var ars = cif * ar, tc = cif * cons, lt = cif * latu, base = cif + ars, tr = ars + tc + lt;
-        var iva = noc ? base * 0.22 + base * 0.10 : 0;
+        var iva = noc ? base * 1.5 * 0.22 : 0; // no contribuyente: la base del IVA sube un 50 % (como en la calculadora y las guías)
         return { cu: (cif + tr + iva) / uds, imp: (tr + iva) / uds };
       }
       var lo = costo(aLo), hi = costo(aHi), margen = (loc - hi.cu) * uds, pctM = margen / (loc * uds) * 100;
@@ -418,14 +419,14 @@
       var h = '<p class="eyebrow">Tu resultado</p><h2 class="dx-q" tabindex="-1">' + TT[nivel] + '</h2>';
       h += '<p class="dx-p">' + ({ importar: 'Falta confirmar los gastos locales de cada compra, que no están en la cuenta.', chica: 'Hay una diferencia, pero chica: los gastos locales y el dinero inmovilizado pueden comérsela.', local: 'Si el precio local o el del exterior cambian, volvé a calcular.' })[nivel] + '</p>';
       var rg = function (x, y) { return Math.abs(x - y) < 0.005 ? usd(x) : usd(x) + ' a ' + usd(y).replace('USD ', ''); };
-      h += '<table class="hr-tab"><thead><tr><th></th><th>Local</th><th>Importado, por unidad</th></tr></thead><tbody><tr><td>Precio</td><td>' + usd(loc) + '</td><td>' + rg(lo.cu, hi.cu) + '</td></tr><tr><td>De los cuales, impuestos que quedan como costo</td><td></td><td>' + rg(lo.imp, hi.imp) + '</td></tr></tbody></table>';
+      h += '<table class="hr-tab"><thead><tr><th></th><th>Local</th><th>Importado, por unidad</th></tr></thead><tbody><tr><td>Costo por unidad</td><td>' + usd(loc) + '</td><td>' + rg(lo.cu, hi.cu) + '</td></tr><tr><td>De los cuales, impuestos que quedan como costo</td><td></td><td>' + rg(lo.imp, hi.imp) + '</td></tr></tbody></table>';
       if (ns) h += '<p class="dx-p">No sabías el arancel: mostramos un rango de 0 % a 20 %, donde está el 99,1 % de los productos. Decidimos con el extremo más caro.</p>';
-      if (margen > 0) h += '<p class="dx-p"><b>Margen para pagar los gastos locales de cada compra: ' + usd(margen) + '</b>' + (noflete ? ' (antes de flete y seguro, que no cargaste)' : '') + '. Alcanza para despachante, puerto, depósito y transporte interno. Si esos gastos suman más que eso, importar deja de convenir. No los estimamos porque no hay una cifra oficial y los honorarios varían.</p>';
+      if (margen > 0) h += '<p class="dx-p"><b>Margen para pagar los gastos locales de cada compra: ' + usd(margen) + '</b>' + (noflete ? ' (antes de flete y seguro, que no cargaste)' : '') + '. Con eso tenés que pagar despachante, puerto, depósito y transporte interno. Si esos gastos suman más, importar deja de convenir. No los estimamos porque no hay una cifra oficial y los honorarios varían.</p>';
       else h += '<p class="dx-p">Con estos números, importar sale más caro que comprar local aun antes de sumar los gastos locales (despachante, puerto, depósito y transporte).</p>';
       if (noflete && margen > 0) h += '<p class="dx-p">No cargaste el flete y seguro: ese margen de ' + usd(margen) + ' es lo máximo que podría sumar el flete, más los gastos locales, antes de que importar deje de convenir.</p>';
       if (gent && margen > 0) { var gan = loc - hi.cu; h += '<p class="dx-p">Para recuperar los ' + usd(gent) + ' de gastos de entrada hacen falta unas ' + intf(gent / gan) + ' unidades vendidas con esa diferencia por unidad.</p>'; }
       h += '<p class="dx-p"><b>Lo que no está en la cuenta:</b> los gastos locales de la compra, el dinero que queda parado hasta que llega la carga, el riesgo de calidad y las habilitaciones del producto. Importar es pagar antes y esperar la carga: solo el tránsito marítimo desde China ronda 30 a 40 días puerto a puerto según fuentes privadas, sin contar la producción. Comprar local suele resolverse con stock existente.</p>';
-      h += '<p class="dx-p">' + (noc ? 'Como no sos contribuyente de IVA, sumamos el IVA (22 %) y el anticipo de IVA (10 %) al costo. No incluye el anticipo de IRAE y supone la tasa básica de IVA.' : 'Como sos contribuyente de IVA, no sumamos el IVA ni los anticipos al costo: se descuentan de tus liquidaciones, aunque hay que tener la caja el día del despacho.') + '</p>';
+      h += '<p class="dx-p">' + (noc ? 'Como no sos contribuyente de IVA, sumamos al costo el IVA de importación: 22 % sobre una base que, en tu caso, sube un 50 %. Supone la tasa básica de IVA; confirmá tu caso con tu contador.' : 'Como sos contribuyente de IVA, no sumamos el IVA ni los anticipos al costo: se descuentan de tus liquidaciones, aunque hay que tener la caja el día del despacho.') + '</p>';
       var pts = ({ importar: 3, chica: 1, local: 0 })[nivel] + (cif >= 20000 ? 2 : cif >= 5000 ? 1 : 0) + (s.contri === 'si' ? 1 : 0);
       return {
         h: h, nivel: nivel, cat: s.mismo,
@@ -475,17 +476,17 @@
         if (med < CFG_Q.corto) avisos.push('Con la compra mínima te quedás sin stock enseguida: la repetición de pedido es parte del plan.');
         nivel = (venceSi && vida && med > vida) || med > CFG_Q.mucho ? 'sobrestock' : med < CFG_Q.corto ? 'corto' : 'justo';
       } else {
-        h += '<h2 class="dx-q" tabindex="-1">Sin pedido mínimo conocido, así rinden distintos tamaños de pedido.</h2>';
-        var v2 = rot ? pts * rot : pts * 5, base = [500, 1000, 5000];
-        h += '<table class="hr-tab"><thead><tr><th>Pedido</th><th>Venta por mes</th><th>Meses de stock</th></tr></thead><tbody>' + base.map(function (b) { return '<tr><td>' + intf(b) + ' unid.</td><td>' + intf(v2) + ' unid.</td><td>' + mes(m(b, v2)) + '</td></tr>'; }).join('') + '</tbody></table>';
+        var v2 = rot ? pts * rot : pts * 5, base = [1, 3, 6];
+        h += '<h2 class="dx-q" tabindex="-1">Sin pedido mínimo conocido: para 3 meses de venta harían falta unas ' + intf(v2 * 3) + ' unidades.</h2>';
+        h += '<table class="hr-tab"><thead><tr><th>Stock para</th><th>Venta por mes</th><th>Pedido</th></tr></thead><tbody>' + base.map(function (b) { return '<tr><td>' + b + (b === 1 ? ' mes' : ' meses') + '</td><td>' + intf(v2) + ' unid.</td><td>' + intf(v2 * b) + ' unid.</td></tr>'; }).join('') + '</tbody></table>';
         h += '<p class="hr-nota">' + (rot ? 'Con tu estimación de rotación.' : 'Con un escenario de 5 unidades por punto por mes: es un escenario, no un dato del mercado.') + ' Cuando sepas el pedido mínimo, volvé a calcular.</p>';
         nivel = 'sin_minimo'; med = null;
       }
-      if (s.dep === 'no') avisos.push('Si todavía no tenés dónde guardarlo, tené en cuenta que el depósito aduanero y el almacenaje corren por día (mirá la guía del contenedor en el puerto).');
+      if (s.dep === 'no') avisos.push('Si todavía no tenés dónde guardarlo, tené en cuenta que el depósito aduanero y el almacenaje corren por día. <a href="/guias/contenedor-en-el-puerto-de-montevideo-almacenaje-y-demoras/">Mirá la guía del contenedor en el puerto</a>.');
       if (avisos.length) h += '<ul class="dx-list">' + avisos.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>';
       var cons = nivel === 'sobrestock' ? 'probar primero con una compra más chica o con muestras' : nivel === 'corto' ? 'mezclar variedades en el mismo pedido y acordar con el proveedor cómo repetir' : 'consolidar carga con otras compras, así el flete por unidad no se come la primera prueba';
       h += '<h3 class="dx-h3">Cómo bajar el riesgo de la primera compra</h3><p class="dx-p">Una opción es ' + cons + '. Analizamos tu caso sin costo.</p>';
-      h += '<p class="dx-p"><b>Lo que esta cuenta no sabe:</b> la rotación real de tu producto. Usa las estimaciones que cargaste vos.</p>';
+      h += '<p class="dx-p"><b>Lo que esta cuenta no sabe:</b> la rotación real de tu producto. ' + (rot ? 'Usa la estimación que cargaste vos.' : 'Usa escenarios, no datos del mercado.') + '</p>';
       var capL = s.cap && s.cap !== 'c0' ? lab(TOOLS.lote.steps[6], s.cap) : 'no indicó';
       var pp = ({ c3: 3, c2: 2 })[s.cap] || 1; pp += pts >= 10 ? 2 : pts >= 3 ? 1 : 0; pp += (s.dep === 'propio' || s.dep === 'alq') ? 1 : 0;
       var rngTxt = minp ? mes(titulo[0]) + ' a ' + mes(titulo[1]) + ' meses de stock' : 'sin pedido mínimo';
@@ -591,8 +592,8 @@
     h += '<div class="hr-acts"><button type="button" class="btn wa-b" id="hr-wa">Mandármelo por WhatsApp</button>' +
       '<a class="btn ghost" id="hr-caso" href="' + WA + '?text=' + encodeURIComponent('Hola, usé la herramienta "' + T.titulo + '" de la web y quiero que revisen mi caso. ' + r.wa) + '" target="_blank" rel="noopener">Que revisen mi caso, sin costo</a>' +
       '<button type="button" class="btn ghost" id="hr-copy">Copiar enlace a este resultado</button></div>';
-    h += '<p class="hr-aviso"><b>Información general, no asesoramiento.</b> ' + (r.verif ? r.verif + ' ' : '') + AVISO + '</p>';
-    h += '<div class="dx-cap"><h3 class="dx-h3">¿Preferís que te escribamos nosotros?</h3><p class="dx-p">Analizamos tu caso sin costo. Dejá tu nombre y un WhatsApp o correo, y un especialista te escribe en horario comercial. Es opcional: el resultado ya lo tenés completo.</p>' +
+    h += '<p class="hr-aviso">' + (r.verif ? r.verif + ' ' : '') + AVISO + '</p>';
+    h += '<div class="dx-cap"><h3 class="dx-h3">¿Preferís que te escribamos nosotros?</h3><p class="dx-p">Analizamos tu caso sin costo. Dejá tu nombre y un WhatsApp o correo, y te escribimos por WhatsApp o por correo. Es opcional: el resultado ya lo tenés completo.</p>' +
       '<form id="hr-form" class="lead" novalidate>' +
       '<div class="row"><label>Tu nombre *<input name="nom" type="text" maxlength="100" autocomplete="name" required></label>' +
       '<label>WhatsApp o correo *<input name="ct" type="text" maxlength="100" autocomplete="off" required></label></div>' +
@@ -638,7 +639,7 @@
       GM.enviar(d, function () {
         ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'herr_' + NAME, prioridad: prio, categoria: r.cat || '' });
         ga('herr_cta', { herramienta: NAME, tipo: 'formulario' });
-        ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
+        ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te vamos a escribir por WhatsApp o por correo. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
         ok.classList.add('show');
       }, function () {
         GM.fallo(ok, WA + '?text=' + encodeURIComponent(msg));

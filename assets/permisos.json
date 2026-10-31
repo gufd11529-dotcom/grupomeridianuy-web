@@ -36,19 +36,19 @@
     ]},
     "masc_al": {"l": "alimento para mascotas", "pasos": [
       {"id": "roaa", "org": "MGAP", "k": "el registro de operadores ante el MGAP", "t": "Registro obligatorio de operadores de alimentos para animales (ROAA).", "src": "mgap", "cuando": "antes_comprar"},
-      {"id": "reg", "org": "MGAP", "k": "el registro del producto ante el MGAP", "t": "Registro del producto ante el MGAP.", "src": "mgap", "cuando": "antes_comprar", "reg": true},
+      {"id": "reg", "org": "MGAP", "k": "el registro del producto ante el MGAP", "t": "Registro del producto en el sistema de registros de alimento animal del MGAP. Confirmá con el MGAP si tu producto lo necesita.", "src": "mgap", "cuando": "antes_comprar", "reg": true},
       {"id": "sol", "org": "MGAP", "k": "la solicitud de importación del MGAP", "t": "Solicitud de importación: es un trámite obligatorio para importadores. El MGAP tiene un sistema nuevo desde el 13 de julio de 2026.", "src": "mgap", "cuando": "antes_embarcar"}
     ], "no_verif": "La página del MGAP de hoy no dice por qué ventanilla se tramita (una fuente anterior hablaba de VUCE). Confirmalo con el MGAP o con tu despachante."},
     "masc_ar": {"l": "arena sanitaria para mascotas", "confirmar": "No encontramos un trámite específico para este producto. Confirmalo con tu despachante antes de comprar."},
     "masc_acc": {"l": "accesorios o higiene de mascotas", "confirmar": "Suelen no tener registro específico, pero no encontramos una fuente oficial que lo diga. Confirmalo con tu despachante antes de comprar."},
     "el_lista": {"l": "artículo eléctrico de la lista de URSEA", "pasos": [
-      {"id": "ursea", "org": "URSEA", "k": "la autorización previa de URSEA", "t": "Autorización previa de URSEA, que se tramita por VUCE, con evaluación de la conformidad según normas UNIT o IEC. Alcanza a 14 familias: fichas y tomacorrientes, prolongadores, adaptadores, cables, interruptores automáticos, diferenciales, interruptores, portalámparas, calentadores de agua, conductos, envolventes, refrigeradores y sistemas de alimentación de vehículos eléctricos.", "src": "ursea", "cuando": "antes_comprar"}
+      {"id": "ursea", "org": "URSEA", "k": "la autorización previa de URSEA", "t": "Autorización previa de URSEA, que se tramita por VUCE, con evaluación de la conformidad según normas UNIT o IEC. Alcanza a una lista cerrada de productos: fichas y tomacorrientes, prolongadores, adaptadores, cables, interruptores automáticos, diferenciales, interruptores, portalámparas, calentadores de agua, conductos, envolventes, refrigeradores y sistemas de alimentación de vehículos eléctricos.", "src": "ursea", "cuando": "antes_comprar"}
     ]},
     "el_calent": {"l": "calentador de agua o heladera", "hereda": "el_lista"},
-    "el_otro": {"l": "otro aparato eléctrico o electrónico", "confirmar": "No figura entre las 14 familias de URSEA que revisamos. Confirmalo con tu despachante antes de comprar.", "src_confirmar": "ursea"},
-    "jug": {"l": "juguete", "pasos": [
-      {"id": "cert", "org": "LATU o UNIT", "k": "el certificado de comercialización del juguete", "t": "Certificado de comercialización para importados, antes del despacho y ligado a la factura. Pide evaluación de la conformidad en origen según normas de seguridad (Decreto 388/005). Lo emite el LATU o UNIT.", "src": "juguetes", "cuando": "antes_comprar"}
-    ], "no_verif": "No publicamos importes del trámite: miralos en la página oficial antes de comprar."},
+    "el_otro": {"l": "otro aparato eléctrico o electrónico", "confirmar": "No figura en la lista de productos de URSEA que revisamos. Confirmalo con tu despachante antes de comprar.", "src_confirmar": "ursea"},
+    "jug": {"l": "juguetes", "pasos": [
+      {"id": "cert", "org": "MIEM", "k": "el certificado de comercialización de juguetes del MIEM", "t": "Certificado que habilita a vender los juguetes en el país. Se tramita ante la Dirección Nacional de Industrias del MIEM, con el organismo certificador que elijas (LATU o UNIT), antes del despacho y uno por cada ítem de la factura de importación. Pide la evaluación de la conformidad en origen según normas de seguridad de juguetes (EN-71, NM 300 o ASTM F963). Decreto 388/005.", "src": "juguetes", "cuando": "antes_comprar"}
+    ], "no_verif": "El costo total del trámite, porque el organismo certificador cobra aparte: miralo en la página oficial antes de comprar."},
     "calz": {"l": "calzado", "pasos": [
       {"id": "lic", "org": "MIEM", "k": "la licencia de importación de calzado del MIEM", "t": "Licencia de importación del MIEM (Dirección Nacional de Industrias). Se tramita en línea (Decreto 101/013).", "src": "calzado", "cuando": "antes_comprar"}
     ]},

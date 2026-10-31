@@ -118,7 +118,7 @@
     btn.disabled = true; btn.style.opacity = '.5';
     GM.enviar(d, function () {
       ga('generate_lead', { envio_id: GM.ultimoEnvio, lead_source: 'calculadora_com', cif: c ? Math.round(c.cif) : 0 });
-      ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te escribimos en horario comercial para pedirte lo que falte y armar el costo completo de tu caso. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
+      ok.innerHTML = '<b>Recibido, ' + esc(nom) + '.</b> Te vamos a escribir por WhatsApp o por correo para pedirte lo que falte y armar el costo completo de tu caso. Si querés adelantar, <a href="' + WA + '?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">mandanos esto por WhatsApp</a>.';
       ok.classList.add('show');
     }, function () {
       GM.fallo(ok, WA + '?text=' + encodeURIComponent(msg));
