@@ -400,6 +400,7 @@ form.lead .btn{justify-self:start}
 .hr-tab{width:100%;border-collapse:collapse;font-size:15px;margin:0 0 16px;table-layout:auto}
 .hr-tab th,.hr-tab td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);overflow-wrap:break-word;hyphens:auto;vertical-align:top}
 .hr-tab td:not(:first-child){white-space:nowrap}
+@media (max-width:400px){.hr-tab td:not(:first-child){white-space:normal}.hr-tab th,.hr-tab td{padding:8px 5px}}
 .hr-tab th{font-size:12.5px;color:var(--mute);font-weight:600}
 .hr-tab td:last-child,.hr-tab th:last-child{text-align:right}
 .hr-tab tr:last-child td{font-weight:700;border-bottom:0}
