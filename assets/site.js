@@ -147,4 +147,32 @@
       btn.disabled = false; btn.style.opacity = '';
     });
   });
+  // Hoja de costos en PDF (imán de contactos, nombre + WhatsApp) → misma hoja "Leads Grupo Meridian"
+  var H = document.getElementById('gm-hoja');
+  if (H) H.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var g = function (n) { var x = H.querySelector('[name="' + n + '"]'); return x ? String(x.value || '').trim() : ''; };
+    if (g('web')) return; // honeypot
+    var err = document.getElementById('gm-hoja-err'), ok = document.getElementById('gm-hoja-ok'), btn = H.querySelector('button[type=submit]');
+    var nom = g('nom').replace(/[<>|]/g, ''), wa = g('wa').replace(/[^\d+]/g, '').replace(/(?!^)\+/g, '').slice(0, 20);
+    var dig = wa.replace(/\D/g, '').length;
+    if (!nom || dig < 8 || dig > 15) { err.classList.add('show'); return; }
+    err.classList.remove('show');
+    var d = { tipo: 'comercio', nombre: nom, comercio: '(sin empresa) ' + nom.slice(0, 60), telefono: wa, departamento: '',
+      tipo_comercio: 'Hoja de costos', volumen: '',
+      productos: 'Descargó la hoja de costos «Importar a Uruguay»',
+      origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '') };
+    var msg = 'Hola, soy ' + nom + '. Bajé la Hoja de costos y quiero que revisen mi caso.';
+    var PDF = '/descargas/hoja-costos-importar-uruguay.pdf';
+    btn.disabled = true; btn.style.opacity = '.5';
+    GM.enviar(d, function () {
+      ga('generate_lead', { lead_source: 'hoja_costos' });
+      ok.innerHTML = '<b>Gracias, ' + nom + '.</b> Acá está tu hoja: <a href="' + PDF + '" download target="_blank" rel="noopener">Descargar el PDF</a>. Para hacer las cuentas desde el móvil, usá la <a href="/calculadora/">calculadora</a>. Si querés que revisemos tu caso, <a href="https://wa.me/59893682685?text=' + encodeURIComponent(msg) + '" target="_blank" rel="noopener">escribinos por WhatsApp</a>.';
+      ok.classList.add('show');
+      ga('hoja_costos_descarga_visible', { lead_source: 'hoja_costos' });
+    }, function () {
+      GM.fallo(ok, WA_URL + '?text=' + encodeURIComponent(msg), ' El PDF sí lo podés bajar: <a href="' + PDF + '" download target="_blank" rel="noopener">Descargar el PDF</a>.');
+      btn.disabled = false; btn.style.opacity = '';
+    });
+  });
 })();
