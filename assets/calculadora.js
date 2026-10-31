@@ -87,6 +87,8 @@
     last = { fob: fob, flete: flete, cif: cif, uds: uds, origen: el('c-origen').options[el('c-origen').selectedIndex].text,
       arancel: ns ? 'No lo sé (' + min + '-' + max + ' %)' : av.replace('.', ',') + ' %', tipo: el('c-tipo').options[el('c-tipo').selectedIndex].text, iva: (iva * 100) + ' %',
       queda: rng(lo.queda, hi.queda), total: rng(lo.total, hi.total), puesto: rng(lo.puesto, hi.puesto) };
+    // Solo números (sin datos personales) para precargar las herramientas de /herramientas/ en esta pestaña
+    try { if (uds) sessionStorage.setItem('gm_calc', JSON.stringify({ puesto: Math.round(hi.puesto / uds * 100) / 100, cif: Math.round(cif), uds: uds })); else sessionStorage.removeItem('gm_calc'); } catch (e) {}
     if (!used) { used = true; ga('calculadora_uso', { arancel: av, origen: el('c-origen').value, tipo: tipo }); }
   }
 

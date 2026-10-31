@@ -28,6 +28,11 @@
 - [Tienda grupomeridian.shop](https://grupomeridian.shop/): arena sanitaria para gatos de bentonita (4 y 8 kg, aromas limón, lavanda y manzana) y de tofu (6 L), packs y accesorios, con envío a todo Uruguay
 - [Compras mayoristas](https://grupomeridian.shop/asesor/): pet shops, veterinarias, supermercados y distribuidores
 
+## Herramientas gratis (sin dejar datos)
+- [Qué permisos necesita tu producto](https://www.grupomeridianuy.com/herramientas/que-permisos-necesita-tu-producto/): La lista ordenada de trámites ante organismos según tu producto, con fuente oficial y fecha de verificación.
+- [Precio de venta en góndola](https://www.grupomeridianuy.com/herramientas/precio-en-gondola/): Del costo puesto en Uruguay al precio al público, con el margen de cada eslabón y el IVA. O al revés.
+- [Índice de herramientas](https://www.grupomeridianuy.com/herramientas/)
+
 ## Más guías
 - [Importar de China a Uruguay: impuestos, flete y cómo elegir proveedor](https://www.grupomeridianuy.com/guias/importar-de-china-a-uruguay/): El primer origen de las importaciones uruguayas: tributos, flete marítimo, proveedores y documentos.
 - [Importar de Brasil a Uruguay: Mercosur, certificado de origen y transporte](https://www.grupomeridianuy.com/guias/importar-de-brasil-a-uruguay/): El segundo origen de Uruguay: preferencia Mercosur, certificado de origen, camión y pasos de frontera.

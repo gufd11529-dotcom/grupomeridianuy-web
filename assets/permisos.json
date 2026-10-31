@@ -1,0 +1,63 @@
+{
+  "verificado": "2026-10-31",
+  "verificado_largo": "31 de octubre de 2026",
+  "fuentes": {
+    "msp_hab": {"n": "gub.uy: Habilitación y registro de empresas (alimentos, cosméticos, domisanitarios)", "u": "https://www.gub.uy/tramites/habilitacion-registro-empresas-alimentos-cosmeticos-domisanitarios", "ver": "2026-10-31"},
+    "msp_domi": {"n": "gub.uy: Registro de domisanitarios", "u": "https://www.gub.uy/tramites/registro-autorizacion-venta-renovacion-productos-domisanitarios", "ver": "2026-10-31"},
+    "latu": {"n": "LATU: Preguntas frecuentes", "u": "https://www.latu.org.uy/faq", "ver": "2026-10-31"},
+    "ursea": {"n": "URSEA: Productos eléctricos", "u": "https://www.gub.uy/unidad-reguladora-servicios-energia-agua/productos-electricos", "ver": "2026-10-31"},
+    "mgap": {"n": "MGAP: Alimentos para animales", "u": "https://www.gub.uy/ministerio-ganaderia-agricultura-pesca/alimentos-para-animales", "ver": "2026-10-31"},
+    "juguetes": {"n": "gub.uy: Importación y comercialización de juguetes", "u": "https://www.gub.uy/tramites/importacion-comercializacion-juguetes", "ver": "2026-10-31"},
+    "calzado": {"n": "gub.uy: Importación de calzado (Decreto 101/013)", "u": "https://www.gub.uy/tramites/importacion-calzado-decreto-101013", "ver": "2026-10-31"},
+    "textil": {"n": "IMPO: Decreto 8/2022", "u": "https://impo.com.uy/bases/decretos/8-2022/1", "ver": "2026-10-31"}
+  },
+  "grupos": {
+    "alim": {"l": "alimento envasado", "pasos": [
+      {"id": "hab", "org": "MSP", "k": "la habilitación de la empresa que importa o del depósito, ante el MSP", "t": "Habilitación de la empresa importadora o del depósito. Es un trámite arancelado; la resolución autoriza hasta 5 años y pide, entre otras cosas, certificado notarial, título del Director Técnico, certificación de Bomberos y habilitación de la Intendencia.", "src": "msp_hab", "cuando": "antes_comprar"},
+      {"id": "reg", "org": "MSP", "k": "el registro bromatológico del producto", "t": "Registro bromatológico vigente del producto (nacional o departamental) antes de importarlo.", "src": "latu", "cuando": "antes_comprar", "reg": true},
+      {"id": "latu", "org": "LATU", "k": "el certificado de comercialización del LATU", "t": "Certificado de comercialización del LATU. Lo cobra Aduanas: 0,5 % del valor CIF más IVA.", "src": "latu", "cuando": "antes_embarcar"},
+      {"id": "rot", "org": "Etiqueta", "k": "el rotulado en español", "t": "Rotulado en español. Si el alimento supera los límites de nutrientes, también lleva octógonos de advertencia.", "c": false, "cuando": "vender"}
+    ]},
+    "beb": {"l": "bebida sin alcohol", "hereda": "alim"},
+    "granel": {"l": "alimento a granel o fraccionado", "hereda": "alim"},
+    "beb_az": {"l": "bebida con azúcar o saborizada", "hereda": "alim", "mas": [
+      {"id": "lic", "org": "MSP", "k": "la licencia de importación del MSP para aguas con azúcar o saborizadas", "t": "Licencia de importación no automática del MSP para aguas con azúcar o saborizadas (dato de la OMC, 2025). Tu despachante confirma si el código de tu producto la alcanza.", "src": null, "ver": "2026-09-26", "cuando": "antes_comprar"}
+    ], "extra": "Estas bebidas además pagan IMESI; no está en esta lista de trámites. Mirá la guía de IMESI."},
+    "beb_alc": {"l": "bebida alcohólica", "hereda": "alim", "mas": [
+      {"id": "alc", "org": "LATU", "k": "la certificación de bebidas alcohólicas del LATU", "t": "Las bebidas alcohólicas pasan además por la certificación del LATU.", "src": null, "ver": "2026-09-26", "cuando": "antes_embarcar"}
+    ], "extra": "Estas bebidas además pagan IMESI; la tasa efectiva la fija el Poder Ejecutivo. Mirá la guía de IMESI."},
+    "cosm": {"l": "cosmética, perfumería o higiene personal", "pasos": [
+      {"id": "hab", "org": "MSP", "k": "la habilitación de la empresa que importa, ante el MSP", "t": "Habilitación de la empresa importadora o del depósito. Es un trámite arancelado; la resolución autoriza hasta 5 años.", "src": "msp_hab", "cuando": "antes_comprar"},
+      {"id": "reg", "org": "MSP", "k": "el registro de cada producto en el MSP", "t": "Registro de cada producto en el MSP antes de venderlo.", "src": "msp_hab", "cuando": "antes_comprar", "reg": true}
+    ], "no_verif": "Hoy no pudimos abrir la versión 2026 del trámite de registro de cosméticos. Confirmalo en el MSP antes de comprar.", "extra": "Algunos cosméticos pagan IMESI; no está en esta lista de trámites."},
+    "limp": {"l": "limpieza o desinfección del hogar", "pasos": [
+      {"id": "hab", "org": "MSP", "k": "la habilitación de la empresa que importa, ante el MSP", "t": "Habilitación de la empresa importadora o del depósito. Es un trámite arancelado; la resolución autoriza hasta 5 años.", "src": "msp_hab", "cuando": "antes_comprar"},
+      {"id": "reg", "org": "MSP", "k": "el registro del domisanitario y los rótulos firmados por el Director Técnico", "t": "Registro del producto domisanitario. Se presenta la habilitación vigente de la empresa importadora y los rótulos firmados por el Director Técnico.", "src": "msp_domi", "cuando": "antes_comprar", "reg": true}
+    ]},
+    "masc_al": {"l": "alimento para mascotas", "pasos": [
+      {"id": "roaa", "org": "MGAP", "k": "el registro de operadores ante el MGAP", "t": "Registro obligatorio de operadores de alimentos para animales (ROAA).", "src": "mgap", "cuando": "antes_comprar"},
+      {"id": "reg", "org": "MGAP", "k": "el registro del producto ante el MGAP", "t": "Registro del producto ante el MGAP.", "src": "mgap", "cuando": "antes_comprar", "reg": true},
+      {"id": "sol", "org": "MGAP", "k": "la solicitud de importación del MGAP", "t": "Solicitud de importación: es un trámite obligatorio para importadores. El MGAP tiene un sistema nuevo desde el 13 de julio de 2026.", "src": "mgap", "cuando": "antes_embarcar"}
+    ], "no_verif": "La página del MGAP de hoy no dice por qué ventanilla se tramita (una fuente anterior hablaba de VUCE). Confirmalo con el MGAP o con tu despachante."},
+    "masc_ar": {"l": "arena sanitaria para mascotas", "confirmar": "No encontramos un trámite específico para este producto. Confirmalo con tu despachante antes de comprar."},
+    "masc_acc": {"l": "accesorios o higiene de mascotas", "confirmar": "Suelen no tener registro específico, pero no encontramos una fuente oficial que lo diga. Confirmalo con tu despachante antes de comprar."},
+    "el_lista": {"l": "artículo eléctrico de la lista de URSEA", "pasos": [
+      {"id": "ursea", "org": "URSEA", "k": "la autorización previa de URSEA", "t": "Autorización previa de URSEA, que se tramita por VUCE, con evaluación de la conformidad según normas UNIT o IEC. Alcanza a 14 familias: fichas y tomacorrientes, prolongadores, adaptadores, cables, interruptores automáticos, diferenciales, interruptores, portalámparas, calentadores de agua, conductos, envolventes, refrigeradores y sistemas de alimentación de vehículos eléctricos.", "src": "ursea", "cuando": "antes_comprar"}
+    ]},
+    "el_calent": {"l": "calentador de agua o heladera", "hereda": "el_lista"},
+    "el_otro": {"l": "otro aparato eléctrico o electrónico", "confirmar": "No figura entre las 14 familias de URSEA que revisamos. Confirmalo con tu despachante antes de comprar.", "src_confirmar": "ursea"},
+    "jug": {"l": "juguete", "pasos": [
+      {"id": "cert", "org": "LATU o UNIT", "k": "el certificado de comercialización del juguete", "t": "Certificado de comercialización para importados, antes del despacho y ligado a la factura. Pide evaluación de la conformidad en origen según normas de seguridad (Decreto 388/005). Lo emite el LATU o UNIT.", "src": "juguetes", "cuando": "antes_comprar"}
+    ], "no_verif": "No publicamos importes del trámite: miralos en la página oficial antes de comprar."},
+    "calz": {"l": "calzado", "pasos": [
+      {"id": "lic", "org": "MIEM", "k": "la licencia de importación de calzado del MIEM", "t": "Licencia de importación del MIEM (Dirección Nacional de Industrias). Se tramita en línea (Decreto 101/013).", "src": "calzado", "cuando": "antes_comprar"}
+    ]},
+    "ropa": {"l": "ropa", "pasos": [
+      {"id": "lic", "org": "MIEM", "k": "la solicitud previa ante el MIEM", "t": "Solicitud previa ante la Dirección Nacional de Industrias del MIEM para los productos del anexo del Decreto 8/2022 (licencia automática).", "src": "textil", "cuando": "antes_comprar"}
+    ], "no_verif": "No pudimos ver el anexo completo del decreto: confirmá si tu prenda está alcanzada."},
+    "textil": {"l": "otro textil (mantas, sábanas)", "hereda": "ropa"},
+    "bazar": {"l": "utensilios y bazar", "confirmar": "No encontramos un trámite previo general para estos artículos. Confirmalo con tu despachante antes de comprar. Si van a estar en contacto con alimentos, no pudimos confirmar si tienen requisitos."},
+    "ferr": {"l": "ferretería", "confirmar": "No encontramos un trámite previo general para estos artículos. Confirmalo con tu despachante antes de comprar, sobre todo si alguno es eléctrico."},
+    "otro": {"l": "tu producto", "confirmar": "No encontramos un trámite previo general para este producto. Confirmalo con tu despachante antes de comprar."}
+  }
+}
