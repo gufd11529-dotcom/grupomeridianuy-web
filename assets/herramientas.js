@@ -594,7 +594,7 @@
       '<a class="btn ghost" id="hr-caso" href="' + WA + '?text=' + encodeURIComponent('Hola, usé la herramienta "' + T.titulo + '" de la web y quiero que revisen mi caso. ' + r.wa) + '" target="_blank" rel="noopener">Que revisen mi caso, sin costo</a>' +
       '<button type="button" class="btn ghost" id="hr-copy">Copiar enlace a este resultado</button></div>';
     h += '<p class="hr-aviso">' + (r.verif ? r.verif + ' ' : '') + AVISO + '</p>';
-    h += '<div class="dx-cap"><h3 class="dx-h3">¿Preferís que te escribamos nosotros?</h3><p class="dx-p">Analizamos tu caso sin costo. Dejá tu nombre y un WhatsApp o correo, y te escribimos por WhatsApp o por correo. Es opcional: el resultado ya lo tenés completo.</p>' +
+    h += '<div class="dx-cap"><h3 class="dx-h3">¿Preferís que te escribamos nosotros?</h3><p class="dx-p">Analizamos tu caso sin costo. Dejá tu nombre y un WhatsApp o correo, y te escribimos por ahí. Es opcional: el resultado ya lo tenés completo.</p>' +
       '<form id="hr-form" class="lead" novalidate>' +
       '<div class="row"><label>Tu nombre *<input name="nom" type="text" maxlength="100" autocomplete="name" required></label>' +
       '<label>WhatsApp o correo *<input name="ct" type="text" maxlength="100" autocomplete="off" required></label></div>' +
