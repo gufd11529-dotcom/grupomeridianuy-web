@@ -148,7 +148,7 @@ El importador, inscrito en el RUT, tramita las habilitaciones que correspondan, 
 URL: https://www.grupomeridianuy.com/guias/costos-de-importar-a-uruguay/
 Actualizada: 2026-10-13
 
-Respuesta corta: Importar a Uruguay paga, sobre el valor CIF, el arancel (de 0 % a 35 % según el producto), la tasa consular (5 %, o 3 % para origen Mercosur o Chile con certificado de origen), el IVA del 22 % o 10 % y anticipos de IVA (10 % o 3 %) y de IRAE (4 % desde 2026). Para una empresa contribuyente, el IVA y los anticipos se descuentan después; el costo que queda es sobre todo arancel, tasa consular y gastos de despacho.
+Respuesta corta: En un ejemplo ilustrativo de USD 10.000 de mercadería (valor CIF) con un arancel del 10 %, una empresa contribuyente paga en el despacho unos USD 5.460 en tributos, pero solo USD 1.500 le quedan como costo: el arancel y la tasa consular del 5 %. El resto, el IVA (22 % o 10 %) y los anticipos de IVA (10 % o 3 %) y de IRAE (4 % desde 2026), se descuenta después. El arancel va de 0 % a 35 % según el producto y la tasa consular baja al 3 % con origen Mercosur o Chile y certificado de origen. A eso se suman los gastos de despacho.
 
 ## Sobre qué se calculan: el valor en aduana
 
