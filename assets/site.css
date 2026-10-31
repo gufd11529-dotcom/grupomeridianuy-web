@@ -359,3 +359,16 @@ form.lead .btn{justify-self:start}
 
 /* cabecera: en pantallas hasta 800 px se usa la imagen de 800 px (variable --hero-800 puesta en línea por build.py) */
 @media (max-width:800px){.hero[style*="--hero-800"]{background-image:var(--hero-800)!important}}
+
+/* 31-10-2026 · móvil: que la respuesta de la guía se vea en la primera pantalla y WhatsApp tenga texto */
+@media (max-width:560px){
+  .hero.short.guide{min-height:0}
+  .hero.short.guide .wrap{padding-top:92px;padding-bottom:26px}
+  .hero.short.guide h1{font-size:28px}
+  .ck{padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));gap:6px 10px;flex-wrap:nowrap}
+  .ck p{flex:1 1 auto;font-size:12px;line-height:1.35}
+  .ck-b{width:auto;gap:6px}
+  .ck .btn{flex:none;padding:8px 10px;font-size:12.5px}
+  .wa span{display:inline}
+  .wa{padding:11px 15px}
+}
