@@ -32,9 +32,9 @@
     cosm: 'Cosmética y perfumería: algunos productos pagan IMESI (no incluido acá) y todos necesitan registro en el MSP.',
     ropa: 'Ropa: fuera del Mercosur paga 20 % de arancel. La ropa y algunos textiles necesitan licencia de importación del MIEM; lo confirmamos por producto.',
     calz: 'Calzado: fuera del Mercosur paga entre 25 % y 35 % de arancel según el tipo, y tiene su propio trámite de importación en el MIEM.',
-    elec: 'Eléctricos: los de baja tensión del reglamento de URSEA necesitan autorización previa con certificado de conformidad.',
+    elec: 'Eléctricos: los de la lista de URSEA necesitan autorización previa de URSEA; si tu aparato no figura, confirmalo con tu despachante.',
     jug: 'Juguetes: necesitan certificado de comercialización del MIEM, con ensayos en LATU o UNIT, antes de venderse.',
-    masc: 'Alimento para mascotas: necesita registro en el MGAP. Accesorios e higiene suelen no tener registro específico.',
+    masc: 'Alimento para mascotas: el MGAP pide registro de operadores y solicitud de importación. Accesorios, higiene y arena: confirmalo con tu despachante.',
     veh: 'Vehículos, tabaco y combustibles: pagan IMESI y tienen reglas propias. Esta calculadora no sirve para esos productos: escribinos.'
   };
   function fmt(n) { return 'USD ' + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
