@@ -16,11 +16,16 @@
   // Corta «productos» y «origen» a 1.900 caracteres (el servidor rechaza más de 2.000).
   // 31-10-2026: lee la respuesta del servidor ({"ok":true/false}); solo da \u00abRecibido\u00bb si no la rechaz\u00f3.
   // Cada env\u00edo lleva un c\u00f3digo (envio_id) que va a la hoja (en \u00aborigen\u00bb) y a Analytics, para cruzarlos.
+  // Recuerda qu\u00e9 formulario se est\u00e1 enviando (en captura, antes de que corra el manejador de cada formulario)
+  document.addEventListener('submit', function (e) { GM.formEnvio = e.target; }, true);
   GM.enviar = function (d, ok, ko) {
     var p = { token: GM.token }, k, id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
     for (k in d) if (Object.prototype.hasOwnProperty.call(d, k)) p[k] = d[k];
     p.origen = (p.origen || '') + ' \u00b7 id:' + id;
     ['productos', 'origen'].forEach(function (c) { if (p[c] && p[c].length > 1900) p[c] = p[c].slice(0, 1899) + '\u2026'; });
+    // 09-11-2026 · Ley 18.331: queda la prueba de la casilla «novedades» en el texto de «productos» (despu\u00e9s de cortar, para que nunca se pierda)
+    var cb = GM.formEnvio && GM.formEnvio.querySelector ? GM.formEnvio.querySelector('input[name="novedades"]') : null;
+    if (cb) { var dt = new Date(); p.productos = (p.productos || '') + (cb.checked ? ' || Novedades: s\u00ed (casilla marcada ' + dt.getFullYear() + '-' + ('0' + (dt.getMonth() + 1)).slice(-2) + '-' + ('0' + dt.getDate()).slice(-2) + ')' : ' || Novedades: no'); }
     GM.ultimoEnvio = id;
     var bien = function () { if (ok) ok(id); }, mal = function (motivo) { GM.ga('lead_error', { motivo: motivo, envio_id: id, lead_source: location.pathname }); if (ko) ko(); };
     try {

@@ -600,6 +600,7 @@
       '<label>WhatsApp o correo *<input name="ct" type="text" maxlength="100" autocomplete="off" required></label></div>' +
       (T.form ? '<label>' + T.form.label + '<select name="' + T.form.id + '">' + T.form.opts.map(function (o) { return '<option value="' + o[0] + '">' + o[1] + '</option>'; }).join('') + '</select></label>' : '') +
       '<label>Qué producto es (opcional)<textarea name="prod" maxlength="800" placeholder="Qué es y cualquier dato que sume"></textarea></label>' +
+      '<label class="nov"><input type="checkbox" name="novedades" value="1"><span>Quiero recibir novedades y guías de Grupo Meridian por WhatsApp o correo. Me puedo dar de baja cuando quiera.</span></label>' +
       '<div class="hp" aria-hidden="true"><label>No completar<input name="web" type="text" tabindex="-1" autocomplete="off"></label></div>' +
       '<span class="err" id="hr-err" role="alert">Necesitamos tu nombre y un WhatsApp o un correo válido para responderte.</span>' +
       '<button class="btn dark" type="submit">Que me escriban</button>' +
@@ -633,7 +634,7 @@
       var d = { tipo: 'comercio', nombre: nom, comercio: '(sin empresa) ' + nom.slice(0, 60), telefono: esTel ? ct : '', departamento: '',
         tipo_comercio: tc, volumen: String(r.sheet.vol).slice(0, 120),
         productos: 'Producto: ' + (v('prod') || '(sin describir)') + ' || ' + r.sheet.det + (T.form ? ' || Perfil: ' + (T.form.opts.filter(function (o) { return o[0] === pv; })[0] || ['', 'no indicó'])[1] : '') + (esMail ? ' || Email: ' + ct : ''),
-        origen: 'grupomeridianuy.com' + location.pathname + (document.referrer ? ' ← ' + document.referrer : '') };
+        origen: 'grupomeridianuy.com' + location.pathname + location.search + (document.referrer ? ' ← ' + document.referrer : '') };
       var msg = 'Hola, soy ' + nom + '. Usé la herramienta "' + T.titulo + '" de la web. ' + r.wa;
       var ok = document.getElementById('hr-ok'), btn = F.querySelector('button[type=submit]');
       btn.disabled = true; btn.style.opacity = '.5';

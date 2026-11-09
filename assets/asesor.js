@@ -194,6 +194,7 @@
       '<label>Correo (opcional)<input name="mail" type="email" maxlength="100" autocomplete="email"></label>' +
       '<details class="dx-more"><summary>Para afinar el análisis (opcional)</summary>' +
       (s.obj !== 'lanzar' ? selExtra('vol') : '') + selExtra('plazo') + '</details>' +
+      '<label class="nov"><input type="checkbox" name="novedades" value="1"><span>Quiero recibir novedades y guías de Grupo Meridian por WhatsApp o correo. Me puedo dar de baja cuando quiera.</span></label>' +
       '<div class="hp" aria-hidden="true"><label>No completar<input name="web" type="text" tabindex="-1" autocomplete="off"></label></div>' +
       '<span class="err" id="dx-err" role="alert">Necesitamos tu nombre y un WhatsApp para responderte.</span>' +
       '<button class="btn dark" type="submit">Que me escriban por WhatsApp</button>' +
