@@ -5822,3 +5822,147 @@ Sí: los que generan radiaciones ionizantes o contienen material radiactivo nece
 - MSP, ¿puedo ingresar al país productos de salud desde el exterior?: https://www.gub.uy/ministerio-salud-publica/Puedo-ingresar-al-pa%C3%ADs-productos-de-salud-desde-el-exterior
 - MSP, registro de comercialización de DEA/DESA por empresas de equipos médicos: https://www.gub.uy/tramites/registro-comercializacion-deadesa-empresas-equipos-medicos
 - MEF, Nomenclatura y aranceles de Uruguay: https://www.gub.uy/ministerio-economia-finanzas/nomenclatura-aranceles-uruguay-0
+
+---
+
+# Importadoras en Uruguay: qué hacen, cuándo conviene contratar una y cómo elegirla
+
+URL: https://www.grupomeridianuy.com/guias/importadoras-en-uruguay-que-hacen-y-como-elegir/
+Actualizada: 2026-11-11
+
+Respuesta corta: Una importadora en Uruguay es una empresa que ya importa y arma la operación por vos: verifica al proveedor, coordina flete, habilitaciones y despachante, y te deja el producto en el país. Suele convenir en tu primera importación o con volumen chico. Para elegir una, preguntá quién figura como importador, qué incluye el servicio y dejalo por escrito.
+
+## Qué es una importadora y qué no es
+
+La palabra se usa para cosas distintas, y de ahí vienen la mitad de los malentendidos. En la práctica, cuando alguien busca «importadoras en Uruguay» se está preguntando por una de estas figuras:
+
+Figura | Qué hace | Qué no hace | 
+
+Importadora de servicios | Arma la operación completa por encargo tuyo: proveedor, pago, flete, habilitaciones, despacho y entrega en Uruguay | No suele quedarse con tu negocio: el producto y la venta son tuyos | 
+
+Importadora-distribuidora | Importa para sí misma y le vende a comercios, almacenes o supermercados | No trae lo que vos elijas: vende lo que ella decidió importar | 
+
+Representante o agente de una marca | Tiene la exclusividad de una marca extranjera en Uruguay | No importa otras marcas por encargo | 
+
+Despachante de aduana | Hace el trámite ante la Dirección Nacional de Aduanas en nombre del importador | No busca proveedor, no financia ni vende | 
+
+Courier o forwarder | Transporta la carga desde el exterior | No clasifica el producto ni tramita habilitaciones | 
+
+Descripción general. Cada empresa define su alcance por contrato: lo que importa es lo que figura por escrito.
+
+Una misma empresa puede ser varias de estas cosas a la vez. Por eso la pregunta útil no es «¿sos importadora?», sino «¿qué parte de mi operación te encargás vos y cuál me queda a mí?».
+
+## Qué hace una importadora por vos
+
+Si la importadora hace la operación completa, el reparto habitual es este:
+
+- Proveedor: buscar o verificar fabricante, pedir muestras y negociar condiciones de compra (los Incoterms definen quién paga qué tramo).
+
+- Pago al exterior: ordenar el pago al proveedor, o indicarte cómo hacerlo (ver pagarle al proveedor del exterior).
+
+- Transporte: contratar el flete y el seguro, y armar la carga. Con volumen chico, puede combinarla con la de otros clientes (LCL y FCL).
+
+- Clasificación y habilitaciones: definir el código NCM con el despachante y avisarte qué permisos o registros pide tu producto antes de embarcar (ver habilitaciones por producto).
+
+- Despacho: coordinar con el despachante el DUA y el pago de los tributos (qué impuestos se pagan).
+
+- Depósito y entrega: recibir la mercadería en Uruguay y, si hace falta, guardarla hasta que la retires o te la lleven.
+
+Lo que no puede hacer nadie por vos es decidir qué vender ni a qué precio. Eso sigue siendo tuyo, y conviene resolverlo antes de comprar (ver qué importar para vender).
+
+## La pregunta clave: ¿quién figura como importador?
+
+Ante la Aduana, el que importa es quien figura en el despacho, y el trámite lo presenta un despachante habilitado en su nombre. La OMC (2026) indica que cualquier persona física o jurídica inscrita en el RUT puede operar en comercio exterior, y que es obligatorio contratar un despachante para las importaciones. Con una importadora, hay dos arreglos posibles:
+
+- La importadora figura como importadora. Compra, importa y después te vende o te entrega lo que importó para vos. Vos no necesitás montar nada propio, pero la mercadería pasa por su empresa.
+
+- Figurás vos. La importadora arma y coordina todo, pero el despacho sale a nombre de tu empresa. Necesitás RUT, un despachante con poder y, si el producto lo pide, registro en la VUCE (los cuatro pasos están en registrarse como importador).
+
+Cambia quién responde ante la Aduana, quién tramita las habilitaciones y a nombre de quién queda la factura. Dejalo escrito antes de pagar nada, no después.
+
+## Cuándo conviene contratar una importadora
+
+- Es tu primera importación. Te ahorra aprender a golpes con la plata puesta: proveedor, clasificación, habilitaciones, flete.
+
+- El volumen es chico. Un contenedor propio puede ser mucho para empezar. La importadora puede sumar tu carga a otras.
+
+- No tenés tiempo ni a quién ponerle a eso. Importar es un trabajo con papeles, plazos y coordinación entre varias partes.
+
+- Querés probar un producto antes de armar tu propia estructura. Muchas empresas empiezan acompañadas y después importan solas.
+
+- Tu producto necesita habilitaciones. Alimentos, cosméticos, eléctricos o productos de salud tienen trámites previos; alguien con experiencia te evita el error más caro, que es comprar antes de saber si entra.
+
+Si ya tenés proveedor de confianza, importás seguido y alguien de tu equipo puede dedicarle horas, probablemente te conviene más trabajar directo con un despachante. La comparación completa está en importadora, despachante o por tu cuenta.
+
+## Qué preguntarle antes de contratar
+
+- ¿Quién figura como importador en el despacho? Y a nombre de quién sale la factura.
+
+- ¿Qué incluye exactamente? Proveedor, flete, seguro, despachante, tributos, depósito, entrega. Que cada tramo diga si lo hace ella, lo hacés vos o lo paga un tercero.
+
+- ¿Cómo se cobra y qué no está incluido? No hay una tarifa oficial para este servicio: se acuerda. Pedí que quede escrito qué cubre y qué gastos aparecen aparte.
+
+- ¿Cómo se manejan los tributos y el pago al proveedor? Quién adelanta qué, y cuándo se te pide cada pago.
+
+- ¿Qué pasa si hay un problema? Mercadería observada por la Aduana, demoras en el puerto, un lote con defectos. Quién responde y cómo se resuelve.
+
+- ¿Con qué despachante trabaja? Y si podés hablar con él o con alguien que ya haya trabajado con ellos.
+
+- ¿Tiene experiencia con productos como el tuyo? Sobre todo si el tuyo requiere habilitación.
+
+- ¿Dónde está la mercadería mientras tanto? Si tiene depósito propio, dónde queda y cómo se retira.
+
+## Señales de alerta
+
+- Promete costos finales sin saber qué producto es. Sin el código NCM, el origen y las condiciones de compra, cualquier número es una estimación.
+
+- Dice que «no hace falta» despachante, RUT o habilitación. Para importaciones comerciales el despachante es obligatorio y el RUT es la base para operar (OMC, 2026); si te dicen otra cosa, pedí la norma.
+
+- Pide el pago completo por adelantado y no da nada por escrito.
+
+- No te dice quién es el importador ni quién es el despachante.
+
+- Todo es «incluido» y nada está detallado. Lo que no está escrito se discute después.
+
+- No te hace preguntas. Una importadora seria te pregunta qué producto es, para quién, cuánto vas a mover y si necesita habilitación antes de hablar de costos.
+
+## Qué llevar preparado a la primera consulta
+
+- Qué producto querés traer, con una foto o un enlace del fabricante, si ya lo tenés.
+
+- Para quién es: tienda propia, almacenes, supermercados, uso de tu empresa.
+
+- Cuánto pensás mover al comienzo, aunque sea una idea.
+
+- Si ya tenés empresa o RUT y si tenés despachante.
+
+- Qué precio de venta tenés en la cabeza, para saber si los números cierran (te sirve la calculadora de impuestos).
+
+Con eso se puede decir si el producto necesita habilitación, qué camino conviene y qué conviene confirmar con el despachante antes de comprar. El costo exacto sale recién cuando se define el producto, el origen y la operación; no se puede dar de entrada.
+
+## Preguntas frecuentes
+
+**¿Qué es una importadora en Uruguay?**
+Es una empresa que importa mercadería y, según el caso, la vende a comercios o arma la operación de importación por encargo de otra empresa. El alcance de cada una se define por contrato, así que conviene preguntar qué parte de la operación hace.
+
+**¿Una importadora es lo mismo que una distribuidora?**
+No siempre. La distribuidora importa y vende lo que ella eligió; la importadora de servicios trae lo que vos le encargás. Hay empresas que hacen las dos cosas.
+
+**¿Necesito tener empresa para trabajar con una importadora?**
+Depende del arreglo. Si la importadora figura como importadora, quizás no. Si el despacho sale a tu nombre, necesitás estar inscrito en el RUT. Preguntalo antes de pagar.
+
+**¿Sigo necesitando un despachante si contrato una importadora?**
+Para importaciones comerciales el despacho lo hace un despachante de aduana habilitado. La importadora suele coordinarlo, pero el despachante sigue siendo parte de la operación.
+
+**¿Cuánto cobra una importadora?**
+No hay una tarifa oficial: se acuerda por operación y depende del producto, el origen, el volumen y qué parte del trabajo hace. Pedí por escrito qué incluye y qué gastos van aparte.
+
+**¿Puedo empezar con una importadora y después importar por mi cuenta?**
+Sí, es un camino habitual. Una primera operación acompañada te deja proveedor verificado, costos reales y un procedimiento que después podés repetir.
+
+## Fuentes
+
+- OMC, Examen de las Políticas Comerciales de Uruguay, WT/TPR/S/486 (abril 2026): https://www.wto.org/english/news_e/news_docs/S486_e.pdf
+- Código Aduanero, Ley 19.276 (IMPO): https://www.impo.com.uy/bases/codigo-aduanero/19276-2014
+- VUCE, Ventanilla Única de Comercio Exterior: https://vuce.gub.uy/acerca-de-vuce/
+- gub.uy, inscripción de empresa unipersonal (DGI y BPS): https://www.gub.uy/tramites/inscripcion-empresa-unipersonal
