@@ -5966,3 +5966,109 @@ Sí, es un camino habitual. Una primera operación acompañada te deja proveedor
 - Código Aduanero, Ley 19.276 (IMPO): https://www.impo.com.uy/bases/codigo-aduanero/19276-2014
 - VUCE, Ventanilla Única de Comercio Exterior: https://vuce.gub.uy/acerca-de-vuce/
 - gub.uy, inscripción de empresa unipersonal (DGI y BPS): https://www.gub.uy/tramites/inscripcion-empresa-unipersonal
+
+---
+
+# Importar de la Unión Europea a Uruguay: qué cambia con el acuerdo Mercosur-UE
+
+URL: https://www.grupomeridianuy.com/guias/importar-de-la-union-europea-a-uruguay-acuerdo-mercosur-ue/
+Actualizada: 2026-11-25
+
+Respuesta corta: Desde el 1 de mayo de 2026 el acuerdo interino Mercosur-UE se aplica de forma provisional. Para pagar arancel preferencial, el proveedor europeo tiene que emitir una Declaración de Origen, con su número REX si está registrado; los certificados de origen tradicionales no sirven. La preferencia se pide en el DUA con un código de acuerdo, y depende del producto.
+
+## Qué cambió el 1 de mayo de 2026
+
+Hasta 2026, traer mercadería de España, Italia, Alemania o cualquier otro país europeo significaba pagar el arancel común del Mercosur. El acuerdo interino de comercio entre el Mercosur y la Unión Europea cambia eso de forma gradual. Se firmó el 17 de enero de 2026 en Asunción, Uruguay lo aprobó por la Ley 20.462 y se aplica de forma provisional desde el 1 de mayo de 2026.
+
+Según Cancillería, el Mercosur consolida arancel cero para cerca del 75 % del comercio con la UE desde el inicio, y llega al 92 % del universo arancelario del acuerdo en diez años. O sea, no todo lo europeo entra sin arancel: depende del producto y del calendario de desgravación.
+
+La aplicación es provisional: según Presidencia, continúa hasta que se pronuncie el Tribunal de Justicia de la Unión Europea. Mejor no armar un negocio que dependa de que la preferencia no cambie.
+
+## Qué productos tienen preferencia
+
+No hay una lista corta de «productos europeos sin arancel». La preferencia depende del código arancelario (NCM) de tu producto, de que sea originario de la UE y, en algunos casos, de un cupo. Algunos bajan a cero desde el inicio, otros bajan de a poco durante años y otros quedan afuera. Consultá el cronograma en la página del MEF o con tu despachante antes de comprar.
+
+## La prueba de origen: Declaración de Origen y número REX
+
+Para acceder a la preferencia, la mercadería tiene que ser originaria de la UE y el proveedor tiene que respaldarlo. Según Aduanas, el único documento admisible es la Declaración de Origen, emitida por el exportador europeo. Los certificados de origen que emiten entidades del país exportador (los que se usan con otros acuerdos) no sirven acá.
+
+Punto | Qué dice la guía oficial | 
+
+Quién la emite | El exportador europeo. No requiere firma | 
+
+Fecha | 1 de mayo de 2026 o posterior, sin importar la fecha de la factura | 
+
+Validez | 12 meses desde su emisión | 
+
+Número REX | Obligatorio para exportadores registrados. Un exportador no registrado puede omitirlo solo si el envío no supera los 6.000 euros de valor total de factura | 
+
+Origen que indica | «European Union» o «EU», no el nombre del país | 
+
+Resumen de la guía de Aduanas y de las preguntas frecuentes del MEF. Una declaración con errores en el texto o en el número REX no es válida.
+
+Antes de pagar, pedile a tu proveedor un modelo de la declaración y verificá que tenga el número REX correcto. Si falta o está mal, el DUA va a salir sin preferencia y pagás el arancel completo.
+
+## Cómo se pide la preferencia en el DUA
+
+La preferencia no es automática: hay que pedirla en el despacho, y de eso se ocupa tu despachante. Según las preguntas frecuentes del MEF:
+
+- Vale para DUA numerados desde el 1 de mayo de 2026, con una Declaración de Origen emitida desde esa fecha.
+
+- Se usa un código de acuerdo: 1117 para mercadería sin cupo, 1118 para cupo Mercosur y 1119 para cupo bilateral de Uruguay.
+
+- Si hay mercadería de distintos países de la UE, se declara en ítems separados, cada uno con su país. No existe un origen «UE».
+
+- Se puede pedir al solicitar el canal del despacho o, después, por expediente ante Aduanas hasta 2 años después de numerado el DUA.
+
+- La mercadería que estaba en tránsito o almacenada el 1 de mayo puede acceder a la preferencia si la declaración se presenta dentro de los 6 meses desde la entrada en vigor.
+
+Para más detalle del trámite, mirá la guía del despacho aduanero y el DUA.
+
+## Cupos: algunos productos tienen un tope
+
+Algunos productos tienen preferencia solo hasta cierto volumen. El MEF administra los cupos y emite las licencias: existe un cupo bilateral, asignado solo a Uruguay, y un cupo Mercosur, compartido entre los países del bloque. Cuando el cupo se agota, lo que entre después paga el arancel vigente, sin preferencia.
+
+Si tu producto tiene cupo, no cierres el precio de venta sin confirmar con tu despachante que todavía hay disponibilidad.
+
+## Lo que no cambia
+
+El acuerdo baja el arancel y nada más. Siguen aplicando el IVA, los anticipos que correspondan y las habilitaciones del producto (alimentos, cosméticos, eléctricos). La tasa consular del 3 % está prevista solo para origen Mercosur o Chile con certificado: para mercadería europea no afirmamos qué tasa corresponde y conviene confirmarlo con el despachante. Para armar el costo completo usá la calculadora y la guía de costos de importar.
+
+Queda una duda abierta: Aduanas informó que todavía analiza cómo se aplica la exoneración cuando la preferencia es parcial, y que publicará el criterio cuando lo defina.
+
+## Pasos antes de comprarle a Europa
+
+- Averiguá el código arancelario de tu producto y buscá en el cronograma del acuerdo si tiene arancel cero, desgravación gradual o cupo.
+
+- Pedile al proveedor que confirme que el producto es de origen UE y que va a emitir la Declaración de Origen con su número REX.
+
+- Acordá por escrito que la declaración se emite y llega con la factura (Incoterm incluido).
+
+- Pedile a tu despachante que calcule el arancel con y sin preferencia, y que revise las habilitaciones.
+
+- Recién ahí cerrá el pedido y el precio de venta.
+
+## Preguntas frecuentes
+
+**¿El acuerdo Mercosur-UE ya está en vigor?**
+Se aplica de forma provisional desde el 1 de mayo de 2026. Según Presidencia, continúa hasta que se pronuncie el Tribunal de Justicia de la Unión Europea, así que no es una situación definitiva.
+
+**¿Todo lo que viene de Europa paga arancel cero?**
+No. Cerca del 75 % del comercio queda en arancel cero desde el inicio y se llega al 92 % del universo arancelario en diez años. Depende del producto, de su origen y, en algunos casos, de un cupo.
+
+**¿Sirve el certificado de origen de la cámara de comercio del proveedor?**
+No. Según Aduanas, el único documento admisible es la Declaración de Origen que emite el exportador europeo. Los certificados de entidades del país exportador no se aceptan para este acuerdo.
+
+**¿Qué es el número REX?**
+Es el número de exportador registrado que le asignan las autoridades de un país de la UE. Va en la Declaración de Origen. Un exportador no registrado puede omitirlo solo si el envío no supera los 6.000 euros de valor de factura.
+
+**¿Puedo reclamar la preferencia si ya despaché la mercadería?**
+Según las preguntas frecuentes del MEF, se puede pedir por expediente ante Aduanas hasta 2 años después de numerado el DUA, siempre que tengas una Declaración de Origen válida. Consultalo con tu despachante.
+
+## Fuentes
+
+- Cancillería, inicio de la aplicación provisional del Acuerdo Comercial Interino Mercosur-UE: https://www.gub.uy/ministerio-relaciones-exteriores/comunicacion/noticias/inicio-aplicacion-provisional-del-acuerdo-comercial-interino-entre-mercosur
+- Presidencia, Uruguay aprobó el acuerdo interino de comercio entre el Mercosur y la Unión Europea (27-2-2026): https://www.gub.uy/presidencia/comunicacion/noticias/uruguay-aprobo-acuerdo-interino-comercio-entre-mercosur-union-europea
+- MEF, Acuerdo Interino de Comercio Mercosur-UE: preguntas frecuentes para la importación: https://www.gub.uy/ministerio-economia-finanzas/comunicacion/noticias/acuerdo-interino-comercio-entre-mercosur-ue-preguntas-frecuentes-para
+- MEF, Acuerdo Mercosur-Unión Europea: https://www.gub.uy/ministerio-economia-finanzas/politicas-y-gestion/acuerdo-mercosur-union-europea
+- Aduanas, documento guía sobre reglas de origen Mercosur-UE (30-4-2026): https://www.aduanas.gub.uy/innovaportal/file/28469/1/documento-guia-sobre-reglas-de-origen-mcs-ue-30-04-26.pdf
