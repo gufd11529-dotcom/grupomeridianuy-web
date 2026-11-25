@@ -5361,9 +5361,9 @@ En la página de la guía gratuita: reúne 12 puntos para repasar antes de la pr
 # Certificado de origen y preferencias arancelarias en Uruguay: cuándo se paga menos y por qué se puede perder
 
 URL: https://www.grupomeridianuy.com/guias/certificado-de-origen-y-preferencias-arancelarias-uruguay/
-Actualizada: 2026-10-29
+Actualizada: 2026-11-25
 
-Respuesta corta: El origen es dónde se produjo o se transformó la mercadería, no dónde la comprás ni desde dónde se embarca. Para que valga una preferencia de un acuerdo (por ejemplo, el Mercosur o Chile) hay que presentar la prueba de origen que ese acuerdo exige. Con ella, la tasa consular baja del 5 % al 3 % para origen Mercosur o Chile, y el arancel puede bajar según el acuerdo y el código NCM. Sin la prueba, o con una que la Aduana no acepta, se paga como origen general.
+Respuesta corta: El origen es dónde se produjo o se transformó la mercadería, no dónde la comprás ni desde dónde se embarca. Para que valga una preferencia de un acuerdo (por ejemplo, el Mercosur o Chile) hay que presentar la prueba de origen que ese acuerdo exige. Con ella, la tasa consular baja del 5 % al 3 % para origen Mercosur o Chile, y el arancel puede bajar según el acuerdo y el código NCM. Con la Unión Europea, desde el 1 de mayo de 2026, la prueba es una Declaración de Origen del exportador europeo, no un certificado. Sin la prueba, o con una que la Aduana no acepta, se paga como origen general.
 
 ## Qué es el origen y por qué importa
 
@@ -5397,6 +5397,8 @@ La Aduana advirtió en diciembre de 2025 que no sirve cualquier papel con el nom
 
 Otros acuerdos tienen su propia prueba. Según la tabla de la RG 06/2025, para Chile, México y Colombia la Aduana espera el certificado de origen. Para el Mercosur y algunos acuerdos con Brasil y Argentina (sector automotor y, con Brasil, productos de zonas francas), certificado o declaración.
 
+Unión Europea: el acuerdo interino Mercosur-UE se aplica desde el 1 de mayo de 2026 y funciona al revés que el Mercosur. Según la guía de reglas de origen de Aduanas, el único documento admisible es la Declaración de Origen que emite el exportador europeo, con su número REX (el registro de exportadores de la UE). Los certificados de cámaras o entidades del país exportador no sirven para este acuerdo. El detalle (qué texto lleva, cuándo se puede omitir el REX, cómo se pide la preferencia en el DUA) está en la guía de importar de la Unión Europea.
+
 ## El certificado de origen digital por VUCE
 
 Uruguay recibe certificados de origen digitales (COD) a través de la VUCE. Según el MEF, se usan con los socios del Mercosur desde 2018 y con Chile desde 2021; con México, la Aduana puso en marcha su procedimiento el 6 de junio de 2022. Con Colombia (ACE 72), la versión definitiva rige desde el 3 de marzo de 2025.
@@ -5425,6 +5427,8 @@ La validez en el tiempo del certificado y el plazo para presentarlo los fija la 
 
 - Datos que no coinciden: si el certificado no concuerda con la factura o con la mercadería, la Aduana puede discrepar. Es una recomendación práctica nuestra: la norma que leímos no enumera todos los motivos.
 
+- Prueba equivocada con la UE: para el acuerdo Mercosur-UE no vale un certificado de cámara o entidad, solo la Declaración de Origen del exportador. Si tiene errores en el texto o en el número REX, tampoco es válida.
+
 - Control posterior: aunque el trámite salga bien, la Aduana puede revisar después de la liberación.
 
 Si la Aduana discrepa, el caso sigue el recorrido de una observación: lo explica la guía de DUA, canales y observaciones.
@@ -5439,7 +5443,9 @@ Si la Aduana discrepa, el caso sigue el recorrido de una observación: lo explic
 
 - Si el acuerdo permite certificado digital, que se emita por la vía que usa la VUCE.
 
-Para países concretos, mirá importar de Brasil e importar de Argentina. Los acuerdos nuevos, como el de Mercosur con la Unión Europea, traen sus propias reglas de origen: están resumidos en la guía de novedades 2026.
+- Si es de la Unión Europea, que emita la Declaración de Origen con su número REX correcto (un exportador no registrado puede omitirlo solo en envíos de hasta 6.000 euros): un certificado de cámara no sirve.
+
+Para países concretos, mirá importar de Brasil e importar de Argentina. Si el proveedor es europeo, lo que tenés que pedirle es la Declaración de Origen con su número REX: está explicado en la guía de importar de la Unión Europea. El resto de los cambios del año, en novedades 2026.
 
 ## Lo que no pudimos confirmar
 
@@ -5462,6 +5468,9 @@ Es una prueba de origen que firma el exportador o el productor, sin certificaci�
 **¿Sirve el certificado de origen digital?**
 Sí. Uruguay recibe certificados digitales por la VUCE con los socios del Mercosur, Chile, México y Colombia, si el acuerdo lo prevé. La VUCE controla la estructura y la firma, pero la aceptación final es de la Aduana al declarar el DUA.
 
+**¿Con un proveedor de la Unión Europea sirve el certificado de origen?**
+No. Para el acuerdo Mercosur-UE, que se aplica desde el 1 de mayo de 2026, Aduanas solo admite la Declaración de Origen que emite el exportador europeo, con su número REX. Los certificados de cámaras o entidades no se aceptan para la preferencia, que se pide en DUA numerados desde el 1 de mayo de 2026.
+
 **¿Cuánto dura un certificado de origen?**
 Depende del acuerdo y de la norma de la Aduana (RG 18/2019). No confirmamos el plazo en las fuentes oficiales que leímos, así que no damos cifra: pedile al despachante que lo verifique antes del embarque.
 
@@ -5477,6 +5486,8 @@ Depende del acuerdo y de la norma de la Aduana (RG 18/2019). No confirmamos el p
 - Texto Ordenado DGI 2023, Título 10, IVA: arts. 12, 13 y 34 (IMPO): https://www.impo.com.uy/bases/todgi-2023/10-2024
 - MEF, Nomenclatura y aranceles de Uruguay: https://www.gub.uy/ministerio-economia-finanzas/nomenclatura-aranceles-uruguay-0
 - VUCE, Ventanilla Única de Comercio Exterior: https://www.vuce.gub.uy
+- Aduanas, documento guía sobre reglas de origen Mercosur-UE (30-4-2026): https://www.aduanas.gub.uy/innovaportal/file/28469/1/documento-guia-sobre-reglas-de-origen-mcs-ue-30-04-26.pdf
+- MEF, Acuerdo Interino de Comercio Mercosur-UE: preguntas frecuentes para la importación: https://www.gub.uy/ministerio-economia-finanzas/comunicacion/noticias/acuerdo-interino-comercio-entre-mercosur-ue-preguntas-frecuentes-para
 
 ---
 
